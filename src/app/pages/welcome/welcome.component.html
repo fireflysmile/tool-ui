@@ -1,7 +1,11 @@
 <app-header></app-header>
 <div class="welcome main-content">
   <h3 class="title">Welcome</h3>
-  <div class="search-box"></div>
+  <div class="search-box">
+    <label for="search" class="icon-search"></label>
+    <input id="search" class="input" type="text" placeholder="What do you want to search?">
+    <app-dropdown [style.margin-left]="'auto'" [values]="listSearchBy" [dropdownName]="dropdownName" [activeValue]="searchBy" (select)="action($event)"></app-dropdown>
+  </div>
   <div class="options box-content">
     <div class="col" *ngFor="let item of links">
       <a href="javascript:;" class="item {{ item.icon }}" (click)="getSuggest(item.value)">

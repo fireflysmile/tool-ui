@@ -10,9 +10,27 @@
     text-align: center;
     padding-top: 34px;
   }
+  .search-box {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $cloud;
+    height: 70px;
+    margin-top: 3px;
+    margin-bottom: 21px;
+    .icon-search {
+      @include icon(search, null, null);
+      cursor: pointer;
+    }
+    .input {
+      border: none;
+      padding-left: 35px;
+      width: 60%;
+      font-size: 15px;
+    }
+  }
   .options {
-    width: 100%;
-    padding: 17px;
+    margin-left: -18px;
+    margin-left: -18px;
     .col {
       width: 25%;
       padding: 18px;
@@ -42,4 +60,9 @@
       }
     }
   }
+}
+
+@include placeholder {
+  color: $dusty-gray;
+  font-size: 15px;
 }
