@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormControlName, Validators, FormControl } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { DataService } from 'src/app/services/data.service';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
+import { message } from 'src/app/core/messages';
 
 @Component({
   selector: 'app-login',
@@ -27,7 +28,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    // get email and password values
+    // get username and password values
     const username: string = this.login.get('username').value;
     const password: string = this.login.get('password').value;
 
@@ -43,16 +44,14 @@ export class LoginComponent implements OnInit {
 
     this.dataService.get('user.json').subscribe(
       (data: any) => {
-
         const users = data.user;
-        users.array.forEach(user => {
+        users.forEach((user: any) => {
           if (payload.username === user.username && payload.password === user.password) {
             this.router.navigateByUrl('welcome');
           } else {
-
+            this.error = message.error_login;
           }
         });
-
       }
     );
   }

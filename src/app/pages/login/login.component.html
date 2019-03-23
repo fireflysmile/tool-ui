@@ -11,8 +11,12 @@
       <div class="row-set">
         <input type="password" class="input" placeholder="password" formControlName="password">
       </div>
-      <button type="submit" class="button-fluid">Login</button>
+      <button type="submit" class="button-fluid" [ngClass]="{'disable': login.invalid}" [disabled]="login.invalid">Login</button>
+      <p class="error-ms" *ngIf="error">{{ error }}</p>
     </form>
+    <div class="copyright">
+      <small>Copyright Rollout management 2019</small>
+    </div>
   </div>
   <div class="right"></div>
 </div>

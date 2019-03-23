@@ -9,6 +9,7 @@
     width: $main-login;
     padding: 69px 75px;
     &.main-login {
+      position: relative;
       form {
         margin-top: 115px;
       }
@@ -32,12 +33,18 @@
           height: nth($tuple, 3);
           line-height: nth($tuple, 3);
           border: none;
+          cursor: pointer;
+          font-size: 14px;
         }
       }
       .button-fluid {
         background-color: $blue;
         color: white;
         margin-top: 30px;
+        &.disable {
+          opacity: .5;
+          cursor: not-allowed;
+        }
       }
       .input {
         width: 100%;
@@ -52,6 +59,18 @@
           color: $blue;
           font-size: 30px;
         }
+      }
+      .error-ms {
+        color: $mandy;
+        font-size: 13px;
+        text-align: center;
+        padding-top: 30px;
+      }
+      .copyright {
+        color: $dusty-gray;
+        font-size: 14px;
+        position: absolute;
+        bottom: 70px;
       }
     }
   }
