@@ -1,0 +1,64 @@
+{
+  "links": [
+    {
+      "text": "Input Data",
+      "icon": "input-data"
+    },
+    {
+      "text": "Onboard to Project Data",
+      "icon": "onboard"
+    },
+    {
+      "text": "Dashboard",
+      "icon": "dashboard"
+    },
+    {
+      "text": "App Readiness",
+      "icon": "readiness"
+    },
+    {
+      "text": "Email Templates",
+      "icon": "email"
+    },
+    {
+      "text": "Self Service",
+      "icon": "service"
+    },
+    {
+      "text": "Survey",
+      "icon": "survey"
+    },
+    {
+      "text": "Report",
+      "icon": "report"
+    }
+  ],
+  "listsearch": [
+    {
+      "value": "Computers",
+      "label": "Computers"
+    },
+    {
+      "value": "Computers 2",
+      "label": "Computers 2"
+    }
+  ],
+  "inputdatas": [
+    {
+      "text": "SCCM",
+      "icon": "sccm"
+    },
+    {
+      "text": "AD",
+      "icon": "ad"
+    },
+    {
+      "text": "HR Database",
+      "icon": "hr"
+    },
+    {
+      "text": "CSV File",
+      "icon": "csv"
+    }
+  ]
+}

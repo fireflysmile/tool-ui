@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LogoComponent } from './components/logo/logo.component';
+import { ClickOutsideDirective } from './directives/click-outside.directive';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { LogoComponent } from './components/logo/logo.component';
     LoginComponent,
     WelcomeComponent,
     HeaderComponent,
-    LogoComponent
+    LogoComponent,
+    ClickOutsideDirective,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,
