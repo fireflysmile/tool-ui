@@ -4,7 +4,8 @@
   <div class="search-box">
     <label for="search" class="icon-search"></label>
     <input id="search" class="input" type="text" placeholder="What do you want to search?">
-    <app-dropdown [style.margin-left]="'auto'" [values]="listSearchBy" [dropdownName]="dropdownName" [activeValue]="searchBy" (select)="action($event)"></app-dropdown>
+    <app-dropdown [style.margin-left]="'auto'" [values]="listSearchBy" [dropdownName]="dropdownName"
+      [activeValue]="searchBy" (select)="action($event)"></app-dropdown>
   </div>
   <div class="options box-content">
     <div class="col" *ngFor="let item of links">
@@ -15,30 +16,44 @@
     </div>
   </div>
 </div>
-<div class="welcome main-content" *ngIf="import">
+
+<div class="welcome main-content" *ngIf="import && !uploaded">
   <h3 class="title">INPUT DATA</h3>
   <p class="sub-title">Please select the resource to migrate the data</p>
   <div class="search-box"></div>
   <div class="options box-content">
     <div class="col" *ngFor="let item of inputDatas">
       <a href="javascript:;" class="item {{ item.icon }}" (click)="select(item.text)">
-        <i class="icon"></i>
-        <div class="text">{{ item.text === 'CSV File' ? 'Upload' : 'Import from' }} <p>{{ item.text }}</p></div>
+        <i class="icon"></i><br/>
+        <div class="text">{{ item.text === 'CSV File' ? 'Upload' : 'Import from' }} <p>{{ item.text }}</p>
+        </div>
       </a>
     </div>
   </div>
+</div>
+
+<div class="welcome main-content" *ngIf="uploaded">
+  <h3 class="title">UPLOAD CSV FILE</h3>
+  <p class="sub-title fix">Upload all data as a separated tabs for users, application, department, and computers. in a
+    single CSV.</p>
+  <div class="search-box"></div>
+  <div class="options box-content">
+    <div class="col col-full">
+      <a href="javascript:;" class="item csv">
+        <i class="icon"></i><br/>
+        <p class="text">Drop your <span>CSV File here</span></p>
+      </a>
+    </div>
+  </div>
+  <div [style.text-align]="'center'">
+      <p class="suport-text">Learn how to format your CSV File <a href="javascript:;">here</a></p>
+  </div>
   <div class="clear">
-      <p-fileUpload name="myfile[]" url="./upload.php" multiple="multiple"
-      accept="image/*" maxFileSize="1000000">
-          <ng-template pTemplate="toolbar">
-              <div>Upload 3 Files</div>
-          </ng-template>
-          <ng-template let-file pTemplate="file">
-              <div>Custom UI to display a file</div>
-          </ng-template>
-          <ng-template pTemplate="content">
-              <div>Custom UI to manage uploaded files</div>
-          </ng-template>
-    </p-fileUpload>
+    <p-fileUpload
+    name="myfile[]"
+    multiple="multiple"
+    accept=".csv"
+    showUploadButton="false"
+    showCancelButton="false" maxFileSize="1000000"></p-fileUpload>
   </div>
 </div>

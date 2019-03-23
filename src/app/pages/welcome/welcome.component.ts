@@ -17,6 +17,7 @@ export class WelcomeComponent implements OnInit {
   inputDatas = [];
 
   import: boolean;
+  uploaded: boolean;
 
   constructor(private dataService: DataService) { }
 
@@ -40,6 +41,8 @@ export class WelcomeComponent implements OnInit {
           this.import = true;
         }
       );
+    } else if (key === 'CSV File') {
+      this.uploaded = true;
     }
   }
 
