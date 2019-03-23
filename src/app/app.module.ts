@@ -12,6 +12,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { ClickOutsideDirective } from './directives/click-outside.directive';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { FileUploadModule } from 'primeng/fileupload';
+
+const PrimeNGmodule = [
+  FileUploadModule
+];
 
 @NgModule({
   declarations: [
@@ -28,7 +33,8 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    PrimeNGmodule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
