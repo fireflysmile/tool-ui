@@ -1,3 +1,13 @@
-<p>
-  welcome works!
-</p>
+<app-header></app-header>
+<div class="welcome main-content">
+  <h3 class="title">Welcome</h3>
+  <div class="search-box"></div>
+  <div class="options box-content">
+    <div class="col" *ngFor="let item of links">
+      <a href="javascript:;" class="item {{ item.icon }}" (click)="getSuggest(item.value)">
+        <i class="icon"></i><br />
+        <span class="text">{{ item.text }}</span>
+      </a>
+    </div>
+  </div>
+</div>

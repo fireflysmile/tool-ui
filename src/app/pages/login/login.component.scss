@@ -19,14 +19,6 @@
         font-size: 34px;
         padding-bottom: 25px;
       }
-      .logo {
-        display: block;
-        width: 149px;
-        margin-left: -2px;
-        img {
-          width: 100%;
-        }
-      }
       @each $tuple in $buttonConfig {
         .button-#{nth($tuple, 1)} {
           width: nth($tuple, 2);

@@ -1,0 +1,46 @@
+@import 'icons';
+@import 'color';
+@import 'mixin';
+
+.welcome {
+  .title {
+    font-size: 30px;
+    color: $chathams-blue;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 34px;
+  }
+  .options {
+    width: 100%;
+    padding: 17px;
+    .col {
+      width: 25%;
+      padding: 18px;
+      float: left;
+      .item {
+        width: 100%;
+        height: 200px;
+        display: inline-block;
+        border-radius: 10px;
+        text-decoration: none;
+        margin-bottom: 10px;
+        text-align: center;
+        padding-top: 33px;
+        @each $icons in $iconsConfig {
+          &.#{nth($icons, 1)} {
+            @include linear-gradient(nth($icons, 2), nth($icons, 3));
+            .icon {
+              @include icon(nth($icons, 1), null, null);
+              margin-bottom: 20px;
+            }
+          }
+        }
+        .text {
+          font-size: 18px;
+          color: white;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}

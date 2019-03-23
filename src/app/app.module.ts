@@ -8,12 +8,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataService } from './services/data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
+import { HeaderComponent } from './components/header/header.component';
+import { LogoComponent } from './components/logo/logo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    HeaderComponent,
+    LogoComponent
   ],
   imports: [
     BrowserModule,
