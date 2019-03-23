@@ -1,0 +1,18 @@
+<div class="login">
+  <div class="left main-login">
+    <a href="javascript:;" class="logo">
+      <img src="assets/img/logo@2x.png" alt="logo company">
+    </a>
+    <form [formGroup]="login" (ngSubmit)="onSubmit()">
+      <h3 class="title">Login</h3>
+      <div class="row-set">
+        <input type="text" class="input" placeholder="username" formControlName="username">
+      </div>
+      <div class="row-set">
+        <input type="password" class="input" placeholder="password" formControlName="password">
+      </div>
+      <button type="submit" class="button-fluid">Login</button>
+    </form>
+  </div>
+  <div class="right"></div>
+</div>

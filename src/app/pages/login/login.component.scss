@@ -1,0 +1,68 @@
+@import 'width-height';
+@import 'color';
+@import 'mixin';
+
+.login {
+  display: flex;
+  height: 100vh;
+  .left {
+    width: $main-login;
+    padding: 69px 75px;
+    &.main-login {
+      form {
+        margin-top: 115px;
+      }
+      .title {
+        text-transform: uppercase;
+        color: $chathams-blue;
+        font-size: 34px;
+        padding-bottom: 25px;
+      }
+      .logo {
+        display: block;
+        width: 149px;
+        margin-left: -2px;
+        img {
+          width: 100%;
+        }
+      }
+      @each $tuple in $buttonConfig {
+        .button-#{nth($tuple, 1)} {
+          width: nth($tuple, 2);
+          height: nth($tuple, 3);
+          line-height: nth($tuple, 3);
+          border: none;
+        }
+      }
+      .button-fluid {
+        background-color: $blue;
+        color: white;
+        margin-top: 30px;
+      }
+      .input {
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+        color: $mine-shaft;
+        border: none;
+        border-bottom: 1px solid $geyser;
+        margin-bottom: 15px;
+        font-size: 16px;
+        &.input[type='password'] {
+          color: $blue;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  .right {
+    width: calc(100% - #{$main-login});
+    background: url('src/assets/img/bg-login@2x.jpg') no-repeat center;
+    background-size: cover;
+  }
+}
+
+@include placeholder {
+  color: $silver;
+  font-size: 16px;
+}
