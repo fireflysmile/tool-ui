@@ -17,8 +17,9 @@
       .title {
         text-transform: uppercase;
         color: $chathams-blue;
-        font-size: 34px;
+        font-size: 36px;
         padding-bottom: 25px;
+        font-weight: 800;
       }
       @each $tuple in $buttonConfig {
         .button-#{nth($tuple, 1)} {
