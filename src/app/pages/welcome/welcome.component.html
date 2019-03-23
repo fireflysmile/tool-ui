@@ -1,5 +1,5 @@
 <app-header></app-header>
-<div class="welcome main-content">
+<div class="welcome main-content" *ngIf="!import">
   <h3 class="title">Welcome</h3>
   <div class="search-box">
     <label for="search" class="icon-search"></label>
@@ -8,9 +8,22 @@
   </div>
   <div class="options box-content">
     <div class="col" *ngFor="let item of links">
-      <a href="javascript:;" class="item {{ item.icon }}" (click)="getSuggest(item.value)">
+      <a href="javascript:;" class="item {{ item.icon }}" (click)="select(item.text)">
         <i class="icon"></i><br />
         <span class="text">{{ item.text }}</span>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="welcome main-content" *ngIf="import">
+  <h3 class="title">INPUT DATA</h3>
+  <p class="sub-title">Please select the resource to migrate the data</p>
+  <div class="search-box"></div>
+  <div class="options box-content">
+    <div class="col" *ngFor="let item of inputDatas">
+      <a href="javascript:;" class="item {{ item.icon }}" (click)="select(item.text)">
+        <i class="icon"></i>
+        <div class="text">{{ item.text === 'CSV File' ? 'Upload' : 'Import from' }} <p>{{ item.text }}</p></div>
       </a>
     </div>
   </div>

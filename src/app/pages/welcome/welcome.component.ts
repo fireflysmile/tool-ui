@@ -14,6 +14,9 @@ export class WelcomeComponent implements OnInit {
   listSearchBy: DropdownValue[];
 
   links = [];
+  inputDatas = [];
+
+  import: boolean;
 
   constructor(private dataService: DataService) { }
 
@@ -27,6 +30,17 @@ export class WelcomeComponent implements OnInit {
   }
 
   action(e): void {
+  }
+
+  select(key) {
+    if (key === 'Input Data') {
+      this.dataService.get('welcome.json').subscribe(
+        (data: any) => {
+          this.inputDatas = data.inputdatas;
+          this.import = true;
+        }
+      );
+    }
   }
 
 }

@@ -42,5 +42,23 @@
       "value": "Computers 2",
       "label": "Computers 2"
     }
+  ],
+  "inputdatas": [
+    {
+      "text": "SCCM",
+      "icon": "sccm"
+    },
+    {
+      "text": "AD",
+      "icon": "ad"
+    },
+    {
+      "text": "HR Database",
+      "icon": "hr"
+    },
+    {
+      "text": "CSV File",
+      "icon": "csv"
+    }
   ]
 }
