@@ -1,0 +1,94 @@
+@import 'primeng';
+@import 'config';
+@import 'mixin';
+@import 'icons';
+@import 'width-height';
+
+.dashboard {
+  .title {
+    font-size: 24px;
+    font-weight: 800;
+    color: $chathams-blue;
+    height: 90px;
+    line-height: 90px;
+    padding-left: 34px;
+  }
+  .box-three {
+    padding: 0 34px 34px;
+    .box {
+      border-radius: 10px;
+      height: 160px;
+      padding: 24px;
+      @each $box in $iconsConfig {
+        &-#{nth($box, 1)} {
+          @include linear-gradient(nth($box, 2), nth($box, 3));
+        }
+      }
+      &-readiness {
+        width: $readiness-w;
+        text-align: center;
+      }
+      &-onboard {
+        width: $onboard-w;
+      }
+      &-input-data {
+        align-content: center;
+        width: calc(100% - #{$readiness-w + $onboard-w + 50});
+        .child {
+          text-align: center;
+          border-right: 1px solid rgba(255,255,255,.6);
+          @each $item in $iconsUserBox {
+            &-#{nth($item, 1)} {
+              .icon {
+                @include icon(nth($item, 1), null, null);
+              }
+            }
+          }
+          .number {
+            font-size: 24px;
+            color: white;
+            font-weight: 800;
+          }
+          .name {
+            font-size: 15px;
+            color: white;
+          }
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+
+      .box-name {
+        font-size: 18px;
+        line-height: 15px;
+        color: white;
+        font-weight: 600;
+      }
+      .detail {
+        padding-top: 30px;
+        font-size: 14px;
+        color: white;
+        p {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .options-fix-table {
+    position: absolute;
+    margin-top: -45px;
+    right: 38px;
+    .btn-filter {
+      margin-left: 97px;
+      font-size: 16px;
+      color: $blue;
+      font-weight: 600;
+      text-decoration: none;
+      .icon-filter {
+        @include icon(filter, null, null);
+        margin-right: 8px;
+      }
+    }
+  }
+}

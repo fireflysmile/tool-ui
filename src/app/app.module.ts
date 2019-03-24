@@ -19,6 +19,10 @@ import { FileUploadModule } from 'primeng/fileupload';
 import { TabViewModule } from 'primeng/tabview';
 import { TableModule } from 'primeng/table';
 import { DataDropdownPipe } from './pipes/data-dropdown.pipe';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { AsideComponent } from './components/aside/aside.component';
+import { AsideViewComponent } from './components/aside-view/aside-view.component';
+import { DonutChartComponent } from './components/donut-chart/donut-chart.component';
 
 const PrimeNGmodule = [
   FileUploadModule,
@@ -37,7 +41,11 @@ const PrimeNGmodule = [
     DropdownComponent,
     BackComponent,
     OnboardProjectComponent,
-    DataDropdownPipe
+    DataDropdownPipe,
+    DashboardComponent,
+    AsideComponent,
+    AsideViewComponent,
+    DonutChartComponent
   ],
   imports: [
     BrowserModule,

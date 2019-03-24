@@ -1,22 +1,22 @@
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
-import { Router } from '@angular/router';
-import { Table } from 'primeng/table';
-import { DataService } from 'src/app/services/data.service';
 import { config } from 'src/app/core/config';
+import { Table } from 'primeng/table';
+import { Router } from '@angular/router';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
-  selector: 'app-onboard-project',
-  templateUrl: './onboard-project.component.html',
-  styleUrls: ['./onboard-project.component.scss'],
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class OnboardProjectComponent implements OnInit {
+export class DashboardComponent implements OnInit {
 
   listSortBy = [];
   projectDatas = [];
   userData: any[];
 
-  tableHeight = document.documentElement.clientHeight - (config.height_top_table + config.height_bottom_table) + 'px';
+  tableHeight = document.documentElement.clientHeight - config.height_top_dashboard + 'px';
 
   dropdownName = 'Sort by';
   sortBy = 'user_name';

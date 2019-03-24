@@ -1,0 +1,7 @@
+@import 'width-height';
+
+.wp-view {
+  .right-content {
+    width: calc(100% - #{$aside-w});
+  }
+}

@@ -29,9 +29,6 @@
       position: absolute;
     }
   }
-  .table-view {
-    height: calc(100% - #{$top-table + $bottom-table});
-  }
   @each $tuple in $buttonConfig {
     .button-#{nth($tuple, 1)} {
       width: nth($tuple, 2);

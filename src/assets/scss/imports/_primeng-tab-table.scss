@@ -62,4 +62,9 @@ body .ui-tabview.ui-tabview-right .ui-tabview-nav li a:hover{
   .checkbox {
     text-align: center;
   }
+  .no-checkbox {
+    :first-child {
+      padding-left: 33px;
+    }
+  }
 }
