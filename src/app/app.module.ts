@@ -12,11 +12,18 @@ import { HeaderComponent } from './components/header/header.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { ClickOutsideDirective } from './directives/click-outside.directive';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
-import { FileUploadModule } from 'primeng/fileupload';
 import { BackComponent } from './components/back/back.component';
+import { OnboardProjectComponent } from './pages/onboard-project/onboard-project.component';
+
+import { FileUploadModule } from 'primeng/fileupload';
+import { TabViewModule } from 'primeng/tabview';
+import { TableModule } from 'primeng/table';
+import { DataDropdownPipe } from './pipes/data-dropdown.pipe';
 
 const PrimeNGmodule = [
-  FileUploadModule
+  FileUploadModule,
+  TabViewModule,
+  TableModule
 ];
 
 @NgModule({
@@ -28,7 +35,9 @@ const PrimeNGmodule = [
     LogoComponent,
     ClickOutsideDirective,
     DropdownComponent,
-    BackComponent
+    BackComponent,
+    OnboardProjectComponent,
+    DataDropdownPipe
   ],
   imports: [
     BrowserModule,

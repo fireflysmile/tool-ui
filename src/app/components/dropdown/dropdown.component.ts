@@ -34,8 +34,8 @@ export class DropdownComponent implements OnChanges {
   onClickOutside(event: any) {
     this.isShowDropdown = false;
   }
-  selectItem(value) {
-    this.defaultValue = value;
+  selectItem(value: string, text: string) {
+    this.defaultValue = text;
     this.select.emit(value);
   }
   onShowDropdown(): void {

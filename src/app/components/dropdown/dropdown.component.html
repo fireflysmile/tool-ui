@@ -5,6 +5,6 @@
     <i class="icon-page icon-arrow"></i>
   </span>
   <ul *ngIf="isShowDropdown">
-    <li *ngFor="let value of values" (click)="selectItem(value.value)">{{value.label}}</li>
+    <li *ngFor="let value of values" (click)="selectItem(value.value, value.label)">{{value.label}}</li>
   </ul>
 </div>
