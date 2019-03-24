@@ -16,6 +16,8 @@ export class OnboardProjectComponent implements OnInit {
   projectDatas = [];
   userData: any[];
 
+  selected: number;
+
   tableHeight = document.documentElement.clientHeight - (config.height_top_table + config.height_bottom_table) + 'px';
 
   dropdownName = 'Sort by';
