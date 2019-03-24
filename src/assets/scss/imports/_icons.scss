@@ -30,7 +30,7 @@ $uris: (
   background-size: contain;
   width: nth($data, 1);
   height: nth($data, 2);
-  @if ($w && $h){
+  @if ($w and $h) {
     width: $w;
     height: $h;
   }
