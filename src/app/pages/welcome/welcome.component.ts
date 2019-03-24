@@ -46,4 +46,9 @@ export class WelcomeComponent implements OnInit {
     }
   }
 
+  redirectTo() {
+    this.import = false;
+    this.uploaded = false;
+  }
+
 }

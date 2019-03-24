@@ -1,0 +1,19 @@
+@import 'color';
+
+.btn-back {
+  font-size: 14px;
+  font-weight: 600;
+  color: $blue;
+  position: absolute;
+  top: 94px;
+  left: 34px;
+  .icon-back {
+    display: inline-block;
+    height: 9px;
+    width: 9px;
+    border-style: solid;
+    border-color: $blue;
+    border-width: 0 0 2px 2px;
+    transform: rotate(45deg);
+  }
+}

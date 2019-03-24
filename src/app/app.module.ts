@@ -13,6 +13,7 @@ import { LogoComponent } from './components/logo/logo.component';
 import { ClickOutsideDirective } from './directives/click-outside.directive';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { FileUploadModule } from 'primeng/fileupload';
+import { BackComponent } from './components/back/back.component';
 
 const PrimeNGmodule = [
   FileUploadModule
@@ -26,7 +27,8 @@ const PrimeNGmodule = [
     HeaderComponent,
     LogoComponent,
     ClickOutsideDirective,
-    DropdownComponent
+    DropdownComponent,
+    BackComponent
   ],
   imports: [
     BrowserModule,
