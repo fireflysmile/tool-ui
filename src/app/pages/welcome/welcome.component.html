@@ -18,7 +18,8 @@
 </div>
 
 <div class="welcome main-content" *ngIf="import && !uploaded">
-  <h3 class="title">INPUT DATA</h3>
+  <app-back (routerName)="redirectTo()"></app-back>
+  <h3 class="title fix-top">INPUT DATA</h3>
   <p class="sub-title">Please select the resource to migrate the data</p>
   <div class="search-box"></div>
   <div class="options box-content">
@@ -33,7 +34,8 @@
 </div>
 
 <div class="welcome main-content" *ngIf="uploaded">
-  <h3 class="title">UPLOAD CSV FILE</h3>
+  <app-back (routerName)="redirectTo()"></app-back>
+  <h3 class="title fix-top">UPLOAD CSV FILE</h3>
   <p class="sub-title fix">Upload all data as a separated tabs for users, application, department, and computers. in a
     single CSV.</p>
   <div class="search-box"></div>

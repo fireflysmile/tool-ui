@@ -10,3 +10,9 @@ body {
   max-width: 1024px;
   margin: auto
 }
+.p-grid {
+  margin: 0;
+  .p-col {
+    padding: 0
+  }
+}
