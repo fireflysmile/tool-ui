@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LogoComponent } from './components/logo/logo.component';
+import { UserDetailComponent } from './pages/user-detail/user-detail.component';
+import { AppDetailComponent } from './pages/app-detail/app-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { LogoComponent } from './components/logo/logo.component';
     LoginComponent,
     WelcomeComponent,
     HeaderComponent,
-    LogoComponent
+    LogoComponent,
+    UserDetailComponent,
+    AppDetailComponent
   ],
   imports: [
     BrowserModule,

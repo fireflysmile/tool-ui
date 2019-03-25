@@ -1,0 +1,129 @@
+@import "width-height";
+@import "icons";
+@import "color";
+
+.user-detail {
+  padding-left: 30px;
+  .icon-back {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-style: solid;
+    border-width: 0 0 2px 2px;
+    border-color: $blue;
+    transform: rotate(45deg);
+    margin-left: 3px;
+    margin-top: 38px;
+  }
+  .name-back {
+    font-size: 14px;
+    color: $blue;
+    padding-left: 8px;
+  }
+  h3 {
+    font-size: 24px;
+    color: $chathams-blue;
+    padding-top: 15px;
+  }
+  .table {
+    &.left {
+      width: calc(100% - #{$sub-aside});
+      float: left;
+    }
+    border: 1px solid $heather;
+    margin-top: 25px;
+    padding: 20px 20px 52px 20px;
+    .introduce {
+      p {
+        font-size: 14px;
+        color: $mine-shaft;
+      }
+      h4 {
+        font-size: 18px;
+        color: $chathams-blue;
+        padding-bottom: 32px;
+      }
+    }
+    .info {
+      display: flex;
+      flex-direction: row;
+      .content-left {
+        display: flex;
+        padding-right: 123px;
+        .content-name {
+          width:152px;
+          p {
+            font-size: 14px;
+            font-weight: bold;
+          }
+        }
+        .content-answered {
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .manager {
+      padding-top: 45px;
+      div {
+        span {
+          font-size: 14px;
+          padding-right: 37px;
+          &.name {
+            font-weight: bold;
+          }
+          &.email {
+            font-weight: bold;
+            font-style: italic;
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+  .right {
+    width: $sub-aside;
+    float: right;
+    .box-group {
+      float: right;
+      width: 347px;
+      margin-top: 25px;
+      &.diff{
+        margin-top: 40px;
+      }
+      p {
+        padding-left: 21px;
+        &.name {
+          display: flex;
+          align-items: center;
+          font-size: 15px;
+          color: $chathams-blue;
+          font-weight: bold;
+          background-color: $white-lilac;
+          padding-top: 13px;
+          padding-bottom: 12px;
+          border: 1px solid $heather;
+          
+          .icons {
+            margin-right: 16px;
+            &.icon-application {
+              @include icon(aplication, null, null);
+            }
+            &.icon-computer{
+              @include icon(computer, null, null);
+            }
+          }
+        }
+      }
+      .text{
+        padding-top: 13px;
+        padding-bottom: 11px;
+        padding-left: 21px;
+        border-bottom: 1px solid $heather;
+        border-left: 1px solid $heather;
+        border-right: 1px solid $heather;
+      }
+    }
+  }
+}
