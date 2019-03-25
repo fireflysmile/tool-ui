@@ -32,7 +32,7 @@ export class SearchComponent implements OnInit {
     );
   }
 
-  onClickOutside() {
+  onClickOutside(e: any) {
     this.closeSearch.emit();
   }
 

@@ -11,6 +11,10 @@ export class UpdateMigrationComponent implements OnInit {
 
   isData: any;
   datas: any;
+
+  addMigration: boolean;
+  addLoanerName: boolean;
+  addAdditionalApp: boolean;
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
@@ -22,4 +26,15 @@ export class UpdateMigrationComponent implements OnInit {
       }
     );
   }
+
+  fnAddMigration() {
+    this.addMigration = true;
+  }
+  fnAddLoanerName() {
+    this.addLoanerName = true;
+  }
+  fnAdditionalApp() {
+    this.addAdditionalApp = true;
+  }
+
 }
