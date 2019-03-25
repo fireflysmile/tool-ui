@@ -1,7 +1,7 @@
 <div class="options-fix-table p-grid p-align-center">
   <app-dropdown [style.margin-left]="'auto'" [values]="datas?.sort" [dropdownName]="dropdownName"
     [activeValue]="sortByName" (select)="action($event)"></app-dropdown>
-  <a href="javascript:;" class="btn-filter p-grid p-align-center">
+  <a href="javascript:;" class="btn-filter p-grid p-align-center" (click)="fnFilter(); $event.stopPropagation()">
     <span class="icon-filter"></span>
     Filter
   </a>
@@ -48,3 +48,7 @@
     <a href="javascript:;" class="button-ok" (click)="redirectTo('dashboard')">Publish</a>
   </div>
 </div>
+
+<ng-container *ngIf="isFilter">
+  <app-filter [datas]="datas?.config" (closeFilter)="fnCloseFilter()" (okFilter)="fnCloseFilter()"></app-filter>
+</ng-container>

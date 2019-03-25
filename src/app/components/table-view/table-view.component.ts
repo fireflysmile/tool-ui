@@ -15,6 +15,7 @@ export class TableViewComponent implements OnInit {
   @Input() select: boolean;
 
   selected: any;
+  isFilter: boolean;
   dropdownName = 'Sort by';
   constructor(
     private router: Router
@@ -29,6 +30,14 @@ export class TableViewComponent implements OnInit {
 
   redirectTo(key: string) {
     this. router.navigateByUrl(key);
+  }
+
+  fnFilter() {
+    this.isFilter = true;
+  }
+
+  fnCloseFilter() {
+    this.isFilter = false;
   }
 
 }

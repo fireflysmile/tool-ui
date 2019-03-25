@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,12 +27,15 @@ import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { TableViewComponent } from './components/table-view/table-view.component';
 import { ImportDataComponent } from './pages/import-data/import-data.component';
 import { UploadCsvComponent } from './pages/upload-csv/upload-csv.component';
+import { FilterComponent } from './components/filter/filter.component';
+import { DropdownModule } from 'primeng/dropdown';
 
 const PrimeNGmodule = [
   FileUploadModule,
   TabViewModule,
   TableModule,
-  ScrollPanelModule
+  ScrollPanelModule,
+  DropdownModule
 ];
 
 @NgModule({
@@ -51,7 +55,8 @@ const PrimeNGmodule = [
     DonutChartComponent,
     TableViewComponent,
     ImportDataComponent,
-    UploadCsvComponent
+    UploadCsvComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +64,7 @@ const PrimeNGmodule = [
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     PrimeNGmodule
   ],
   providers: [DataService],

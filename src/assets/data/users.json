@@ -1,5 +1,5 @@
 {
-  "config":[
+  "config": [
     {
       "field": "user_id",
       "header": "User ID",
@@ -18,7 +18,25 @@
     {
       "field": "support_language",
       "header": "Support Language",
-      "width": 150
+      "width": 150,
+      "options": [
+        {
+          "label": "English",
+          "value": "English"
+        },
+        {
+          "label": "Italian",
+          "value": "Italian"
+        },
+        {
+          "label": "Ukrainian",
+          "value": "Ukrainian"
+        },
+        {
+          "label": "Vietnamese",
+          "value": "Vietnamese"
+        }
+      ]
     },
     {
       "field": "site_code",
@@ -53,16 +71,93 @@
     {
       "field": "state",
       "header": "State",
-      "width": 150
+      "width": 150,
+      "options": [
+        {
+          "label": "AL",
+          "value": "AL"
+        },
+        {
+          "label": "AZ",
+          "value": "AZ"
+        },
+        {
+          "label": "AK",
+          "value": "AK"
+        },
+        {
+          "label": "AR",
+          "value": "AR"
+        },
+        {
+          "label": "CA",
+          "value": "CA"
+        },
+        {
+          "label": "CO",
+          "value": "CO"
+        },
+        {
+          "label": "CT",
+          "value": "CT"
+        },
+        {
+          "label": "DE",
+          "value": "DE"
+        },
+        {
+          "label": "DC",
+          "value": "DC"
+        },
+        {
+          "label": "KS",
+          "value": "KS"
+        }
+      ]
     },
     {
       "field": "department",
       "header": "Department",
-      "width": 150
+      "width": 150,
+      "options": [
+        {
+          "label": "finance",
+          "value": "finance"
+        },
+        {
+          "label": "banking",
+          "value": "banking"
+        }
+      ]
     },
     {
       "field": "email_address",
       "header": "Email Address",
+      "width": 250
+    },
+    {
+      "field": "site",
+      "header": "site",
+      "width": 250,
+      "options": [
+        {
+          "label": "microsoft",
+          "value": "http://microsoft.com"
+        },
+        {
+          "label": "microsoftoffice",
+          "value": "http://microsoftoffice.com"
+        }
+      ]
+    },
+    {
+      "field": "manager_name",
+      "header": "Manager Name",
+      "width": 150
+    },
+    {
+      "field": "manager_email",
+      "header": "Manager Email",
       "width": 250
     }
   ],
@@ -80,7 +175,10 @@
       "city": "Monroe",
       "state": "AZ",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
     },
     {
       "user_id": 123123,
@@ -95,7 +193,10 @@
       "city": "Tucson",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
     },
     {
       "user_id": 3433,
@@ -110,7 +211,10 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
     },
     {
       "user_id": 213423,
@@ -125,7 +229,10 @@
       "city": "Monroe",
       "state": "AZ",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
     },
     {
       "user_id": 35757,
@@ -140,9 +247,12 @@
       "city": "Tucson",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 7090,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -155,9 +265,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 20080,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -170,9 +283,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 5650,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -185,9 +301,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 7080,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -200,9 +319,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 2030,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -215,9 +337,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 3080,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -230,9 +355,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 78000,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -245,9 +373,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 2320,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -260,9 +391,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 3010,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -275,9 +409,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 7800,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -290,9 +427,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 2300,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -305,9 +445,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 3100,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -320,9 +463,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 700,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -335,9 +481,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 200,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -350,9 +499,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 3100,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -365,9 +517,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 7800,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -380,9 +535,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 8900,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -395,9 +553,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 302,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -410,9 +571,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 11323,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -425,9 +589,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 44123,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -440,9 +607,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 21232,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -455,9 +625,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 23489,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -470,9 +643,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 2144123,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -485,9 +661,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 1232,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -500,9 +679,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 7932,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -515,9 +697,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 4144123,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -530,9 +715,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 31232,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -545,9 +733,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 42389,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -560,9 +751,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 44123,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -575,9 +769,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 312389,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -590,9 +787,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 78789,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -605,9 +805,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 214123,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -620,9 +823,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 12232,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -635,9 +841,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 8979,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -650,9 +859,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 23232,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -665,9 +877,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 311232,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -680,9 +895,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 7899,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -695,9 +913,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 23144123,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -710,9 +931,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 3232,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -725,9 +949,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 89,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -740,9 +967,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 2324123,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -755,9 +985,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 3123,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -770,9 +1003,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 789,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -785,9 +1021,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 23,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -800,9 +1039,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 31231,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -815,9 +1057,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 789,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -830,9 +1075,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 2344123,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -845,9 +1093,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 31232,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -860,9 +1111,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 7789,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -875,9 +1129,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 2323123,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -890,9 +1147,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 231232,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -905,9 +1165,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 7889,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -920,9 +1183,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 23232143,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -935,9 +1201,12 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
+    },
+    {
       "user_id": 123,
       "user_name": "Ivan T Moody",
       "vip": "Yes",
@@ -950,7 +1219,10 @@
       "city": "Bedford",
       "state": "LA",
       "department": "Lorem Ipsum",
-      "email_address": "gomez@gmail.com"
+      "email_address": "gomez@gmail.com",
+      "site": "http://microsoftoffice.com",
+      "manager_name": "fireflysmile",
+      "manager_email": "nvcuong1006@gmail.com"
     }
   ],
   "sort": [
