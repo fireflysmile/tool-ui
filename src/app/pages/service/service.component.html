@@ -1,3 +1,35 @@
-<p>
-  service works!
-</p>
+<app-header></app-header>
+<div class="self-service-page">
+  <h1 class="title">self service</h1>
+  <form>
+    <div class="main">
+      <div class="left-div">
+        <h2><span>Welcome</span><br> Russell V Gomez</h2>
+        <div class="form-group">
+          <div class="row">
+            <label>Current Computer</label>
+            <div class="dropdown">
+              <p-dropdown name="computer" [(ngModel)]="computer" [options]="computerList" optionLabel="computer_name"></p-dropdown>
+            </div>
+          </div>
+          <div class="row">
+            <label>Current Department</label>
+            <div class="dropdown">
+              <p-dropdown  name="department" [(ngModel)]="computer" [options]="computerList" optionLabel="department_name"></p-dropdown>
+            </div>
+          </div>
+          <div class="row">
+            <label>Current Location</label>
+            <div class="dropdown">
+              <p-dropdown  name="location" [(ngModel)]="location" [options]="locationList" optionLabel="office_location"></p-dropdown>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right-div">
+        <p-calendar name="mirgationDate" [(ngModel)]="mirgationDate" placeholder="Select Date" icon="ico calender-ico" [showIcon]="true" [locale]="roCalender"></p-calendar>
+      </div>
+    </div>
+    <button>update</button>
+  </form>
+</div>
