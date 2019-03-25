@@ -1,0 +1,101 @@
+@import 'icons';
+@import 'color';
+@import 'mixin';
+@import 'config';
+@import 'width-height';
+
+.upload {
+  min-height: $min-h;
+  .title {
+    font-size: 30px;
+    color: $chathams-blue;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 34px;
+    font-weight: 800;
+    &.fix-top {
+      padding-top: 60px;
+    }
+  }
+  .sub-title {
+    font-size: 24px;
+    color: $dusty-gray;
+    text-align: center;
+  }
+  .search-box {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $cloud;
+    height: 70px;
+    margin-top: 3px;
+    margin-bottom: 21px;
+    .icon-search {
+      @include icon(search, null, null);
+      cursor: pointer;
+    }
+    .input {
+      border: none;
+      padding-left: 35px;
+      width: 60%;
+      font-size: 15px;
+    }
+  }
+  .options {
+    margin-left: -18px;
+    margin-left: -18px;
+    .col {
+      width: 25%;
+      padding: 18px;
+      float: left;
+      .item {
+        width: 100%;
+        height: 200px;
+        display: inline-block;
+        border-radius: 10px;
+        text-decoration: none;
+        text-align: center;
+        padding-top: 33px;
+        @each $icons in $iconsConfig {
+          &.#{nth($icons, 1)} {
+            @include linear-gradient(nth($icons, 2), nth($icons, 3));
+            .icon {
+              @include icon(nth($icons, 1), null, null);
+              margin-bottom: 20px;
+            }
+          }
+        }
+        .text {
+          font-size: 18px;
+          color: white;
+          line-height: 20px;
+          display: inline-block;
+          padding: 0 23px;
+        }
+      }
+      &-full {
+        width: 452px;
+        float: none;
+        margin: auto;
+      }
+    }
+  }
+  .suport-text {
+    font-size: 18px;
+    color: $dove-gray;
+    display: inline-block;
+    margin-top: 50px;
+    text-align: center;
+    a {
+      color: $blue;
+    }
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+@include placeholder {
+  color: $dusty-gray;
+  font-size: 15px;
+}

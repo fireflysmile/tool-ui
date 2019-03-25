@@ -1,6 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'fonts';
+
+body {
+  font-family: "ProximaNova";
+  font-weight: 400;
+  height: 768px;
+}
 
 .main-content {
-  max-width: 906px;
+  max-width: 1024px;
   margin: auto
+}
+.p-grid {
+  margin: 0;
+  .p-col {
+    padding: 0
+  }
 }

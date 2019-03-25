@@ -1,0 +1,78 @@
+@import 'color';
+
+.ui-tabview {
+  padding: 0;
+  .ui-tabview-panel,
+  .ui-tabview-panels {
+    padding: 0;
+  }
+  &.ui-tabview-top {
+    >.ui-tabview-nav {
+      padding: 0 34px;
+    }
+  }
+}
+
+
+
+body .ui-tabview.ui-tabview-top .ui-tabview-nav li a,
+body .ui-tabview.ui-tabview-bottom .ui-tabview-nav li a,
+body .ui-tabview.ui-tabview-left .ui-tabview-nav li a,
+body .ui-tabview.ui-tabview-right .ui-tabview-nav li a{
+  float: none;
+  display: inline-block;
+  color: $dusty-gray;
+  padding: 0;
+  font-weight: 400;
+  height: 45px;
+  margin-right: 60px;
+}
+
+body .ui-tabview.ui-tabview-top .ui-tabview-nav li.ui-state-active a,
+body .ui-tabview.ui-tabview-bottom .ui-tabview-nav li.ui-state-active a,
+body .ui-tabview.ui-tabview-left .ui-tabview-nav li.ui-state-active a,
+body .ui-tabview.ui-tabview-right .ui-tabview-nav li.ui-state-active a,
+body .ui-tabview.ui-tabview-top .ui-tabview-nav li a:hover,
+body .ui-tabview.ui-tabview-bottom .ui-tabview-nav li a:hover,
+body .ui-tabview.ui-tabview-left .ui-tabview-nav li a:hover,
+body .ui-tabview.ui-tabview-right .ui-tabview-nav li a:hover{
+  border-bottom: 4px solid $blue;
+  color: $chathams-blue;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ui-table .ui-table-thead>tr>th {
+  padding: .25em .5em;
+  background-color: $white-lilac;
+  height: 50px;
+  color: $mine-shaft;
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 1px solid $heather;
+}
+.ui-table .ui-table-tbody>tr>td {
+  height: 50px;
+  color: $mine-shaft;
+  border-bottom: 1px solid $heather;
+}
+.ui-table .ui-table-tbody>tr.ui-state-highlight>td {
+  background-color: $zumthor;
+}
+
+.ui-table {
+  .ui-table-thead,
+  .ui-table-tbody {
+    tr {
+      .checkbox {
+        text-align: right;
+        padding-right: 14px;
+      }
+    }
+  }
+  .no-checkbox {
+    :first-child {
+      padding-left: 33px;
+    }
+  }
+}

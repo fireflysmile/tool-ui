@@ -1,0 +1,56 @@
+@import 'mixin';
+@import 'config';
+@import 'icons';
+@import 'width-height';
+@import 'primeng';
+
+.onboard-project {
+  min-height: $min-h;
+  padding-top: 40px;
+  .options-table {
+    padding: 0 35px;
+    .title-table {
+      font-size: 24px;
+      color: $chathams-blue;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding-top: 10px;
+      padding-bottom: 23px;
+    }
+    .search-table {
+      height: 38px;
+      border: none;
+      border-bottom: 1px solid $geyser;
+      width: 530px;
+      margin-right: 13px;
+    }
+
+    #import {
+      display: none;
+      position: absolute;
+    }
+  }
+  @each $tuple in $buttonConfig {
+    .button-#{nth($tuple, 1)} {
+      width: nth($tuple, 2);
+      height: nth($tuple, 3);
+      line-height: nth($tuple, 3);
+      display: inline-block;
+      background-color: $blue;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+      text-align: center;
+      color: white;
+      font-weight: 600;
+      margin-left: 25px;
+      text-decoration: none;
+    }
+  }
+}
+
+
+@include placeholder {
+  color: $silver;
+  font-size: 15px;
+}

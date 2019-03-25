@@ -1,0 +1,10 @@
+<div class="box-dropdown">
+  <span class="name">{{ dropdownName }}</span>
+  <span class="value-active" (click)="onShowDropdown()" clickOutside (clickOutside)="onClickOutside($event)">
+    {{defaultValue}}
+    <i class="icon-page icon-arrow"></i>
+  </span>
+  <ul *ngIf="isShowDropdown">
+    <li *ngFor="let value of values" (click)="selectItem(value.value, value.label)">{{value.label}}</li>
+  </ul>
+</div>

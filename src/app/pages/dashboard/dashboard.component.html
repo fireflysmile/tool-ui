@@ -1,0 +1,66 @@
+<app-aside-view>
+  <div class="wp-dashboard">
+    <h2 class="title">DASHBOARD</h2>
+    <div class="box-three p-grid p-justify-between">
+      <div class="box box-readiness">
+        <h4 class="box-name">Migration Status</h4>
+        <app-donut-chart [numberData]="50" [donutColor]="'white'" [insetColor]="'#f95d91'"></app-donut-chart>
+      </div>
+      <div class="box box-onboard">
+        <h4 class="box-name">Upcoming Schedule</h4>
+        <div class="detail">
+          <p>March 11,2019 at 09:00 AM</p>
+          <span>1404 Locust Court <br /> Gardena, CA</span>
+        </div>
+      </div>
+      <div class="box box-input-data p-grid p-justify-between">
+        <div class="child child-user p-col">
+          <span class="icon"></span>
+          <p class="number">400</p>
+          <span class="name">Users</span>
+        </div>
+        <div class="child child-departments p-col">
+          <span class="icon"></span>
+          <p class="number">20</p>
+          <span class="name">Departments</span>
+        </div>
+        <div class="child child-applications p-col">
+          <span class="icon"></span>
+          <p class="number">20</p>
+          <span class="name">Applications</span>
+        </div>
+        <div class="child child-computer p-col">
+          <span class="icon"></span>
+          <p class="number">5</p>
+          <span class="name">Computer</span>
+        </div>
+      </div>
+    </div>
+
+    <p-tabView>
+      <p-tabPanel header="Users">
+        <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
+          <app-table-view [datas]="users" [sortBy]="usersSortBy" [sortByName]="usersSortByName"></app-table-view>
+        </p-scrollPanel>
+      </p-tabPanel>
+      <p-tabPanel header="Application">
+        <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
+          <app-table-view [datas]="aplications" [sortBy]="aplicationsSortBy" [sortByName]="aplicationsSortByName">
+          </app-table-view>
+        </p-scrollPanel>
+      </p-tabPanel>
+      <p-tabPanel header="Computer">
+        <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
+          <app-table-view [datas]="computers" [sortBy]="computersSortBy" [sortByName]="computersSortByName">
+          </app-table-view>
+        </p-scrollPanel>
+      </p-tabPanel>
+      <p-tabPanel header="Department">
+        <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
+          <app-table-view [datas]="departments" [sortBy]="departmentsSortBy" [sortByName]="departmentsSortByName">
+          </app-table-view>
+        </p-scrollPanel>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+</app-aside-view>

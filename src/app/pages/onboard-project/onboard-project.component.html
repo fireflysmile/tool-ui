@@ -1,0 +1,38 @@
+<app-header></app-header>
+<app-back (routerName)="redirectTo('welcome')"></app-back>
+<div class="onboard-project">
+  <div class="options-table p-grid p-justify-between">
+    <div class="p-col">
+      <h3 class="title-table">ONBOARD TO PROJECT DATA</h3>
+    </div>
+    <div>
+      <input type="text" placeholder="Project Name" class="search-table">
+      <label for="import" class="button-ok">
+        Browse
+        <input type="file" id="import" accept=".csv" value="">
+      </label>
+    </div>
+  </div>
+  <p-tabView>
+    <p-tabPanel header="Users">
+      <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
+        <app-table-view [select]="true" [datas]="users" [sortBy]="usersSortBy" [sortByName]="usersSortByName"></app-table-view>
+      </p-scrollPanel>
+    </p-tabPanel>
+    <p-tabPanel header="Application">
+      <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
+        <app-table-view [select]="true" [datas]="aplications" [sortBy]="aplicationsSortBy" [sortByName]="aplicationsSortByName"></app-table-view>
+      </p-scrollPanel>
+    </p-tabPanel>
+    <p-tabPanel header="Computer">
+      <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
+        <app-table-view [select]="true" [datas]="computers" [sortBy]="computersSortBy" [sortByName]="computersSortByName"></app-table-view>
+      </p-scrollPanel>
+    </p-tabPanel>
+    <p-tabPanel header="Department">
+      <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
+        <app-table-view [select]="true" [datas]="departments" [sortBy]="departmentsSortBy" [sortByName]="departmentsSortByName"></app-table-view>
+      </p-scrollPanel>
+    </p-tabPanel>
+  </p-tabView>
+</div>

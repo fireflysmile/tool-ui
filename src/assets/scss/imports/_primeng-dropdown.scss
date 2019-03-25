@@ -1,0 +1,16 @@
+@import 'color';
+
+.ui-dropdown-panel {
+  .ui-dropdown-list {
+    background-color: white;
+  }
+}
+
+.ui-dropdown {
+  .ui-dropdown-trigger {
+    .ui-dropdown-trigger-icon {
+      color: $blue;
+      font-size: 12px;
+    }
+  }
+}
