@@ -34,6 +34,12 @@ import { UserDetailComponent } from './pages/user-detail/user-detail.component';
 import { ApplicationDetailComponent } from './pages/application-detail/application-detail.component';
 import { ComputerDetailComponent } from './pages/computer-detail/computer-detail.component';
 import { UpdateMigrationComponent } from './pages/computer-detail/update-migration/update-migration.component';
+import { ReadinessComponent } from './pages/readiness/readiness.component';
+import { PlanningComponent } from './pages/planning/planning.component';
+import { ReportComponent } from './pages/report/report.component';
+import { SurveyComponent } from './pages/survey/survey.component';
+import { EmailComponent } from './pages/email/email.component';
+import { ServiceComponent } from './pages/service/service.component';
 
 const PrimeNGmodule = [
   FileUploadModule,
@@ -66,7 +72,13 @@ const PrimeNGmodule = [
     UserDetailComponent,
     ApplicationDetailComponent,
     ComputerDetailComponent,
-    UpdateMigrationComponent
+    UpdateMigrationComponent,
+    ReadinessComponent,
+    PlanningComponent,
+    ReportComponent,
+    SurveyComponent,
+    EmailComponent,
+    ServiceComponent
   ],
   imports: [
     BrowserModule,

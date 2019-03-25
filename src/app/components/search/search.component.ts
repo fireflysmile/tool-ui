@@ -32,6 +32,8 @@ export class SearchComponent implements OnInit {
     );
   }
 
+  action(e: any) { }
+
   onClickOutside(e: any) {
     this.closeSearch.emit();
   }

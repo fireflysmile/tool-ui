@@ -7,7 +7,7 @@
             <app-dropdown [values]="listSearchBy" [dropdownName]="dropdownName"
             [activeValue]="searchBy" (select)="action($event)"></app-dropdown>
         </div>
-        <span class="icon-close" (click)="onClickOutside()"></span>
+        <span class="icon-close" (click)="onClickOutside($event)"></span>
       </div>
     </div>
   </div>
