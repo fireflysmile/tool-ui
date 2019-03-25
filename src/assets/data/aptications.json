@@ -1,0 +1,182 @@
+{
+  "config":[
+    {
+      "field": "application_name",
+      "header": "Application Name",
+      "width": 170
+    },
+    {
+      "field": "version",
+      "header": "Version",
+      "width": 110
+    },
+    {
+      "field": "manufacturer",
+      "header": "Manufacturer",
+      "width": 150
+    },
+    {
+      "field": "language",
+      "header": "Language",
+      "width": 110
+    },
+    {
+      "field": "package_ID",
+      "header": "Package ID",
+      "width": 160
+    },
+    {
+      "field": "compatibility_status",
+      "header": "Compatibility Status",
+      "width": 160
+    },
+    {
+      "field": "type_of_install",
+      "header": "Type of install",
+      "width": 100
+    },
+    {
+      "field": "sourcepath",
+      "header": "Sourcepath",
+      "width": 180
+    },
+    {
+      "field": "status",
+      "header": "Status",
+      "width": 150
+    },
+    {
+      "field": "email_address",
+      "header": "Email Address",
+      "width": 250
+    }
+  ],
+  "datas": [
+    {
+      "application_name": "Visio",
+      "version": "3.0.1.1",
+      "manufacturer": "Microsoft",
+      "language": "English",
+      "package_ID": "Package Name",
+      "compatibility_status": "Win 10",
+      "type_of_install": "Manual",
+      "sourcepath": "Source Media",
+      "status": "Rationalization",
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "application_name": "Office",
+      "version": "3.0.1.1",
+      "manufacturer": "Microsoft",
+      "language": "English",
+      "package_ID": "Package Name",
+      "compatibility_status": "Win 10",
+      "type_of_install": "Manual",
+      "sourcepath": "Source Media",
+      "status": "Rationalization",
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "application_name": "Photoshop",
+      "version": "3.0.1.1",
+      "manufacturer": "Microsoft",
+      "language": "English",
+      "package_ID": "Package Name",
+      "compatibility_status": "Win 10",
+      "type_of_install": "Manual",
+      "sourcepath": "Source Media",
+      "status": "Rationalization",
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "application_name": "Illustrator",
+      "version": "3.0.1.1",
+      "manufacturer": "Microsoft",
+      "language": "English",
+      "package_ID": "Package Name",
+      "compatibility_status": "Win 10",
+      "type_of_install": "Manual",
+      "sourcepath": "Source Media",
+      "status": "Rationalization",
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "application_name": "After Effect",
+      "version": "3.0.1.1",
+      "manufacturer": "Microsoft",
+      "language": "English",
+      "package_ID": "Package Name",
+      "compatibility_status": "Win 10",
+      "type_of_install": "Manual",
+      "sourcepath": "Source Media",
+      "status": "Rationalization",
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "application_name": "Premiere",
+      "version": "3.0.1.1",
+      "manufacturer": "Microsoft",
+      "language": "English",
+      "package_ID": "Package Name",
+      "compatibility_status": "Win 10",
+      "type_of_install": "Manual",
+      "sourcepath": "Source Media",
+      "status": "Rationalization",
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "application_name": "Animate",
+      "version": "3.0.1.1",
+      "manufacturer": "Microsoft",
+      "language": "English",
+      "package_ID": "Package Name",
+      "compatibility_status": "Win 10",
+      "type_of_install": "Manual",
+      "sourcepath": "Source Media",
+      "status": "Rationalization",
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "application_name": "Adobe XD",
+      "version": "3.0.1.1",
+      "manufacturer": "Microsoft",
+      "language": "English",
+      "package_ID": "Package Name",
+      "compatibility_status": "Win 10",
+      "type_of_install": "Manual",
+      "sourcepath": "Source Media",
+      "status": "Rationalization",
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "application_name": "Corel Draw",
+      "version": "3.0.1.1",
+      "manufacturer": "Microsoft",
+      "language": "English",
+      "package_ID": "Package Name",
+      "compatibility_status": "Win 10",
+      "type_of_install": "Manual",
+      "sourcepath": "Source Media",
+      "status": "Rationalization",
+      "email_address": "gomez@gmail.com"
+    }
+  ],
+  "sort": [
+    {
+      "value": "application_name",
+      "label": "Application Name"
+    },
+    {
+      "value": "package_ID",
+      "label": "Package ID"
+    },
+    {
+      "value": "compatibility_status",
+      "label": "Compatibility Status"
+    },
+    {
+      "value": "status",
+      "label": "Status"
+    }
+  ]
+}

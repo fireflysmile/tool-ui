@@ -1,15 +1,16 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { config } from 'src/app/core/config';
+import { Table } from 'primeng/table';
 import { Router } from '@angular/router';
 import { DataService } from 'src/app/services/data.service';
-import { config } from 'src/app/core/config';
 
 @Component({
-  selector: 'app-onboard-project',
-  templateUrl: './onboard-project.component.html',
-  styleUrls: ['./onboard-project.component.scss'],
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class OnboardProjectComponent implements OnInit {
+export class DashboardComponent implements OnInit {
 
   getHeight: number;
   tabHeight: string;
@@ -34,13 +35,13 @@ export class OnboardProjectComponent implements OnInit {
   dropdownName = 'Sort by';
 
   constructor(
-    private dataService: DataService,
-    private router: Router
+    private router: Router,
+    private dataService: DataService
   ) { }
 
   ngOnInit() {
 
-    this.getHeight = document.documentElement.clientHeight - (config.height_top_table + config.height_bottom_table);
+    this.getHeight = document.documentElement.clientHeight - config.height_top_dashboard;
     if (this.getHeight > config.min_table) {
       this.tabHeight = this.getHeight + 'px';
     } else {
@@ -75,7 +76,7 @@ export class OnboardProjectComponent implements OnInit {
   }
 
   redirectTo(key: string) {
-    this.router.navigateByUrl(key);
+    this. router.navigateByUrl(key);
   }
 
 }

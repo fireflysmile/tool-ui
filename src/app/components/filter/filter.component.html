@@ -1,0 +1,18 @@
+<div class="filter">
+  <form [formGroup]="formFilter" (ngSubmit)="onSubmit()" class="filter-content" clickOutside (clickOutside)="onClickOutside($event)">
+    <div class="content">
+        <h4>FILTER</h4>
+        <div class="filter-row p-grid p-align-center" *ngFor="let filter of datas">
+          <label>{{ filter.header }}</label>
+          <div class="input">
+            <input type="text" *ngIf="!filter.options" [hidden]="filter.header === 'Vip'">
+            <span class="vip" *ngIf="filter.header === 'Vip'">Yes</span>
+            <div class="dropdown">
+              <p-dropdown *ngIf="filter.options" [options]="filter.options"></p-dropdown>
+            </div>
+          </div>
+        </div>
+    </div>
+    <button type="submit" class="btn-filter">Filter</button>
+  </form>
+</div>

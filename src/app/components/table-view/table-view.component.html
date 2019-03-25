@@ -1,0 +1,54 @@
+<div class="options-fix-table p-grid p-align-center">
+  <app-dropdown [style.margin-left]="'auto'" [values]="datas?.sort" [dropdownName]="dropdownName"
+    [activeValue]="sortByName" (select)="action($event)"></app-dropdown>
+  <a href="javascript:;" class="btn-filter p-grid p-align-center" (click)="fnFilter(); $event.stopPropagation()">
+    <span class="icon-filter"></span>
+    Filter
+  </a>
+</div>
+
+<p-table class="table-view" [(selection)]="selected" [columns]="datas?.config" [sortField]="sortBy" [value]="datas?.datas"
+  [style]="{width:'100%'}">
+  <ng-template pTemplate="colgroup" let-columns>
+    <colgroup>
+      <col [style.width.px]="70" *ngIf="select">
+      <col *ngFor="let col of columns" [style.width.px]="col.width">
+    </colgroup>
+  </ng-template>
+  <ng-template pTemplate="header" let-columns>
+    <tr [class.no-checkbox]="!select">
+      <th class="checkbox" *ngIf="select">
+        <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+      </th>
+      <th *ngFor="let col of columns">
+        {{col.header}}
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr [pSelectableRow]="rowData" [class.no-checkbox]="!select">
+      <td class="checkbox" *ngIf="select">
+        <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+      </td>
+      <td *ngFor="let col of columns">
+        {{rowData[col.field]}}
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+
+<div class="table-bottom p-grid p-align-center p-justify-between" *ngIf="select">
+  <div class="number-select">
+    <p *ngIf="selected?.length > 0">
+      <span>{{selected?.length}} Item(s)</span> selected
+    </p>
+  </div>
+  <div>
+    <a href="javascript:;" class="button-ok" (click)="redirectTo('dashboard')">Review</a>
+    <a href="javascript:;" class="button-ok" (click)="redirectTo('dashboard')">Publish</a>
+  </div>
+</div>
+
+<ng-container *ngIf="isFilter">
+  <app-filter [datas]="datas?.config" (closeFilter)="fnCloseFilter()" (okFilter)="fnCloseFilter()"></app-filter>
+</ng-container>

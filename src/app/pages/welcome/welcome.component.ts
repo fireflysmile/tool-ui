@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DropdownValue } from 'src/app/components/dropdown/dropdown.component';
 import { DataService } from 'src/app/services/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-welcome',
@@ -19,7 +20,10 @@ export class WelcomeComponent implements OnInit {
   import: boolean;
   uploaded: boolean;
 
-  constructor(private dataService: DataService) { }
+  constructor(
+    private dataService: DataService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.dataService.get('welcome.json').subscribe(
@@ -30,25 +34,11 @@ export class WelcomeComponent implements OnInit {
     );
   }
 
-  action(e): void {
+  action(e: string): void {
   }
 
-  select(key) {
-    if (key === 'Input Data') {
-      this.dataService.get('welcome.json').subscribe(
-        (data: any) => {
-          this.inputDatas = data.inputdatas;
-          this.import = true;
-        }
-      );
-    } else if (key === 'CSV File') {
-      this.uploaded = true;
-    }
-  }
-
-  redirectTo() {
-    this.import = false;
-    this.uploaded = false;
+  redirectTo(routerName: string) {
+    this.router.navigateByUrl(routerName);
   }
 
 }

@@ -1,0 +1,94 @@
+{
+  "config":[
+    {
+      "field": "department_name",
+      "header": "Department Name",
+      "width": 400
+    },
+    {
+      "field": "employees",
+      "header": "Employees",
+      "width": 200
+    },
+    {
+      "field": "office_location",
+      "header": "Office Location",
+      "width": 400
+    },
+    {
+      "field": "applications",
+      "header": "Applications",
+      "width": 200
+    },
+    {
+      "field": "email_address",
+      "header": "Email Address",
+      "width": 250
+    }
+  ],
+  "datas": [
+    {
+      "department_name": "Commercial",
+      "employees": 40,
+      "office_location": "1402 Heather Sees Way,SPARTANSBURG,PA",
+      "applications": 32,
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "department_name": "Business Education",
+      "employees": 50,
+      "office_location": "4666 Ingram Road, KINSLEY, KS",
+      "applications": 32,
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "department_name": "Accounting",
+      "employees": 23,
+      "office_location": "946 Whaley Lane, New Berlin, WI",
+      "applications": 32,
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "department_name": "Economics",
+      "employees": 35,
+      "office_location": "4670 Collins Avenue, Columbus, OH",
+      "applications": 32,
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "department_name": "Information Management",
+      "employees": 56,
+      "office_location": "3266 White Pine Lane, LOS ANGELES, CA",
+      "applications": 32,
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "department_name": "Marketing",
+      "employees": 234,
+      "office_location": "1685 Friendship Lane, Oakland, CA",
+      "applications": 45,
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "department_name": "Finance",
+      "employees": 235,
+      "office_location": "848 Friendship Lane, San Martin, CA",
+      "applications": 87,
+      "email_address": "gomez@gmail.com"
+    }
+  ],
+  "sort": [
+    {
+      "value": "department_name",
+      "label": "Department Name"
+    },
+    {
+      "value": "employees",
+      "label": "Employees"
+    },
+    {
+      "value": "applications",
+      "label": "Applications"
+    }
+  ]
+}

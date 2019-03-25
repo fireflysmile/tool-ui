@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div class="upload main-content">
+  <app-back (routerName)="redirectTo('welcome')"></app-back>
+  <h3 class="title fix-top">UPLOAD CSV FILE</h3>
+  <p class="sub-title fix">Upload all data as a separated tabs for users, application, department, and computers. in a
+    single CSV.</p>
+  <div class="search-box"></div>
+  <div class="options box-content">
+    <div class="col col-full">
+      <a href="javascript:;" class="item csv">
+        <i class="icon"></i><br />
+        <p class="text">Drop your <span>CSV File here</span></p>
+      </a>
+    </div>
+  </div>
+  <div [style.text-align]="'center'">
+    <p class="suport-text">Learn how to format your CSV File <a href="javascript:;">here</a></p>
+  </div>
+  <div class="clear">
+    <p-fileUpload name="myfile[]" multiple="multiple" accept=".csv" showUploadButton="false" showCancelButton="false"
+      maxFileSize="1000000"></p-fileUpload>
+  </div>
+</div>

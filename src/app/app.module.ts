@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,11 +20,22 @@ import { FileUploadModule } from 'primeng/fileupload';
 import { TabViewModule } from 'primeng/tabview';
 import { TableModule } from 'primeng/table';
 import { DataDropdownPipe } from './pipes/data-dropdown.pipe';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { AsideViewComponent } from './components/aside-view/aside-view.component';
+import { DonutChartComponent } from './components/donut-chart/donut-chart.component';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
+import { TableViewComponent } from './components/table-view/table-view.component';
+import { ImportDataComponent } from './pages/import-data/import-data.component';
+import { UploadCsvComponent } from './pages/upload-csv/upload-csv.component';
+import { FilterComponent } from './components/filter/filter.component';
+import { DropdownModule } from 'primeng/dropdown';
 
 const PrimeNGmodule = [
   FileUploadModule,
   TabViewModule,
-  TableModule
+  TableModule,
+  ScrollPanelModule,
+  DropdownModule
 ];
 
 @NgModule({
@@ -37,7 +49,14 @@ const PrimeNGmodule = [
     DropdownComponent,
     BackComponent,
     OnboardProjectComponent,
-    DataDropdownPipe
+    DataDropdownPipe,
+    DashboardComponent,
+    AsideViewComponent,
+    DonutChartComponent,
+    TableViewComponent,
+    ImportDataComponent,
+    UploadCsvComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +64,7 @@ const PrimeNGmodule = [
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     PrimeNGmodule
   ],
   providers: [DataService],

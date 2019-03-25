@@ -5,6 +5,7 @@
 
 .login {
   display: flex;
+  min-height: $min-h;
   height: 100vh;
   .left {
     width: $main-login;
