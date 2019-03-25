@@ -21,7 +21,7 @@ export class FilterComponent implements OnInit {
     this.formFilter = this.fb.group({});
   }
 
-  onClickOutside() {
+  onClickOutside(e: any) {
     this.closeFilter.emit();
   }
 
