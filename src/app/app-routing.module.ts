@@ -10,6 +10,12 @@ import { UserDetailComponent } from './pages/user-detail/user-detail.component';
 import { ApplicationDetailComponent } from './pages/application-detail/application-detail.component';
 import { ComputerDetailComponent } from './pages/computer-detail/computer-detail.component';
 import { UpdateMigrationComponent } from './pages/computer-detail/update-migration/update-migration.component';
+import { ReadinessComponent } from './pages/readiness/readiness.component';
+import { PlanningComponent } from './pages/planning/planning.component';
+import { ReportComponent } from './pages/report/report.component';
+import { SurveyComponent } from './pages/survey/survey.component';
+import { EmailComponent } from './pages/email/email.component';
+import { ServiceComponent } from './pages/service/service.component';
 
 const routes: Routes = [
   {
@@ -29,6 +35,24 @@ const routes: Routes = [
   },
   {
     path: 'dashboard', component: DashboardComponent
+  },
+  {
+    path: 'readiness', component: ReadinessComponent
+  },
+  {
+    path: 'planning', component: PlanningComponent
+  },
+  {
+    path: 'report', component: ReportComponent
+  },
+  {
+    path: 'survey', component: SurveyComponent
+  },
+  {
+    path: 'email', component: EmailComponent
+  },
+  {
+    path: 'service', component: ServiceComponent
   },
   {
     path: 'user-detail', component: UserDetailComponent
