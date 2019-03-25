@@ -2,9 +2,10 @@
 @import 'icons';
 
 .options-fix-table {
-  position: fixed;
+  position: absolute;
   margin-top: -45px;
   right: 38px;
+  visibility: visible;
   z-index: 99;
   .btn-filter {
     margin-left: 97px;

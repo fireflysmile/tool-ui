@@ -1,0 +1,127 @@
+<app-aside-view>
+  <div class="migration-update">
+    <a class="btn-back" [routerLink]="[ '/computer-detail' ]">
+      <span class="icon-back"></span>
+      <span class="name-back">Back to Dashboard</span>
+    </a>
+    <h3 class="title">Migration Status</h3>
+    <div class="migration-content p-grid">
+      <div class="p-col-fixed content content-left">
+        <div class="box-name">
+          <p class="sub">{{ isData?.asset_type }}</p>
+          <h4 class="name">{{ isData?.computer_name }}</h4>
+        </div>
+        <div class="item-row p-grid p-align-center">
+          <label class="label">Planned Date</label>
+          <div class="input no-bd">
+            <span class="text">14-03-2019</span>
+          </div>
+        </div>
+        <div class="item-row p-grid p-align-center">
+          <label class="label">Actual Date</label>
+          <div class="input">
+            <div class="dropdown">
+              <p-dropdown [options]="datas?.actual_date"></p-dropdown>
+            </div>
+          </div>
+        </div>
+        <div class="item-row p-grid p-align-center">
+          <label class="label">Migration Type</label>
+          <div class="input">
+            <div class="dropdown">
+              <p-dropdown [options]="datas?.migration_type"></p-dropdown>
+            </div>
+          </div>
+        </div>
+        <div class="item-row p-grid p-align-center">
+          <label class="label">Migration Status</label>
+          <div class="input">
+            <input type="text" value="Completed">
+          </div>
+        </div>
+        <div class="item-row p-grid p-align-center">
+          <label class="label">Replacement Device</label>
+          <div class="input">
+            <input type="text" value="Device Name">
+          </div>
+        </div>
+        <div class="item-row p-grid p-align-center" *ngIf="addMigration">
+          <label class="label">Migration Data</label>
+          <div class="input">
+            <input type="text">
+          </div>
+        </div>
+        <div class="item-row p-grid p-align-center" *ngIf="!addMigration">
+          <a href="javascript:;" class="btn-add-new p-grid p-align-center" (click)="addMigration = !addMigration">
+            <span class="icon-add"></span>
+            Add Migration Data
+          </a>
+        </div>
+      </div>
+      <div class="p-col content content-right">
+        <div class="item-row p-grid p-align-center">
+          <label class="label p-col-fixed">Current H/W Model</label>
+          <div class="input p-col">
+            <input type="text" value="{{ isData?.asset_model }}">
+          </div>
+        </div>
+        <div class="item-row p-grid p-align-center">
+          <label class="label p-col-fixed">Current Keyboard Layout</label>
+          <div class="input p-col">
+            <div class="dropdown">
+              <p-dropdown [options]="datas?.current_keyboard"></p-dropdown>
+            </div>
+          </div>
+        </div>
+        <div class="item-row p-grid p-align-center">
+          <label class="label p-col-fixed">New Keyboard Layout</label>
+          <div class="input p-col">
+            <div class="dropdown">
+              <p-dropdown [options]="datas?.new_keyboard"></p-dropdown>
+            </div>
+          </div>
+        </div>
+        <div class="item-row p-grid p-align-center">
+          <label class="label p-col-fixed">No. of Monitors</label>
+          <div class="input p-col">
+            <input type="text" value="1">
+          </div>
+        </div>
+        <div class="item-row p-grid p-align-center">
+          <label class="label p-col-fixed">New Device SI/ No</label>
+          <div class="input p-col">
+            <input type="text" value="{{ isData?.serial_number }}">
+          </div>
+        </div>
+        <div class="item-row p-grid p-align-center" *ngIf="addLoanerName">
+          <label class="label p-col-fixed">Loaner Name</label>
+          <div class="input p-col">
+            <input type="text">
+          </div>
+        </div>
+        <div class="item-row p-grid p-align-center" *ngIf="addAdditionalApp">
+          <label class="label p-col-fixed">Additional App Installed</label>
+          <div class="input p-col">
+            <input type="text">
+          </div>
+        </div>
+        <div class="item-row p-grid p-align-center" *ngIf="!addLoanerName">
+          <a href="javascript:;" class="btn-add-new p-grid p-align-center" (click)="addLoanerName = !addLoanerName">
+            <span class="icon-add"></span>
+            Add Loaner Name
+          </a>
+        </div>
+        <div class="item-row p-grid p-align-center" *ngIf="!addAdditionalApp">
+          <a href="javascript:;" class="btn-add-new p-grid p-align-center" (click)="addAdditionalApp = !addAdditionalApp">
+            <span class="icon-add"></span>
+            Add Additional App Installed
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="p-grid p-justify-end" [style.margin-top.px]="35">
+        <a href="javascript:;" class="button-ok" [routerLink]="[ '/computer-detail' ]">Cancel</a>
+        <a href="javascript:;" class="button-ok" [routerLink]="[ '/computer-detail' ]">Update</a>
+      </div>
+  </div>
+</app-aside-view>

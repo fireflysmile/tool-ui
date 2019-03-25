@@ -1,0 +1,50 @@
+{
+  "actual_date": [
+    {
+      "label": "14-03-2019",
+      "value": "14-03-2019"
+    },
+    {
+      "label": "14-07-2019",
+      "value": "14-07-2019"
+    },
+    {
+      "label": "14-11-2019",
+      "value": "14-11-2019"
+    },
+    {
+      "label": "14-12-2019",
+      "value": "14-12-2019"
+    }
+  ],
+  "migration_type": [
+    {
+      "label": "Refresh",
+      "value": "Refresh"
+    },
+    {
+      "label": "Replace",
+      "value": "Replace"
+    }
+  ],
+  "current_keyboard": [
+    {
+      "label": "Layout SI.NA",
+      "value": "Layout SI.NA"
+    },
+    {
+      "label": "Key SI.NA",
+      "value": "Key SI.NA"
+    }
+  ],
+  "new_keyboard": [
+    {
+      "label": "Layout KH",
+      "value": "Layout KH"
+    },
+    {
+      "label": "Layout SI.NA 09",
+      "value": "Layout SI.NA 09"
+    }
+  ]
+}

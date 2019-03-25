@@ -1,0 +1,139 @@
+@import "width-height";
+@import "icons";
+@import "color";
+
+.detail {
+  padding: 35px;
+  .btn-back {
+    text-decoration: none;
+    font-size: 14px;
+    color: $blue;
+    font-weight: 600;
+    .icon-back {
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      border-style: solid;
+      border-width: 0 0 2px 2px;
+      border-color: $blue;
+      transform: rotate(45deg);
+      margin-left: 3px;
+    }
+    .name-back {
+      padding-left: 8px;
+    }
+  }
+  h3 {
+    font-size: 24px;
+    color: $chathams-blue;
+    padding-top: 15px;
+    text-transform: uppercase;
+  }
+  .table {
+    &.left {
+      width: calc(100% - #{$sub-aside});
+      float: left;
+    }
+    border: 1px solid $heather;
+    margin-top: 25px;
+    padding: 20px 20px 52px 20px;
+    .introduce {
+      p {
+        font-size: 14px;
+        color: $mine-shaft;
+        text-transform: uppercase;
+      }
+      h4 {
+        font-size: 18px;
+        color: $chathams-blue;
+        padding-bottom: 32px;
+        font-weight: 600;
+      }
+    }
+    .info {
+      display: flex;
+      flex-direction: row;
+      .content-left {
+        display: flex;
+        padding-right: 123px;
+        .content-name {
+          width:152px;
+          p {
+            font-size: 14px;
+            font-weight: bold;
+          }
+        }
+        .content-answered {
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .manager {
+      padding-top: 45px;
+      div {
+        span {
+          font-size: 14px;
+          min-width: 152px;
+          display: inline-block;
+          &.name {
+            font-weight: bold;
+          }
+          &.email {
+            font-style: italic;
+          }
+        }
+      }
+    }
+  }
+  .right {
+    width: $sub-aside;
+    float: right;
+    .box-group {
+      float: right;
+      width: 347px;
+      margin-top: 25px;
+      border: 1px solid $heather;
+      &.diff{
+        margin-top: 40px;
+      }
+      p {
+        padding-left: 21px;
+        &.name {
+          display: flex;
+          align-items: center;
+          font-size: 15px;
+          color: $chathams-blue;
+          font-weight: bold;
+          background-color: $white-lilac;
+          padding-top: 13px;
+          padding-bottom: 12px;
+          border-bottom: 1px solid $heather;
+          .icons {
+            margin-right: 16px;
+            &.icon-application {
+              @include icon(applications-color, null, null);
+            }
+            &.icon-computer{
+              @include icon(computer-color, null, null);
+            }
+          }
+        }
+      }
+      .text{
+        height: 52px;
+        padding: 0 23px;
+        line-height: 52px;
+        border-bottom: 1px solid $heather;
+        &:last-child {
+          border: none;
+        }
+        a {
+          text-decoration: none;
+          color: $blue;
+        }
+      }
+    }
+  }
+}
