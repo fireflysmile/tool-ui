@@ -6,6 +6,10 @@ import { OnboardProjectComponent } from './pages/onboard-project/onboard-project
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ImportDataComponent } from './pages/import-data/import-data.component';
 import { UploadCsvComponent } from './pages/upload-csv/upload-csv.component';
+import { UserDetailComponent } from './pages/user-detail/user-detail.component';
+import { ApplicationDetailComponent } from './pages/application-detail/application-detail.component';
+import { ComputerDetailComponent } from './pages/computer-detail/computer-detail.component';
+import { UpdateMigrationComponent } from './pages/computer-detail/update-migration/update-migration.component';
 
 const routes: Routes = [
   {
@@ -25,6 +29,18 @@ const routes: Routes = [
   },
   {
     path: 'dashboard', component: DashboardComponent
+  },
+  {
+    path: 'user-detail', component: UserDetailComponent
+  },
+  {
+    path: 'application-detail', component: ApplicationDetailComponent
+  },
+  {
+    path: 'computer-detail', component: ComputerDetailComponent
+  },
+  {
+    path: 'migration-update', component: UpdateMigrationComponent
   },
   {
     path: '**', redirectTo: '', pathMatch: 'full'

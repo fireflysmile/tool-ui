@@ -13,7 +13,12 @@
   }
 }
 
-
+.ui-scrollpanel-wrapper {
+  position: unset;
+  .ui-scrollpanel-content {
+    position: unset;
+  }
+}
 
 body .ui-tabview.ui-tabview-top .ui-tabview-nav li a,
 body .ui-tabview.ui-tabview-bottom .ui-tabview-nav li a,

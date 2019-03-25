@@ -1,0 +1,14 @@
+<div class="search">
+  <div class="search-box" clickOutside (clickOutside)="onClickOutside($event)">
+    <div class="box">
+      <input class="input" type="text" placeholder="What do you want to search?">
+      <div [style.margin-left]="'auto'">
+        <div [style.float]="'left'">
+            <app-dropdown [values]="listSearchBy" [dropdownName]="dropdownName"
+            [activeValue]="searchBy" (select)="action($event)"></app-dropdown>
+        </div>
+        <span class="icon-close" (click)="onClickOutside()"></span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -29,6 +29,11 @@ import { ImportDataComponent } from './pages/import-data/import-data.component';
 import { UploadCsvComponent } from './pages/upload-csv/upload-csv.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { DropdownModule } from 'primeng/dropdown';
+import { SearchComponent } from './components/search/search.component';
+import { UserDetailComponent } from './pages/user-detail/user-detail.component';
+import { ApplicationDetailComponent } from './pages/application-detail/application-detail.component';
+import { ComputerDetailComponent } from './pages/computer-detail/computer-detail.component';
+import { UpdateMigrationComponent } from './pages/computer-detail/update-migration/update-migration.component';
 
 const PrimeNGmodule = [
   FileUploadModule,
@@ -56,7 +61,12 @@ const PrimeNGmodule = [
     TableViewComponent,
     ImportDataComponent,
     UploadCsvComponent,
-    FilterComponent
+    FilterComponent,
+    SearchComponent,
+    UserDetailComponent,
+    ApplicationDetailComponent,
+    ComputerDetailComponent,
+    UpdateMigrationComponent
   ],
   imports: [
     BrowserModule,

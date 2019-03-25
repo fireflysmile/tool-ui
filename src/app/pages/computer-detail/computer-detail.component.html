@@ -1,0 +1,105 @@
+<app-aside-view>
+  <div class="detail">
+    <a class="btn-back" [routerLink]="[ '/dashboard' ]">
+      <span class="icon-back"></span>
+      <span class="name-back">Back to Computer Details</span>
+    </a>
+    <h3>
+      COMPUTER DETAILS
+      <a href="javascript:;" class="btn-update" [routerLink]="[ '/migration-update' ]">Update Migration Status</a>
+    </h3>
+    <div class="table left">
+      <div class="introduce">
+        <p>{{ isData?.asset_type }}</p>
+        <h4>{{ isData?.computer_name }}</h4>
+      </div>
+      <div class="info">
+        <div class="content-left">
+          <div class="content-name">
+            <p>Manufacturer</p>
+            <p>Asset Tag</p>
+            <p>Asset Type</p>
+            <p>Serial Number</p>
+            <p>Computer Model</p>
+          </div>
+          <div class="content-answered">
+            <p>{{ isData?.manufacturer }}</p>
+            <p>{{ isData?.asset_tag }}</p>
+            <p>{{ isData?.asset_type }}</p>
+            <p>{{ isData?.serial_number }}</p>
+            <p>{{ isData?.asset_model }}</p>
+          </div>
+        </div>
+        <div class="content-left">
+          <div class="content-name">
+            <p>CPU Info</p>
+            <p>Memory</p>
+            <p>Disk Space</p>
+            <p>Free Space</p>
+            <p>Operating System</p>
+          </div>
+          <div class="content-answered">
+            <p>{{ isData?.cpu }}</p>
+            <p>{{ isData?.memory }}</p>
+            <p>{{ isData?.disk_space }}</p>
+            <p>{{ isData?.free_space }}</p>
+            <p>{{ isData?.operating_system }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="info">
+        <div class="content-left">
+          <div class="content-name">
+            <p>Last Logon Name</p>
+            <p>IP Address</p>
+            <p>BIOS Version</p>
+          </div>
+          <div class="content-answered">
+            <p>{{ isData?.last_logon_name }}</p>
+            <p>{{ isData?.ip_address }}</p>
+            <p>{{ isData?.bios_version }}</p>
+          </div>
+        </div>
+        <div class="content-left">
+          <div class="content-name">
+            <p>Primary Machine</p>
+            <p>Shared Machine</p>
+            <p>Purchase Date</p>
+          </div>
+          <div class="content-answered">
+            <p>{{ isData?.primary_machine }}</p>
+            <p>{{ isData?.shared_machine }}</p>
+            <p>{{ isData?.purchase_date }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="box-group">
+        <p class="name">
+          <span class="icons icon-application"></span>
+          Application
+        </p>
+        <div class="text">
+          <a href="javascript:;" [routerLink]="[ '/application-detail' ]">Skype</a>
+        </div>
+        <div class="text">
+          <a href="javascript:;" [routerLink]="[ '/application-detail' ]">Chrome</a>
+        </div>
+        <div class="text">
+          <a href="javascript:;" [routerLink]="[ '/application-detail' ]">Adobe Creative Cloud</a>
+        </div>
+      </div>
+      <div class="box-group diff">
+        <p class="name">
+          <span class="icons icon-users"></span>
+          Users
+        </p>
+        <div class="text">
+          <a href="javascript:;" [routerLink]="[ '/user-detail' ]">Russel V Gomez</a>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</app-aside-view>

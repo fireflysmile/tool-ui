@@ -1,4 +1,6 @@
 <app-aside-view>
+
+  <!-- content dashboard -->
   <div class="wp-dashboard">
     <h2 class="title">DASHBOARD</h2>
     <div class="box-three p-grid p-justify-between">
@@ -40,18 +42,18 @@
     <p-tabView>
       <p-tabPanel header="Users">
         <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
-          <app-table-view [datas]="users" [sortBy]="usersSortBy" [sortByName]="usersSortByName"></app-table-view>
+          <app-table-view [datas]="users" [sortBy]="usersSortBy" (viewDetail)="fnViewDetail($event, 'user-detail')" [sortByName]="usersSortByName"></app-table-view>
         </p-scrollPanel>
       </p-tabPanel>
       <p-tabPanel header="Application">
         <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
-          <app-table-view [datas]="aplications" [sortBy]="aplicationsSortBy" [sortByName]="aplicationsSortByName">
+          <app-table-view [datas]="aplications" [sortBy]="aplicationsSortBy" (viewDetail)="fnViewDetail($event, 'application-detail')" [sortByName]="aplicationsSortByName">
           </app-table-view>
         </p-scrollPanel>
       </p-tabPanel>
       <p-tabPanel header="Computer">
         <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
-          <app-table-view [datas]="computers" [sortBy]="computersSortBy" [sortByName]="computersSortByName">
+          <app-table-view [datas]="computers" [sortBy]="computersSortBy" (viewDetail)="fnViewDetail($event, 'computer-detail')" [sortByName]="computersSortByName">
           </app-table-view>
         </p-scrollPanel>
       </p-tabPanel>
@@ -63,4 +65,6 @@
       </p-tabPanel>
     </p-tabView>
   </div>
+  <!-- end content dashboard -->
+
 </app-aside-view>

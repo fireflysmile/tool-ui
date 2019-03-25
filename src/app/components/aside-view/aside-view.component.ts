@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AsideViewComponent implements OnInit {
 
+  search: boolean;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  fnSearch() {
+    this.search = !this.search;
+  }
+
+  fnCloseSearch() {
+    this.search = false;
   }
 
 }

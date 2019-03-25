@@ -183,7 +183,7 @@
     {
       "user_id": 123123,
       "user_name": "Robert S Castro",
-      "vip": "Yes",
+      "vip": "No",
       "support_language": "English",
       "site_code": "2426",
       "building": "24627",
@@ -237,7 +237,7 @@
     {
       "user_id": 35757,
       "user_name": "Robert S Castro",
-      "vip": "Yes",
+      "vip": "No",
       "support_language": "English",
       "site_code": "2426",
       "building": "24627",
@@ -309,7 +309,7 @@
     {
       "user_id": 7080,
       "user_name": "Ivan T Moody",
-      "vip": "Yes",
+      "vip": "No",
       "support_language": "English",
       "site_code": "2426",
       "building": "24627",
@@ -345,7 +345,7 @@
     {
       "user_id": 3080,
       "user_name": "Ivan T Moody",
-      "vip": "Yes",
+      "vip": "No",
       "support_language": "English",
       "site_code": "2426",
       "building": "24627",
@@ -381,7 +381,7 @@
     {
       "user_id": 2320,
       "user_name": "Ivan T Moody",
-      "vip": "Yes",
+      "vip": "No",
       "support_language": "English",
       "site_code": "2426",
       "building": "24627",
@@ -417,7 +417,7 @@
     {
       "user_id": 7800,
       "user_name": "Ivan T Moody",
-      "vip": "Yes",
+      "vip": "No",
       "support_language": "English",
       "site_code": "2426",
       "building": "24627",
@@ -453,7 +453,7 @@
     {
       "user_id": 3100,
       "user_name": "Ivan T Moody",
-      "vip": "Yes",
+      "vip": "No",
       "support_language": "English",
       "site_code": "2426",
       "building": "24627",

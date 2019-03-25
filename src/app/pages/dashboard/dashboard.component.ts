@@ -79,4 +79,10 @@ export class DashboardComponent implements OnInit {
     this. router.navigateByUrl(key);
   }
 
+  fnViewDetail(isData: any, page: string) {
+    localStorage.setItem(page, JSON.stringify(isData));
+
+    this.router.navigateByUrl(page);
+  }
+
 }

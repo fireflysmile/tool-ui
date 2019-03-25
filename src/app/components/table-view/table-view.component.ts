@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,6 +13,8 @@ export class TableViewComponent implements OnInit {
   @Input() sortByName: string;
 
   @Input() select: boolean;
+
+  @Output() viewDetail: EventEmitter<any> = new EventEmitter();
 
   selected: any;
   isFilter: boolean;
@@ -38,6 +40,10 @@ export class TableViewComponent implements OnInit {
 
   fnCloseFilter() {
     this.isFilter = false;
+  }
+
+  viewData(isData: any) {
+    this.viewDetail.emit(isData);
   }
 
 }

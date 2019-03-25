@@ -76,4 +76,13 @@
       }
     }
   }
+  .ui-table {
+    .ui-table-tbody {
+      > tr {
+        > td {
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }

@@ -1,0 +1,88 @@
+<app-aside-view>
+  <div class="detail">
+    <a class="btn-back" [routerLink]="[ '/dashboard' ]">
+      <span class="icon-back"></span>
+      <span class="name-back">Back to Dashboard</span>
+    </a>
+    <h3>USER DETAILS</h3>
+    <div class="table left">
+      <div class="introduce">
+        <p>{{ isData?.user_id }}</p>
+        <h4>{{ isData?.user_name }}</h4>
+      </div>
+      <div class="info">
+        <div class="content-left">
+          <div class="content-name">
+            <p>Vip</p>
+            <p>Supporting Language</p>
+            <p>Site Code</p>
+            <p>Building</p>
+            <p>Floor</p>
+          </div>
+          <div class="content-answered">
+            <p>{{ isData?.vip }}</p>
+            <p>{{ isData?.support_language }}</p>
+            <p>{{ isData?.site_code }}</p>
+            <p>{{ isData?.building }}</p>
+            <p>{{ isData?.floor }}</p>
+          </div>
+        </div>
+        <div class="content-left">
+          <div class="content-name">
+            <p>Desk Information</p>
+            <p>Street Address</p>
+            <p>Department</p>
+            <p>Email Address</p>
+            <p>Site</p>
+          </div>
+          <div class="content-answered">
+            <p>{{ isData?.desk_information }}</p>
+            <p>{{ isData?.street_address }}</p>
+            <p>{{ isData?.department }}</p>
+            <p>{{ isData?.email_address }}</p>
+            <p>{{ isData?.site }}</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="manager">
+          <div>
+            <span class="name">Manager Name</span>
+            <span>{{ isData?.manager_name }}</span>
+          </div>
+          <div>
+            <span class="name email">Manager Email</span>
+            <span>{{ isData?.manager_email }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="box-group">
+        <p class="name">
+          <span class="icons icon-application"></span>
+          Application
+        </p>
+        <div class="text">
+          <a href="javascript:;" [routerLink]="[ '/application-detail' ]">Skype</a>
+        </div>
+        <div class="text">
+          <a href="javascript:;" [routerLink]="[ '/application-detail' ]">Chrome</a>
+        </div>
+        <div class="text">
+          <a href="javascript:;" [routerLink]="[ '/application-detail' ]">Adobe Creative Cloud</a>
+        </div>
+      </div>
+      <div class="box-group diff">
+        <p class="name">
+          <span class="icons icon-computer"></span>
+          Computer
+        </p>
+        <div class="text">
+          <a href="javascript:;" [routerLink]="[ '/computer-detail' ]">Russel’s Computer (HP Spectre 360)</a>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</app-aside-view>
