@@ -1,5 +1,5 @@
 <div class="filter">
-  <form [formGroup]="formFilter" class="filter-content" clickOutside (clickOutside)="onClickOutside($event)">
+  <form [formGroup]="formFilter" (click)="onSubmit()" class="filter-content" clickOutside (clickOutside)="onClickOutside()">
     <div class="content">
         <h4>FILTER</h4>
         <div class="filter-row p-grid p-align-center" *ngFor="let filter of datas">
@@ -13,6 +13,6 @@
           </div>
         </div>
     </div>
-    <button type="submit" class="btn-filter" (click)="onSubmit()">Filter</button>
+    <button type="submit" class="btn-filter">Filter</button>
   </form>
 </div>
