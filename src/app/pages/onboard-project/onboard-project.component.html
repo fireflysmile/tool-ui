@@ -15,66 +15,24 @@
   </div>
   <p-tabView>
     <p-tabPanel header="Users">
-      <div class="options-fix-table p-grid p-align-center">
-        <app-dropdown [style.margin-left]="'auto'" [values]="userData | dataDropdown" [dropdownName]="dropdownName"
-          [activeValue]="sortByName" (select)="action($event)"></app-dropdown>
-        <a href="javascript:;" class="btn-filter p-grid p-align-center">
-          <span class="icon-filter"></span>
-          Filter
-        </a>
-      </div>
-
-      <p-table class="table-view" #dt [(selection)]="selected" [columns]="userData" [scrollHeight]="tableHeight"
-        [sortField]="sortBy" [value]="projectDatas" [scrollable]="true" [style]="{width:'100%'}">
-        <ng-template pTemplate="colgroup" let-columns>
-          <colgroup>
-            <col [style.width.px]="50">
-            <col *ngFor="let col of columns" [style.width.px]="col.width">
-          </colgroup>
-        </ng-template>
-        <ng-template pTemplate="header" let-columns>
-          <tr>
-            <th class="checkbox">
-              <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
-            </th>
-            <th *ngFor="let col of columns">
-              {{col.header}}
-            </th>
-          </tr>
-        </ng-template>
-        <ng-template pTemplate="body" let-rowData let-columns="columns">
-          <tr [pSelectableRow]="rowData">
-            <td class="checkbox">
-              <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
-            </td>
-            <td *ngFor="let col of columns">
-              {{rowData[col.field]}}
-            </td>
-          </tr>
-        </ng-template>
-      </p-table>
-
-      <div class="table-bottom p-grid p-align-center p-justify-between">
-        <div class="number-select">
-          <p *ngIf="selected?.length > 0">
-            <span>{{selected?.length}} Item(s)</span> selected
-          </p>
-        </div>
-        <div>
-          <a href="javascript:;" class="button-ok">Review</a>
-          <a href="javascript:;" class="button-ok" (click)="publish(selected?.length)">Publish</a>
-        </div>
-      </div>
-
+      <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
+        <app-table-view [select]="true" [datas]="users" [sortBy]="usersSortBy" [sortByName]="usersSortByName"></app-table-view>
+      </p-scrollPanel>
     </p-tabPanel>
     <p-tabPanel header="Application">
-      Content 2
+      <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
+        <app-table-view [select]="true" [datas]="aplications" [sortBy]="aplicationsSortBy" [sortByName]="aplicationsSortByName"></app-table-view>
+      </p-scrollPanel>
     </p-tabPanel>
     <p-tabPanel header="Computer">
-      Content 3
+      <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
+        <app-table-view [select]="true" [datas]="computers" [sortBy]="computersSortBy" [sortByName]="computersSortByName"></app-table-view>
+      </p-scrollPanel>
     </p-tabPanel>
     <p-tabPanel header="Department">
-      Content 4
+      <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
+        <app-table-view [select]="true" [datas]="departments" [sortBy]="departmentsSortBy" [sortByName]="departmentsSortByName"></app-table-view>
+      </p-scrollPanel>
     </p-tabPanel>
   </p-tabView>
 </div>

@@ -5,6 +5,7 @@
 @import 'primeng';
 
 .onboard-project {
+  min-height: $min-h;
   padding-top: 40px;
   .options-table {
     padding: 0 35px;
@@ -44,39 +45,6 @@
       font-weight: 600;
       margin-left: 25px;
       text-decoration: none;
-    }
-  }
-  .options-fix-table {
-    position: absolute;
-    margin-top: -45px;
-    right: 38px;
-    .btn-filter {
-      margin-left: 97px;
-      font-size: 16px;
-      color: $blue;
-      font-weight: 600;
-      text-decoration: none;
-      .icon-filter {
-        @include icon(filter, null, null);
-        margin-right: 8px;
-      }
-    }
-  }
-  .table-bottom {
-    padding: 0 30px;
-    height: 55px;
-    width: 100%;
-    background-color: white;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    border-top: 1px solid $heather;
-    .number-select {
-      color: $blue;
-      font-size: 14px;
-      span {
-        font-weight: 600;
-      }
     }
   }
 }

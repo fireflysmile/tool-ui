@@ -5,7 +5,7 @@
 
 .login {
   display: flex;
-  height: 100vh;
+  min-height: $min-h;
   .left {
     width: $main-login;
     padding: 69px 75px;

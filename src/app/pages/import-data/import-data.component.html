@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="import main-content">
+  <app-back (routerName)="redirectTo('welcome')"></app-back>
+  <h3 class="title fix-top">INPUT DATA</h3>
+  <p class="sub-title">Please select the resource to migrate the data</p>
+  <div class="search-box"></div>
+  <div class="options box-content">
+    <div class="col" *ngFor="let item of links">
+      <a href="javascript:;" class="item {{ item.icon }}" [class.disabled]="item.text != 'CSV File'" (click)="select(item.text)">
+        <i class="icon"></i><br />
+        <div class="text">{{ item.text === 'CSV File' ? 'Upload' : 'Import from' }} <p>{{ item.text }}</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

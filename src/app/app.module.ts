@@ -20,14 +20,18 @@ import { TabViewModule } from 'primeng/tabview';
 import { TableModule } from 'primeng/table';
 import { DataDropdownPipe } from './pipes/data-dropdown.pipe';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { AsideComponent } from './components/aside/aside.component';
 import { AsideViewComponent } from './components/aside-view/aside-view.component';
 import { DonutChartComponent } from './components/donut-chart/donut-chart.component';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
+import { TableViewComponent } from './components/table-view/table-view.component';
+import { ImportDataComponent } from './pages/import-data/import-data.component';
+import { UploadCsvComponent } from './pages/upload-csv/upload-csv.component';
 
 const PrimeNGmodule = [
   FileUploadModule,
   TabViewModule,
-  TableModule
+  TableModule,
+  ScrollPanelModule
 ];
 
 @NgModule({
@@ -43,9 +47,11 @@ const PrimeNGmodule = [
     OnboardProjectComponent,
     DataDropdownPipe,
     DashboardComponent,
-    AsideComponent,
     AsideViewComponent,
-    DonutChartComponent
+    DonutChartComponent,
+    TableViewComponent,
+    ImportDataComponent,
+    UploadCsvComponent
   ],
   imports: [
     BrowserModule,

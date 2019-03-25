@@ -1,0 +1,279 @@
+{
+  "config":[
+    {
+      "field": "computer_name",
+      "header": "Computer Name",
+      "width": 170
+    },
+    {
+      "field": "manufacturer",
+      "header": "Manufacturer",
+      "width": 150
+    },
+    {
+      "field": "asset_tag",
+      "header": "Asset Tag",
+      "width": 110
+    },
+    {
+      "field": "asset_type",
+      "header": "Asset Type",
+      "width": 160
+    },
+    {
+      "field": "serial_number",
+      "header": "Serial Number",
+      "width": 160
+    },
+    {
+      "field": "asset_model",
+      "header": "Asset Model",
+      "width": 250
+    },
+    {
+      "field": "cpu",
+      "header": "CPU",
+      "width": 180
+    },
+    {
+      "field": "memory",
+      "header": "Memory",
+      "width": 150
+    },
+    {
+      "field": "disk_space",
+      "header": "Disk Space",
+      "width": 150
+    },
+    {
+      "field": "free_space",
+      "header": "Free Space",
+      "width": 250
+    },
+    {
+      "field": "email_address",
+      "header": "Email Address",
+      "width": 250
+    }
+  ],
+  "datas": [
+    {
+      "computer_name": "LT1100221",
+      "manufacturer": "HP",
+      "asset_tag": "OMV",
+      "asset_type": "Laptop",
+      "serial_number": "31059710937501",
+      "asset_model": "HP Spectre 360",
+      "cpu": "3.0GHz",
+      "memory": "6 GB",
+      "disk_space": "320 GB",
+      "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "computer_name": "LT1100222",
+      "manufacturer": "HP",
+      "asset_tag": "OMV",
+      "asset_type": "Laptop",
+      "serial_number": "31059710937501",
+      "asset_model": "HP Spectre 360",
+      "cpu": "3.0GHz",
+      "memory": "6 GB",
+      "disk_space": "320 GB",
+      "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "computer_name": "LT1100223",
+      "manufacturer": "HP",
+      "asset_tag": "OMV",
+      "asset_type": "Laptop",
+      "serial_number": "31059710937501",
+      "asset_model": "HP Spectre 360",
+      "cpu": "3.0GHz",
+      "memory": "6 GB",
+      "disk_space": "320 GB",
+      "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "computer_name": "LT1100224",
+      "manufacturer": "HP",
+      "asset_tag": "OMV",
+      "asset_type": "Laptop",
+      "serial_number": "31059710937501",
+      "asset_model": "HP Spectre 360",
+      "cpu": "3.0GHz",
+      "memory": "6 GB",
+      "disk_space": "320 GB",
+      "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "computer_name": "LT1100225",
+      "manufacturer": "HP",
+      "asset_tag": "OMV",
+      "asset_type": "Laptop",
+      "serial_number": "31059710937501",
+      "asset_model": "HP Spectre 360",
+      "cpu": "3.0GHz",
+      "memory": "6 GB",
+      "disk_space": "320 GB",
+      "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "computer_name": "LT1100226",
+      "manufacturer": "HP",
+      "asset_tag": "OMV",
+      "asset_type": "Laptop",
+      "serial_number": "31059710937501",
+      "asset_model": "HP Spectre 360",
+      "cpu": "3.0GHz",
+      "memory": "6 GB",
+      "disk_space": "320 GB",
+      "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "computer_name": "LT1100227",
+      "manufacturer": "HP",
+      "asset_tag": "OMV",
+      "asset_type": "Laptop",
+      "serial_number": "31059710937501",
+      "asset_model": "HP Spectre 360",
+      "cpu": "3.0GHz",
+      "memory": "6 GB",
+      "disk_space": "320 GB",
+      "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "computer_name": "LT1100228",
+      "manufacturer": "HP",
+      "asset_tag": "OMV",
+      "asset_type": "Laptop",
+      "serial_number": "31059710937501",
+      "asset_model": "HP Spectre 360",
+      "cpu": "3.0GHz",
+      "memory": "6 GB",
+      "disk_space": "320 GB",
+      "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "computer_name": "LT1100229",
+      "manufacturer": "HP",
+      "asset_tag": "OMV",
+      "asset_type": "Laptop",
+      "serial_number": "31059710937501",
+      "asset_model": "HP Spectre 360",
+      "cpu": "3.0GHz",
+      "memory": "6 GB",
+      "disk_space": "320 GB",
+      "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "computer_name": "LT11002211",
+      "manufacturer": "HP",
+      "asset_tag": "OMV",
+      "asset_type": "Laptop",
+      "serial_number": "31059710937501",
+      "asset_model": "HP Spectre 360",
+      "cpu": "3.0GHz",
+      "memory": "6 GB",
+      "disk_space": "320 GB",
+      "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "computer_name": "LT11002222",
+      "manufacturer": "HP",
+      "asset_tag": "OMV",
+      "asset_type": "Laptop",
+      "serial_number": "31059710937501",
+      "asset_model": "HP Spectre 360",
+      "cpu": "3.0GHz",
+      "memory": "6 GB",
+      "disk_space": "320 GB",
+      "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "computer_name": "LT11002233",
+      "manufacturer": "HP",
+      "asset_tag": "OMV",
+      "asset_type": "Laptop",
+      "serial_number": "31059710937501",
+      "asset_model": "HP Spectre 360",
+      "cpu": "3.0GHz",
+      "memory": "6 GB",
+      "disk_space": "320 GB",
+      "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "computer_name": "LT11002244",
+      "manufacturer": "HP",
+      "asset_tag": "OMV",
+      "asset_type": "Laptop",
+      "serial_number": "31059710937501",
+      "asset_model": "HP Spectre 360",
+      "cpu": "3.0GHz",
+      "memory": "6 GB",
+      "disk_space": "320 GB",
+      "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "computer_name": "LT11002255",
+      "manufacturer": "HP",
+      "asset_tag": "OMV",
+      "asset_type": "Laptop",
+      "serial_number": "31059710937501",
+      "asset_model": "HP Spectre 360",
+      "cpu": "3.0GHz",
+      "memory": "6 GB",
+      "disk_space": "320 GB",
+      "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "computer_name": "LT11002266",
+      "manufacturer": "HP",
+      "asset_tag": "OMV",
+      "asset_type": "Laptop",
+      "serial_number": "31059710937501",
+      "asset_model": "HP Spectre 360",
+      "cpu": "3.0GHz",
+      "memory": "6 GB",
+      "disk_space": "320 GB",
+      "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
+      "email_address": "gomez@gmail.com"
+    }
+    ,{
+      "computer_name": "LT11002277",
+      "manufacturer": "HP",
+      "asset_tag": "OMV",
+      "asset_type": "Laptop",
+      "serial_number": "31059710937501",
+      "asset_model": "HP Spectre 360",
+      "cpu": "3.0GHz",
+      "memory": "6 GB",
+      "disk_space": "320 GB",
+      "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
+      "email_address": "gomez@gmail.com"
+    }
+  ],
+  "sort": [
+    {
+      "value": "computer_name",
+      "label": "Computer Name"
+    },
+    {
+      "value": "serial_number",
+      "label": "Serial Number"
+    }
+  ]
+}

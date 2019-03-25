@@ -1,6 +1,5 @@
-import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
-import { Table } from 'primeng/table';
 import { DataService } from 'src/app/services/data.service';
 import { config } from 'src/app/core/config';
 
@@ -12,62 +11,71 @@ import { config } from 'src/app/core/config';
 })
 export class OnboardProjectComponent implements OnInit {
 
-  listSortBy = [];
-  projectDatas = [];
-  userData: any[];
+  getHeight: number;
+  tabHeight: string;
 
-  selected: any;
+  users: any;
+  usersSortBy = 'user_name';
+  usersSortByName = 'User Name';
 
-  tableHeight = document.documentElement.clientHeight - (config.height_top_table + config.height_bottom_table) + 'px';
+  aplications: any;
+  aplicationsSortBy = 'aptication_name';
+  aplicationsSortByName = 'Aptication Name';
+
+  computers: any;
+  computersSortBy = 'computer_name';
+  computersSortByName = 'Computer Name';
+
+  departments: any;
+  departmentsSortBy = 'department_name';
+  departmentsSortByName = 'Department Name';
+
 
   dropdownName = 'Sort by';
-  sortBy = 'user_name';
-  sortByName = 'User Name';
-
-  @ViewChild('dt') primeTable: Table;
 
   constructor(
-    private router: Router,
-    private dataService: DataService
+    private dataService: DataService,
+    private router: Router
   ) { }
 
   ngOnInit() {
 
-    this.userData = [
-      { field: 'user_id', header: 'User ID', width: 125 },
-      { field: 'user_name', header: 'User Name', width: 170 },
-      { field: 'vip', header: 'Vip', width: 70 },
-      { field: 'support_language', header: 'Support Language', width: 150},
-      { field: 'site_code', header: 'Site Code', width: 110 },
-      { field: 'building', header: 'Building', width: 110 },
-      { field: 'floor', header: 'Floor', width: 60 },
-      { field: 'desk_information', header: 'Desk Information', width: 180 },
-      { field: 'street_address', header: 'Street Address', width: 250 },
-      { field: 'city', header: 'City', width: 150 },
-      { field: 'state', header: 'State', width: 150 },
-      { field: 'department', header: 'Department', width: 150 },
-      { field: 'email_address', header: 'Email Address', width: 250 }
-    ];
+    this.getHeight = document.documentElement.clientHeight - (config.height_top_table + config.height_bottom_table);
+    if (this.getHeight > config.min_table) {
+      this.tabHeight = this.getHeight + 'px';
+    } else {
+      this.tabHeight = config.min_table + 'px';
+    }
 
-    this.dataService.get('projects.json').subscribe(
-      (data: any) => {
-        this.projectDatas = data;
+    this.onload();
+
+  }
+
+  onload() {
+    this.dataService.get('users.json').subscribe(
+      (datas: any) => {
+        this.users = datas;
+      }
+    );
+    this.dataService.get('aptications.json').subscribe(
+      (datas: any) => {
+        this.aplications = datas;
+      }
+    );
+    this.dataService.get('computers.json').subscribe(
+      (datas: any) => {
+        this.computers = datas;
+      }
+    );
+    this.dataService.get('departments.json').subscribe(
+      (datas: any) => {
+        this.departments = datas;
       }
     );
   }
 
-  action(key: string): void {
-    this.sortBy = key;
-  }
-
   redirectTo(key: string) {
-    this. router.navigateByUrl(key);
-  }
-
-  publish(select: number) {
-    if (select > 0) {
-      this.redirectTo('dashboard');
-    }
+    this.router.navigateByUrl(key);
   }
 
 }

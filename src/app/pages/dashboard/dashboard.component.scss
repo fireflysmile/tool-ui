@@ -4,7 +4,8 @@
 @import 'icons';
 @import 'width-height';
 
-.dashboard {
+.wp-dashboard {
+  min-height: $min-h;
   .title {
     font-size: 24px;
     font-weight: 800;
@@ -72,22 +73,6 @@
         p {
           font-weight: 600;
         }
-      }
-    }
-  }
-  .options-fix-table {
-    position: absolute;
-    margin-top: -45px;
-    right: 38px;
-    .btn-filter {
-      margin-left: 97px;
-      font-size: 16px;
-      color: $blue;
-      font-weight: 600;
-      text-decoration: none;
-      .icon-filter {
-        @include icon(filter, null, null);
-        margin-right: 8px;
       }
     }
   }

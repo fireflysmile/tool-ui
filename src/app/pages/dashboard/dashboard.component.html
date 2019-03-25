@@ -1,5 +1,5 @@
 <app-aside-view>
-  <div class="dashboard">
+  <div class="wp-dashboard">
     <h2 class="title">DASHBOARD</h2>
     <div class="box-three p-grid p-justify-between">
       <div class="box box-readiness">
@@ -39,47 +39,24 @@
 
     <p-tabView>
         <p-tabPanel header="Users">
-          <div class="options-fix-table p-grid p-align-center">
-            <app-dropdown [style.margin-left]="'auto'" [values]="userData | dataDropdown" [dropdownName]="dropdownName"
-              [activeValue]="sortByName" (select)="action($event)"></app-dropdown>
-            <a href="javascript:;" class="btn-filter p-grid p-align-center">
-              <span class="icon-filter"></span>
-              Filter
-            </a>
-          </div>
-
-          <p-table class="table-view" #dt [columns]="userData" scrollHeight="555px"
-            [sortField]="sortBy" [value]="projectDatas" [scrollable]="true" [style]="{width:'100%'}">
-            <ng-template pTemplate="colgroup" let-columns>
-              <colgroup>
-                <col *ngFor="let col of columns" [style.width.px]="col.width">
-              </colgroup>
-            </ng-template>
-            <ng-template pTemplate="header" let-columns>
-              <tr class="no-checkbox">
-                <th *ngFor="let col of columns">
-                  {{col.header}}
-                </th>
-              </tr>
-            </ng-template>
-            <ng-template pTemplate="body" let-rowData let-columns="columns">
-              <tr class="no-checkbox" [pSelectableRow]="rowData">
-                <td *ngFor="let col of columns">
-                  {{rowData[col.field]}}
-                </td>
-              </tr>
-            </ng-template>
-          </p-table>
-
+          <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
+            <app-table-view [datas]="users" [sortBy]="usersSortBy" [sortByName]="usersSortByName"></app-table-view>
+          </p-scrollPanel>
         </p-tabPanel>
         <p-tabPanel header="Application">
-          Content 2
+          <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
+            <app-table-view [datas]="aplications" [sortBy]="aplicationsSortBy" [sortByName]="aplicationsSortByName"></app-table-view>
+          </p-scrollPanel>
         </p-tabPanel>
         <p-tabPanel header="Computer">
-          Content 3
+          <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
+            <app-table-view [datas]="computers" [sortBy]="computersSortBy" [sortByName]="computersSortByName"></app-table-view>
+          </p-scrollPanel>
         </p-tabPanel>
         <p-tabPanel header="Department">
-          Content 4
+          <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
+            <app-table-view [datas]="departments" [sortBy]="departmentsSortBy" [sortByName]="departmentsSortByName"></app-table-view>
+          </p-scrollPanel>
         </p-tabPanel>
       </p-tabView>
   </div>

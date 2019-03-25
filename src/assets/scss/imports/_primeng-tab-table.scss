@@ -13,6 +13,8 @@
   }
 }
 
+
+
 body .ui-tabview.ui-tabview-top .ui-tabview-nav li a,
 body .ui-tabview.ui-tabview-bottom .ui-tabview-nav li a,
 body .ui-tabview.ui-tabview-left .ui-tabview-nav li a,
@@ -59,8 +61,14 @@ body .ui-tabview.ui-tabview-right .ui-tabview-nav li a:hover{
 }
 
 .ui-table {
-  .checkbox {
-    text-align: center;
+  .ui-table-thead,
+  .ui-table-tbody {
+    tr {
+      .checkbox {
+        text-align: right;
+        padding-right: 14px;
+      }
+    }
   }
   .no-checkbox {
     :first-child {
