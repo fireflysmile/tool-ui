@@ -79,7 +79,7 @@
     ,{
       "application_name": "Photoshop",
       "version": "3.0.1.1",
-      "manufacturer": "Microsoft",
+      "manufacturer": "Adobe",
       "language": "English",
       "package_ID": "Package Name",
       "compatibility_status": "Win 10",
@@ -91,7 +91,7 @@
     ,{
       "application_name": "Illustrator",
       "version": "3.0.1.1",
-      "manufacturer": "Microsoft",
+      "manufacturer": "Adobe",
       "language": "English",
       "package_ID": "Package Name",
       "compatibility_status": "Win 10",
@@ -103,7 +103,7 @@
     ,{
       "application_name": "After Effect",
       "version": "3.0.1.1",
-      "manufacturer": "Microsoft",
+      "manufacturer": "Adobe",
       "language": "English",
       "package_ID": "Package Name",
       "compatibility_status": "Win 10",
@@ -115,7 +115,7 @@
     ,{
       "application_name": "Premiere",
       "version": "3.0.1.1",
-      "manufacturer": "Microsoft",
+      "manufacturer": "Adobe",
       "language": "English",
       "package_ID": "Package Name",
       "compatibility_status": "Win 10",
@@ -127,7 +127,7 @@
     ,{
       "application_name": "Animate",
       "version": "3.0.1.1",
-      "manufacturer": "Microsoft",
+      "manufacturer": "Adobe",
       "language": "English",
       "package_ID": "Package Name",
       "compatibility_status": "Win 10",
@@ -139,7 +139,7 @@
     ,{
       "application_name": "Adobe XD",
       "version": "3.0.1.1",
-      "manufacturer": "Microsoft",
+      "manufacturer": "Adobe",
       "language": "English",
       "package_ID": "Package Name",
       "compatibility_status": "Win 10",
@@ -151,7 +151,7 @@
     ,{
       "application_name": "Corel Draw",
       "version": "3.0.1.1",
-      "manufacturer": "Microsoft",
+      "manufacturer": "Adobe",
       "language": "English",
       "package_ID": "Package Name",
       "compatibility_status": "Win 10",

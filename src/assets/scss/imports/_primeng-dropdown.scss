@@ -5,12 +5,22 @@
     background-color: white;
   }
 }
-
 .ui-dropdown {
+  width: 100%;
   .ui-dropdown-trigger {
     .ui-dropdown-trigger-icon {
       color: $blue;
       font-size: 12px;
+    }
+  }
+  .ui-dropdown-item {
+    height: 36px;
+    line-height: 36px;
+    font-size: 15px;
+    color: $mine-shaft;
+    &.ui-state-highlight {
+      background-color: $blue;
+      color: white;
     }
   }
 }

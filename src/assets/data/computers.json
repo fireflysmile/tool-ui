@@ -1,5 +1,5 @@
 {
-  "config":[
+  "config": [
     {
       "field": "computer_name",
       "header": "Computer Name",
@@ -51,9 +51,39 @@
       "width": 250
     },
     {
-      "field": "email_address",
-      "header": "Email Address",
-      "width": 250
+      "field": "operating_system",
+      "header": "Operating System",
+      "width": 220
+    },
+    {
+      "field": "last_logon_name",
+      "header": "Last Logon Name",
+      "width": 220
+    },
+    {
+      "field": "ip_address",
+      "header": "IP Address",
+      "width": 160
+    },
+    {
+      "field": "bios_version",
+      "header": "BIOS Version",
+      "width": 160
+    },
+    {
+      "field": "primary_machine",
+      "header": "Primary Machine",
+      "width": 150
+    },
+    {
+      "field": "shared_machine",
+      "header": "Shared Machine",
+      "width": 120
+    },
+    {
+      "field": "purchase_date",
+      "header": "Purchase Date",
+      "width": 140
     }
   ],
   "datas": [
@@ -68,9 +98,15 @@
       "memory": "6 GB",
       "disk_space": "320 GB",
       "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "operating_system": "Windows 10",
+      "last_logon_name": "Adan Levine",
+      "ip_address": "214.435.135.125",
+      "bios_version": "10.0.0",
+      "primary_machine": "Yes",
+      "shared_machine": "Yes",
+      "purchase_date": "Dec 12.2018"
+    },
+    {
       "computer_name": "LT1100222",
       "manufacturer": "HP",
       "asset_tag": "OMV",
@@ -81,9 +117,15 @@
       "memory": "6 GB",
       "disk_space": "320 GB",
       "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "operating_system": "Windows 10",
+      "last_logon_name": "Adan Levine",
+      "ip_address": "214.435.135.125",
+      "bios_version": "10.0.0",
+      "primary_machine": "Yes",
+      "shared_machine": "Yes",
+      "purchase_date": "Dec 12.2018"
+    },
+    {
       "computer_name": "LT1100223",
       "manufacturer": "HP",
       "asset_tag": "OMV",
@@ -94,9 +136,15 @@
       "memory": "6 GB",
       "disk_space": "320 GB",
       "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "operating_system": "Windows 10",
+      "last_logon_name": "Adan Levine",
+      "ip_address": "214.435.135.125",
+      "bios_version": "10.0.0",
+      "primary_machine": "Yes",
+      "shared_machine": "Yes",
+      "purchase_date": "Dec 12.2018"
+    },
+    {
       "computer_name": "LT1100224",
       "manufacturer": "HP",
       "asset_tag": "OMV",
@@ -107,9 +155,15 @@
       "memory": "6 GB",
       "disk_space": "320 GB",
       "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "operating_system": "Windows 10",
+      "last_logon_name": "Adan Levine",
+      "ip_address": "214.435.135.125",
+      "bios_version": "10.0.0",
+      "primary_machine": "Yes",
+      "shared_machine": "Yes",
+      "purchase_date": "Dec 12.2018"
+    },
+    {
       "computer_name": "LT1100225",
       "manufacturer": "HP",
       "asset_tag": "OMV",
@@ -120,9 +174,15 @@
       "memory": "6 GB",
       "disk_space": "320 GB",
       "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "operating_system": "Windows 10",
+      "last_logon_name": "Adan Levine",
+      "ip_address": "214.435.135.125",
+      "bios_version": "10.0.0",
+      "primary_machine": "Yes",
+      "shared_machine": "Yes",
+      "purchase_date": "Dec 12.2018"
+    },
+    {
       "computer_name": "LT1100226",
       "manufacturer": "HP",
       "asset_tag": "OMV",
@@ -133,9 +193,15 @@
       "memory": "6 GB",
       "disk_space": "320 GB",
       "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "operating_system": "Windows 10",
+      "last_logon_name": "Adan Levine",
+      "ip_address": "214.435.135.125",
+      "bios_version": "10.0.0",
+      "primary_machine": "Yes",
+      "shared_machine": "Yes",
+      "purchase_date": "Dec 12.2018"
+    },
+    {
       "computer_name": "LT1100227",
       "manufacturer": "HP",
       "asset_tag": "OMV",
@@ -146,9 +212,15 @@
       "memory": "6 GB",
       "disk_space": "320 GB",
       "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "operating_system": "Windows 10",
+      "last_logon_name": "Adan Levine",
+      "ip_address": "214.435.135.125",
+      "bios_version": "10.0.0",
+      "primary_machine": "Yes",
+      "shared_machine": "Yes",
+      "purchase_date": "Dec 12.2018"
+    },
+    {
       "computer_name": "LT1100228",
       "manufacturer": "HP",
       "asset_tag": "OMV",
@@ -159,9 +231,15 @@
       "memory": "6 GB",
       "disk_space": "320 GB",
       "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "operating_system": "Windows 10",
+      "last_logon_name": "Adan Levine",
+      "ip_address": "214.435.135.125",
+      "bios_version": "10.0.0",
+      "primary_machine": "Yes",
+      "shared_machine": "Yes",
+      "purchase_date": "Dec 12.2018"
+    },
+    {
       "computer_name": "LT1100229",
       "manufacturer": "HP",
       "asset_tag": "OMV",
@@ -172,9 +250,15 @@
       "memory": "6 GB",
       "disk_space": "320 GB",
       "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "operating_system": "Windows 10",
+      "last_logon_name": "Adan Levine",
+      "ip_address": "214.435.135.125",
+      "bios_version": "10.0.0",
+      "primary_machine": "Yes",
+      "shared_machine": "Yes",
+      "purchase_date": "Dec 12.2018"
+    },
+    {
       "computer_name": "LT11002211",
       "manufacturer": "HP",
       "asset_tag": "OMV",
@@ -185,9 +269,15 @@
       "memory": "6 GB",
       "disk_space": "320 GB",
       "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "operating_system": "Windows 10",
+      "last_logon_name": "Adan Levine",
+      "ip_address": "214.435.135.125",
+      "bios_version": "10.0.0",
+      "primary_machine": "Yes",
+      "shared_machine": "Yes",
+      "purchase_date": "Dec 12.2018"
+    },
+    {
       "computer_name": "LT11002222",
       "manufacturer": "HP",
       "asset_tag": "OMV",
@@ -198,9 +288,15 @@
       "memory": "6 GB",
       "disk_space": "320 GB",
       "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "operating_system": "Windows 10",
+      "last_logon_name": "Adan Levine",
+      "ip_address": "214.435.135.125",
+      "bios_version": "10.0.0",
+      "primary_machine": "Yes",
+      "shared_machine": "Yes",
+      "purchase_date": "Dec 12.2018"
+    },
+    {
       "computer_name": "LT11002233",
       "manufacturer": "HP",
       "asset_tag": "OMV",
@@ -211,9 +307,15 @@
       "memory": "6 GB",
       "disk_space": "320 GB",
       "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "operating_system": "Windows 10",
+      "last_logon_name": "Adan Levine",
+      "ip_address": "214.435.135.125",
+      "bios_version": "10.0.0",
+      "primary_machine": "Yes",
+      "shared_machine": "Yes",
+      "purchase_date": "Dec 12.2018"
+    },
+    {
       "computer_name": "LT11002244",
       "manufacturer": "HP",
       "asset_tag": "OMV",
@@ -224,9 +326,15 @@
       "memory": "6 GB",
       "disk_space": "320 GB",
       "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "operating_system": "Windows 10",
+      "last_logon_name": "Adan Levine",
+      "ip_address": "214.435.135.125",
+      "bios_version": "10.0.0",
+      "primary_machine": "Yes",
+      "shared_machine": "Yes",
+      "purchase_date": "Dec 12.2018"
+    },
+    {
       "computer_name": "LT11002255",
       "manufacturer": "HP",
       "asset_tag": "OMV",
@@ -237,9 +345,15 @@
       "memory": "6 GB",
       "disk_space": "320 GB",
       "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "operating_system": "Windows 10",
+      "last_logon_name": "Adan Levine",
+      "ip_address": "214.435.135.125",
+      "bios_version": "10.0.0",
+      "primary_machine": "Yes",
+      "shared_machine": "Yes",
+      "purchase_date": "Dec 12.2018"
+    },
+    {
       "computer_name": "LT11002266",
       "manufacturer": "HP",
       "asset_tag": "OMV",
@@ -250,9 +364,15 @@
       "memory": "6 GB",
       "disk_space": "320 GB",
       "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
-      "email_address": "gomez@gmail.com"
-    }
-    ,{
+      "operating_system": "Windows 10",
+      "last_logon_name": "Adan Levine",
+      "ip_address": "214.435.135.125",
+      "bios_version": "10.0.0",
+      "primary_machine": "Yes",
+      "shared_machine": "Yes",
+      "purchase_date": "Dec 12.2018"
+    },
+    {
       "computer_name": "LT11002277",
       "manufacturer": "HP",
       "asset_tag": "OMV",
@@ -263,7 +383,13 @@
       "memory": "6 GB",
       "disk_space": "320 GB",
       "free_space": "C (100GB) ; D(120GB) ; E(50GB)",
-      "email_address": "gomez@gmail.com"
+      "operating_system": "Windows 10",
+      "last_logon_name": "Adan Levine",
+      "ip_address": "214.435.135.125",
+      "bios_version": "10.0.0",
+      "primary_machine": "Yes",
+      "shared_machine": "Yes",
+      "purchase_date": "Dec 12.2018"
     }
   ],
   "sort": [

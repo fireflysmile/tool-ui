@@ -1,0 +1,126 @@
+@import "width-height";
+@import "icons";
+@import "config";
+@import "color";
+@import "primeng-dropdown";
+
+.migration-update {
+  padding: 35px;
+  .btn-back {
+    text-decoration: none;
+    font-size: 14px;
+    color: $blue;
+    font-weight: 600;
+    .icon-back {
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      border-style: solid;
+      border-width: 0 0 2px 2px;
+      border-color: $blue;
+      transform: rotate(45deg);
+      margin-left: 3px;
+    }
+    .name-back {
+      padding-left: 8px;
+    }
+  }
+  .title {
+    font-size: 24px;
+    color: $chathams-blue;
+    padding-top: 15px;
+    text-transform: uppercase;
+  }
+  .migration-content {
+    border: 1px solid $heather;
+    background-color: white;
+    margin-top: 23px;
+    .content{
+      padding: 22px;
+      &-left {
+        width: 400px;
+        border-right: 1px solid $heather;
+        .box-name {
+          .sub {
+            font-size: 14px;
+            color: $mine-shaft;
+          }
+          .name {
+            font-size: 18px;
+            color: $chathams-blue;
+            padding-bottom: 5px;
+            font-weight: 600;
+          }
+        }
+      }
+      .item-row {
+        margin-top: 15px;
+        height: 40px;
+        font-size: 14px;
+        color: $mine-shaft;
+        .label {
+          font-weight: 600;
+          width: 45%;
+        }
+        .input {
+          width: 55%;
+          height: 40px;
+          border: none;
+          border-bottom: 1px solid $geyser;
+          .dropdown {
+            margin-top: 7px;
+          }
+          .text {
+            font-size: 14px;
+            color: $mine-shaft;
+            line-height: 38px;
+          }
+          &.no-bd {
+            border: none;
+          }
+        }
+        input {
+          height: 38px;
+          border: none;
+        }
+        .btn-add-new {
+          font-size: 14px;
+          color: $blue;
+          font-weight: 600;
+          text-decoration: none;
+          .icon-add {
+            margin-right: 14px;
+            margin-top: -3px;
+            @include icon(add, null, null);
+          }
+        }
+      }
+      &-right {
+        padding-top: 75px;
+        padding-bottom: 20px;
+        .item-row {
+          .label {
+            width: 315px;
+          }
+        }
+      }
+    }
+  }
+  @each $tuple in $buttonConfig {
+    .button-#{nth($tuple, 1)} {
+      width: nth($tuple, 2);
+      height: nth($tuple, 3);
+      line-height: nth($tuple, 3);
+      display: inline-block;
+      background-color: $blue;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+      text-align: center;
+      color: white;
+      font-weight: 600;
+      margin-left: 25px;
+      text-decoration: none;
+    }
+  }
+}

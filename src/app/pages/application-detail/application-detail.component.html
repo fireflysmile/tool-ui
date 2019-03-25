@@ -1,0 +1,89 @@
+<app-aside-view>
+  <div class="detail">
+    <a class="btn-back" [routerLink]="[ '/dashboard' ]">
+      <span class="icon-back"></span>
+      <span class="name-back">Back to Dashboard</span>
+    </a>
+    <h3>APPLICATION DETAILS</h3>
+    <div class="p-grid three-col">
+      <div class="p-col table">
+        <div class="introduce">
+          <p>{{ isData?.manufacturer }}</p>
+          <h4>{{ isData?.application_name }}</h4>
+        </div>
+        <div class="info">
+          <div class="content-left">
+            <div class="content-name">
+              <p>Version</p>
+              <p>Language</p>
+              <p>Package ID</p>
+              <p>Compatibility</p>
+              <p>Type of Install</p>
+              <p>Source Path</p>
+              <p>Application Status</p>
+            </div>
+            <div class="content-answered">
+              <p>{{ isData?.version }}</p>
+              <p>{{ isData?.language }}</p>
+              <p>{{ isData?.package_ID }}</p>
+              <p>{{ isData?.compatibility_status }}</p>
+              <p>{{ isData?.type_of_install }}</p>
+              <p>{{ isData?.sourcepath }}</p>
+              <p>{{ isData?.status }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-col">
+        <div class="box-group">
+          <p class="name">
+            <span class="icons icon-users"></span>
+            Users
+          </p>
+          <div class="text">
+            <a href="javascript:;" [routerLink]="[ '/user-detail' ]">Russels Marine</a>
+          </div>
+          <div class="text">
+            <a href="javascript:;" [routerLink]="[ '/user-detail' ]">Abigail</a>
+          </div>
+          <div class="text">
+            <a href="javascript:;" [routerLink]="[ '/user-detail' ]">Abraham</a>
+          </div>
+          <div class="text">
+            <a href="javascript:;" [routerLink]="[ '/user-detail' ]">Russels</a>
+          </div>
+          <div class="text">
+            <a href="javascript:;" [routerLink]="[ '/user-detail' ]">Abraham Marine</a>
+          </div>
+          <div class="text">
+            <a href="javascript:;" [routerLink]="[ '/user-detail' ]">Marine Abraham</a>
+          </div>
+          <div class="text">
+            <a href="javascript:;" [routerLink]="[ '/user-detail' ]">Marine Russels</a>
+          </div>
+        </div>
+      </div>
+      <div class="p-col">
+        <div class="box-group">
+          <p class="name">
+            <span class="icons icon-computer"></span>
+            Computer
+          </p>
+          <div class="text">
+            <a href="javascript:;" [routerLink]="[ '/computer-detail' ]">Russel’s Computer (HP Spectre 360)</a>
+          </div>
+          <div class="text">
+            <a href="javascript:;" [routerLink]="[ '/computer-detail' ]">Abraham’s Computer (HP Spectre 360)</a>
+          </div>
+          <div class="text">
+            <a href="javascript:;" [routerLink]="[ '/computer-detail' ]">Katthie’s Computer (HP Spectre 360)</a>
+          </div>
+          <div class="text">
+            <a href="javascript:;" [routerLink]="[ '/computer-detail' ]">123s Computer (HP Spectre 360)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</app-aside-view>
