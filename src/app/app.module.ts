@@ -44,6 +44,7 @@ import { ServiceComponent } from './pages/service/service.component';
 import { ChartModule } from 'primeng/chart';
 import { FullCalendarModule } from 'primeng/fullcalendar';
 import { CheckboxModule } from 'primeng/checkbox';
+import { EditorModule } from 'primeng/editor';
 
 const PrimeNGmodule = [
   FileUploadModule,
@@ -54,7 +55,8 @@ const PrimeNGmodule = [
   CalendarModule,
   ChartModule,
   FullCalendarModule,
-  CheckboxModule
+  CheckboxModule,
+  EditorModule
 ];
 
 @NgModule({

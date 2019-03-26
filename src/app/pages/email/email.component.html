@@ -1,3 +1,6 @@
-<p>
-  email works!
-</p>
+<app-header></app-header>
+<div class="add-template main-content">
+  <app-back (routerName)="redirectTo('welcome')">Email Template</app-back>
+  <h3 class="title fix-top">Add template</h3>
+  <p-editor [(ngModel)]="text" [style]="{'height':'320px'}"></p-editor>
+</div>
