@@ -52,7 +52,7 @@
           </div>
         </div>
         <div class="item-row p-grid p-align-center" *ngIf="!addMigration">
-          <a href="javascript:;" class="btn-add-new p-grid p-align-center" (click)="addMigration = !addMigration">
+          <a href="javascript:;" class="btn-add-new p-grid p-align-center" (click)="fnAddMigration()">
             <span class="icon-add"></span>
             Add Migration Data
           </a>
@@ -106,13 +106,13 @@
           </div>
         </div>
         <div class="item-row p-grid p-align-center" *ngIf="!addLoanerName">
-          <a href="javascript:;" class="btn-add-new p-grid p-align-center" (click)="addLoanerName = !addLoanerName">
+          <a href="javascript:;" class="btn-add-new p-grid p-align-center" (click)="fnAddLoanerName()">
             <span class="icon-add"></span>
             Add Loaner Name
           </a>
         </div>
         <div class="item-row p-grid p-align-center" *ngIf="!addAdditionalApp">
-          <a href="javascript:;" class="btn-add-new p-grid p-align-center" (click)="addAdditionalApp = !addAdditionalApp">
+          <a href="javascript:;" class="btn-add-new p-grid p-align-center" (click)="fnAddAdditionalApp()">
             <span class="icon-add"></span>
             Add Additional App Installed
           </a>
