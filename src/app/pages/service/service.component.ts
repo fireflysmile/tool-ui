@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import {ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-service',
   templateUrl: './service.component.html',
-  styleUrls: ['./service.component.scss']
+  styleUrls: ['./service.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ServiceComponent implements OnInit {
 
@@ -18,7 +20,24 @@ export class ServiceComponent implements OnInit {
 
   mirgationDate = null;
   roCalender: any;
-
+  datePlan = [
+    {year: 2019, month: 3, day: 1},
+    {year: 2019, month: 3, day: 2},
+    {year: 2019, month: 3, day: 5},
+    {year: 2019, month: 3, day: 7},
+    {year: 2019, month: 3, day: 8},
+    {year: 2019, month: 3, day: 9},
+    {year: 2019, month: 3, day: 12},
+    {year: 2019, month: 3, day: 14},
+    {year: 2019, month: 3, day: 15},
+    {year: 2019, month: 3, day: 17},
+    {year: 2019, month: 3, day: 19},
+    {year: 2019, month: 3, day: 21},
+    {year: 2019, month: 3, day: 22},
+    {year: 2019, month: 3, day: 24},
+    {year: 2019, month: 3, day: 28},
+    {year: 2019, month: 3, day: 29},
+  ];
   constructor() {
     this.roCalender = {
       firstDayOfWeek: 1,
