@@ -41,6 +41,7 @@ import { ReportComponent } from './pages/report/report.component';
 import { SurveyComponent } from './pages/survey/survey.component';
 import { EmailComponent } from './pages/email/email.component';
 import { ServiceComponent } from './pages/service/service.component';
+import { ChartModule } from 'primeng/chart';
 
 const PrimeNGmodule = [
   FileUploadModule,
@@ -48,7 +49,8 @@ const PrimeNGmodule = [
   TableModule,
   ScrollPanelModule,
   DropdownModule,
-  CalendarModule
+  CalendarModule,
+  ChartModule
 ];
 
 @NgModule({

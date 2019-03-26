@@ -1,0 +1,96 @@
+@import 'primeng';
+@import 'color';
+@import 'icons';
+
+.report-wp {
+  .title {
+    font-size: 24px;
+    font-weight: 800;
+    color: $chathams-blue;
+    height: 90px;
+    line-height: 90px;
+    padding-left: 34px;
+  }
+  .options-fix-table {
+    position: absolute;
+    margin-top: -45px;
+    right: 38px;
+    visibility: visible;
+    z-index: 99;
+    .btn-export {
+      margin-left: 46px;
+      font-size: 14px;
+      color: $blue;
+      font-weight: 600;
+      text-decoration: none;
+      .icon {
+        margin-right: 13px;
+        &-pdf {
+          @include icon(pdf-color, null, null);
+        }
+        &-csv {
+          @include icon(csv-color, null, null);
+        }
+      }
+    }
+  }
+  .report-content {
+    .options {
+      border-top: 1px solid $heather;
+      border-bottom: 1px solid $heather;
+      height: 93px;
+      padding: 0 33px;
+      .box {
+        .label {
+          width: 123px;
+          padding: 0;
+          display: inline-block;
+        }
+        &.p-left {
+          padding-left: 73px;
+        }
+        .dropdown {
+          height: 43px;
+          border-bottom: 1px solid $heather;
+          padding-top: 7px;
+        }
+      }
+      .button-ok {
+        width: 120px;
+        height: 35px;
+        line-height: 35px;
+        display: inline-block;
+        background-color: $blue;
+        border: none;
+        cursor: pointer;
+        font-size: 15px;
+        text-align: center;
+        color: white;
+        font-weight: 600;
+        text-decoration: none;
+      }
+    }
+    .chart-view {
+      padding: 34px;
+      > div {
+        min-height: 300px
+      }
+      .two-col {
+        .p-col:first-child {
+          padding-right: 50px;
+        }
+      }
+      .box-name {
+        font-size: 15px;
+        color: $mine-shaft;
+        font-weight: 600;
+        padding-bottom: 30px;
+      }
+      .img-thumb {
+        width: 160px;
+        margin: auto;
+        display: block;
+      }
+    }
+  }
+}

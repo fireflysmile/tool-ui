@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-service',
   templateUrl: './service.component.html',
-  styleUrls: ['./service.component.scss']
+  styleUrls: ['./service.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ServiceComponent implements OnInit {
 
@@ -31,7 +32,7 @@ export class ServiceComponent implements OnInit {
       today: 'Today',
       clear: 'Clear',
       dateFormat: 'mm/dd/yy'
-  };
+    };
     this.computerList = [{computer_name: 'hp'}, {computer_name: 'asus'}, {computer_name: 'macbook'}];
     this.computer = {computer_name: 'hp'};
 
