@@ -42,6 +42,8 @@ import { SurveyComponent } from './pages/survey/survey.component';
 import { EmailComponent } from './pages/email/email.component';
 import { ServiceComponent } from './pages/service/service.component';
 import { ChartModule } from 'primeng/chart';
+import { FullCalendarModule } from 'primeng/fullcalendar';
+import { CheckboxModule } from 'primeng/checkbox';
 
 const PrimeNGmodule = [
   FileUploadModule,
@@ -50,7 +52,9 @@ const PrimeNGmodule = [
   ScrollPanelModule,
   DropdownModule,
   CalendarModule,
-  ChartModule
+  ChartModule,
+  FullCalendarModule,
+  CheckboxModule
 ];
 
 @NgModule({
