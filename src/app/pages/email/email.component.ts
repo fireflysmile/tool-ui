@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-email',
@@ -9,9 +10,13 @@ export class EmailComponent implements OnInit {
 
   text: string;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  redirectTo(key: string) {
+    this.router.navigateByUrl(key);
   }
 
 }
