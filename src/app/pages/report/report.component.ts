@@ -13,7 +13,7 @@ export class ReportComponent implements OnInit {
   selectedBy = '';
   selectedType = '';
   startDate = '';
-  andDate = '';
+  endDate = '';
   selectedMigration = '';
   isType: boolean;
   isDuration: boolean;
