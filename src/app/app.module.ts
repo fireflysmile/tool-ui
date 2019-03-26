@@ -16,6 +16,7 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { BackComponent } from './components/back/back.component';
 import { OnboardProjectComponent } from './pages/onboard-project/onboard-project.component';
 
+import {CalendarModule} from 'primeng/calendar';
 import { FileUploadModule } from 'primeng/fileupload';
 import { TabViewModule } from 'primeng/tabview';
 import { TableModule } from 'primeng/table';
@@ -46,7 +47,8 @@ const PrimeNGmodule = [
   TabViewModule,
   TableModule,
   ScrollPanelModule,
-  DropdownModule
+  DropdownModule,
+  CalendarModule
 ];
 
 @NgModule({

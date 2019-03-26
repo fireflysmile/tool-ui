@@ -1,0 +1,39 @@
+@import "icons";
+@import "color";
+@import "width-height";
+
+.self-service-page {
+    h1 {
+        font-size: 24px;
+        color: $chathams-blue;
+        padding-top: 15px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 36px;;
+    }
+    .main {
+        border: 1px solid $heather;
+        width: $width-service;
+        display: flex;
+        align-self: center;
+        .left-div {
+            width: 60%;
+            box-sizing: border-box;
+            padding: 25px;
+            h2 {
+                font-size: 18px;
+                color: $chathams-blue;
+                padding-bottom: 32px;
+                font-weight: 600;
+                >span {
+                    font-size: 14px;
+                    color: $mine-shaft;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        .right-div {
+            width: 40%;
+        }
+    }
+}
