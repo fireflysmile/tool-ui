@@ -42,6 +42,8 @@ import { SurveyComponent } from './pages/survey/survey.component';
 import { EmailComponent } from './pages/email/email.component';
 import { ServiceComponent } from './pages/service/service.component';
 import { ChartModule } from 'primeng/chart';
+import { TabComponent } from './components/tabset/tab/tab.component';
+import { TabsetComponent } from './components/tabset/tabset.component';
 
 const PrimeNGmodule = [
   FileUploadModule,
@@ -82,7 +84,9 @@ const PrimeNGmodule = [
     ReportComponent,
     SurveyComponent,
     EmailComponent,
-    ServiceComponent
+    ServiceComponent,
+    TabsetComponent,
+    TabComponent
   ],
   imports: [
     BrowserModule,
