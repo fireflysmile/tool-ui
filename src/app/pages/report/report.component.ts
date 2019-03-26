@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewEncapsulation, ViewChild, ElementRef } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
-import 'chart.piecelabel.js';
 import 'chartjs-plugin-doughnutlabel';
 
 @Component({
