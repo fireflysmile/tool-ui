@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmailComponent implements OnInit {
 
+  text: string;
+
   constructor() { }
 
   ngOnInit() {
