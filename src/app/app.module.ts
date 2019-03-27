@@ -45,6 +45,7 @@ import { ChartModule } from 'primeng/chart';
 import { FullCalendarModule } from 'primeng/fullcalendar';
 import { CheckboxModule } from 'primeng/checkbox';
 import { EditorModule } from 'primeng/editor';
+import { TemplateAddComponent } from './pages/email/template-add/template-add.component';
 
 const PrimeNGmodule = [
   FileUploadModule,
@@ -88,7 +89,8 @@ const PrimeNGmodule = [
     ReportComponent,
     SurveyComponent,
     EmailComponent,
-    ServiceComponent
+    ServiceComponent,
+    TemplateAddComponent
   ],
   imports: [
     BrowserModule,

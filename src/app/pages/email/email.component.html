@@ -1,6 +1,210 @@
 <app-header></app-header>
-<div class="add-template main-content">
-  <app-back (routerName)="redirectTo('welcome')">Email Template</app-back>
-  <h3 class="title fix-top">Add template</h3>
-  <p-editor [(ngModel)]="text" [style]="{'height':'320px'}"></p-editor>
+<div class="email-config">
+  <app-back (routerName)="redirectTo('welcome')">Home</app-back>
+  <h3 class="title fix-top">EMAIL TEMPLATE</h3>
+  <div class="config-content p-grid">
+    <div class="p-col-fixed box box-left">
+      <div class="box-config">
+        <div class="p-grid p-align-center item fixed-t">
+          <div class="p-col-fixed" [style.width.px]="50">
+            <span class="icon-email-log"></span>
+          </div>
+          <div class="p-col">Email Log</div>
+        </div>
+        <div class="p-grid p-align-center p-justify-between item" *ngFor="let item of logDatas">
+          <div class="p-col">{{ item.name }} <span *ngIf="item.attach" class="icon-attach"></span></div>
+          <div class="p-col-4 p-grid p-justify-end">{{ item.date_attach }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="p-col box box-right">
+      <p-tabView>
+        <p-tabPanel header="Email Configuration">
+          <div class="box-bd-top">
+            <div class="p-grid p-align-center c-row">
+              <div class="p-col-3">
+                <span class="label">Mail Server Address</span>
+              </div>
+              <div class="p-col-4">
+                <div class="input">
+                  <input type="text" [ngModel]="mailServerAddress">
+                </div>
+              </div>
+            </div>
+            <div class="p-grid p-align-center c-row">
+              <div class="p-col-3">
+                <span class="label">Port</span>
+              </div>
+              <div class="p-col-4">
+                <div class="input">
+                  <input type="text" [(ngModel)]="port">
+                </div>
+              </div>
+            </div>
+            <div class="p-grid p-align-center c-row">
+              <div class="p-col-3">
+                <span class="label">Mail Server Type</span>
+              </div>
+              <div class="p-col-4">
+                <div class="input">
+                  <div class="dropdown">
+                    <p-dropdown [options]="mailTypeOptions" [(ngModel)]="mailServerType">
+                    </p-dropdown>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-grid p-align-center c-row">
+              <div class="p-col-3">
+                <span class="label">Sender Name</span>
+              </div>
+              <div class="p-col-4">
+                <div class="input">
+                  <input type="text" [(ngModel)]="senderName">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box-bd-top">
+            <div class="p-grid p-align-center c-row">
+              <div class="p-col-3">
+                <span class="label">Authentication Type</span>
+              </div>
+            </div>
+            <div class="p-grid p-align-center c-row">
+              <div class="p-col-3">
+                <span class="label">Username</span>
+              </div>
+              <div class="p-col-4">
+                <div class="input">
+                  <input type="text" [(ngModel)]="username">
+                </div>
+              </div>
+            </div>
+            <div class="p-grid p-align-center c-row">
+              <div class="p-col-3">
+                <span class="label">Password</span>
+              </div>
+              <div class="p-col-4">
+                <div class="input">
+                  <input type="text" [(ngModel)]="password">
+                </div>
+              </div>
+            </div>
+
+            <div class="p-grid p-align-center c-row">
+              <div class="p-col-3">
+                <span class="label">Sender Email</span>
+              </div>
+              <div class="p-col-4">
+                <div class="input">
+                  <input type="text" [(ngModel)]="senderEmail">
+                </div>
+              </div>
+            </div>
+          </div>
+        </p-tabPanel>
+        <p-tabPanel header="Schedule Configuration">
+          <div class="box-bd-top">
+            <div class="p-grid p-align-center c-row">
+              <div class="p-col-3">
+                <span class="label">Project Name</span>
+              </div>
+              <div class="p-col-4">
+                <div class="input">
+                  <p-dropdown [options]="scheduleConfig?.project_options" [(ngModel)]="projectName">
+                  </p-dropdown>
+                </div>
+              </div>
+            </div>
+            <div class="p-grid p-align-center c-row">
+              <div class="p-col-3">
+                <span class="label">Group</span>
+              </div>
+              <div class="p-col-4">
+                <div class="input">
+                  <p-dropdown [options]="scheduleConfig?.group_options" [(ngModel)]="group">
+                  </p-dropdown>
+                </div>
+              </div>
+            </div>
+            <div class="p-grid p-align-center c-row">
+              <div class="p-col-3">
+                <span class="label">Migration Type</span>
+              </div>
+              <div class="p-col-4">
+                <div class="input">
+                  <p-dropdown [options]="scheduleConfig?.migration_type_options" [(ngModel)]="migrationType">
+                  </p-dropdown>
+                </div>
+              </div>
+            </div>
+            <div class="p-grid p-align-center c-row">
+              <div class="p-col-3">
+                <span class="label">Test Email</span>
+              </div>
+              <div class="p-col-4">
+                <div class="input">
+                  <input type="text" [(ngModel)]="testEmail">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-grid">
+            <div class="p-col">
+              <div class="box-config">
+                <div class="p-grid p-align-center item fixed-t">
+                  <div class="p-col-fixed" [style.width.px]="50">
+                    <span class="icon-email-log"></span>
+                  </div>
+                  <div class="p-col">Select Receipients</div>
+                </div>
+                <div class="p-grid p-align-center p-justify-between item"
+                  *ngFor="let item of receipientsDatas; let idx of index">
+                  <div class="p-col">{{ item.name }}</div>
+                  <div class="p-col-4 p-grid p-justify-end">
+                    <span class="icon-delete" (click)="deleteReceipient(idx)"></span>
+                  </div>
+                </div>
+                <div class="p-grid p-align-center p-justify-between item">
+                  <div class="p-col">
+                    <a href="javascript:;" class="btn-add-new p-grid p-align-center">
+                      <span class="icon-add"></span>
+                      Add Receipient
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-col box-bd-left">
+              <div class="box-config">
+                <div class="p-grid p-align-center item fixed-t">
+                  <div class="p-col-fixed" [style.width.px]="50">
+                    <span class="icon-save-tpl"></span>
+                  </div>
+                  <div class="p-col">Saved Templates</div>
+                </div>
+                <div class="p-grid p-align-center p-justify-between item"
+                  *ngFor="let item of templatesDatas; let idx of index">
+                  <div class="p-col">{{ item.name }}</div>
+                  <div class="p-col-4 p-grid p-justify-end">
+                    <span class="icon-delete" (click)="deleteTemplates(idx)"></span>
+                  </div>
+                </div>
+                <div class="p-grid p-align-center p-justify-between item">
+                  <div class="p-col">
+                    <a href="javascript:;" class="btn-add-new p-grid p-align-center" [routerLink]="[ '/add-template' ]">
+                      <span class="icon-add"></span>
+                      Add/Update Template
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </p-tabPanel>
+      </p-tabView>
+    </div>
+  </div>
 </div>

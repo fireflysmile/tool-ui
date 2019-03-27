@@ -7,7 +7,7 @@
 }
 .ui-dropdown {
   width: 100%;
-  min-width: 11.5em;
+  min-width: unset;
   .ui-dropdown-trigger {
     .ui-dropdown-trigger-icon {
       color: $blue;

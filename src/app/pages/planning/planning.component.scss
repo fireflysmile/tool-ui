@@ -3,14 +3,15 @@
 @import 'primeng-checkbox';
 @import 'primeng-dropdown';
 @import 'primeng-full-calendar';
+@import 'width-height';
 
 .planning-wp {
   .title {
     font-size: 24px;
     font-weight: 800;
     color: $chathams-blue;
-    height: 90px;
-    line-height: 90px;
+    height: $heading-h;
+    line-height: $heading-h;
     padding-left: 34px;
     text-transform: uppercase
   }

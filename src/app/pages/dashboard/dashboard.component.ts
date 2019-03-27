@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
-import { config } from 'src/app/core/config';
+import { widthHeight } from 'src/app/core/widthHeight';
 import { Table } from 'primeng/table';
 import { Router } from '@angular/router';
 import { DataService } from 'src/app/services/data.service';
@@ -14,6 +14,8 @@ export class DashboardComponent implements OnInit {
 
   getHeight: number;
   tabHeight: string;
+
+  selectedTab: number;
 
   users: any;
   usersSortBy = 'user_name';
@@ -41,11 +43,11 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
 
-    this.getHeight = document.documentElement.clientHeight - config.height_top_dashboard;
-    if (this.getHeight > config.min_table) {
+    this.getHeight = document.documentElement.clientHeight - widthHeight.height_top_dashboard;
+    if (this.getHeight > widthHeight.min_table) {
       this.tabHeight = this.getHeight + 'px';
     } else {
-      this.tabHeight = config.min_table + 'px';
+      this.tabHeight = widthHeight.min_table + 'px';
     }
 
     this.onload();
@@ -83,6 +85,14 @@ export class DashboardComponent implements OnInit {
     localStorage.setItem(page, JSON.stringify(isData));
 
     this.router.navigateByUrl(page);
+  }
+
+  onTabChange(event) {
+      this.activateTab(event.index);
+  }
+
+  activateTab(tabNumber) {
+      this.selectedTab = tabNumber;
   }
 
 }
