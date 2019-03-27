@@ -1,0 +1,108 @@
+@import 'icons';
+@import 'color';
+@import 'width-height';
+@import 'primeng';
+
+.email-config {
+  min-height: $min-h;
+  .title {
+    font-size: 30px;
+    color: $chathams-blue;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 34px;
+    font-weight: 800;
+    &.fix-top {
+      padding-top: 60px;
+    }
+  }
+  .config-content {
+    padding: 34px;
+    .box {
+      border: 1px solid $heather;
+      &-left {
+        padding: 0;
+        width: $left-email-w;
+      }
+      .box-bd-left {
+        border-left: 1px solid $heather;
+      }
+      .box-config {
+        .icon-email-log {
+          @include icon(email-log, null, null);
+          margin-top: 2px;
+        }
+        .icon-save-tpl {
+          @include icon(save-tpl, null, null);
+          margin-top: 2px;
+        }
+        .item {
+          height: 50px;
+          border-top: 1px solid $heather;
+          font-size: 15px;
+          padding: 0 20px;
+          color: $mine-shaft;
+          font-weight: 600;
+          .icon-attach {
+            @include icon(attach, null, null);
+            margin-top: 2px;
+            margin-left: 10px;
+          }
+          .icon-delete {
+            @include icon(delete-red, null, null);
+            cursor: pointer;
+          }
+          &.fixed-t {
+            background-color: $white-lilac;
+            .p-col-fixed {
+              padding: 0;
+            }
+          }
+          input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid $heather;
+            text-align: center;
+          }
+          .btn-add-new {
+            font-size: 14px;
+            color: $blue;
+            font-weight: 600;
+            text-decoration: none;
+            .icon-add {
+              margin-right: 14px;
+              margin-top: -3px;
+              @include icon(add, null, null);
+            }
+          }
+        }
+      }
+      &-right {
+        margin-left: 34px;
+        .ui-tabview.ui-tabview-top .ui-tabview-nav li a {
+          line-height: 45px;
+        }
+        .box-bd-top {
+          border-top: 1px solid $heather;
+          padding: 30px;
+          .c-row {
+            .label {
+              font-size: 15px;
+              color: $mine-shaft;
+              font-weight: 600;
+            }
+            input {
+              height: 39px;
+              border: none;
+            }
+            .input {
+              height: 40px;
+              border: none;
+              border-bottom: 1px solid $geyser;
+            }
+          }
+        }
+      }
+    }
+  }
+}

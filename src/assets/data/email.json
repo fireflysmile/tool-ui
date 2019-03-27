@@ -1,0 +1,165 @@
+{
+  "logs":[
+    {
+      "name": "Lorem Ipsum Dolor Sit Amet",
+      "attach": true,
+      "date_attach": "9 Mar"
+    },
+    {
+      "name": "Lorem Ipsum Dolor Sit Amet",
+      "attach": true,
+      "date_attach": "23 Feb"
+    },
+    {
+      "name": "Lorem Ipsum Dolor Sit Amet",
+      "attach": true,
+      "date_attach": "23 Feb"
+    },
+    {
+      "name": "Lorem Ipsum Dolor Sit Amet",
+      "attach": false,
+      "date_attach": "15 Feb"
+    },
+    {
+      "name": "Lorem Ipsum Dolor Sit Amet",
+      "attach": false,
+      "date_attach": "10 Feb"
+    },
+    {
+      "name": "Lorem Ipsum Dolor Sit Amet",
+      "attach": true,
+      "date_attach": "5 Feb"
+    },
+    {
+      "name": "Lorem Ipsum Dolor Sit Amet",
+      "attach": false,
+      "date_attach": "31 Jan"
+    },
+    {
+      "name": "Lorem Ipsum Dolor Sit Amet",
+      "attach": false,
+      "date_attach": "30 Jan"
+    },
+    {
+      "name": "Lorem Ipsum Dolor Sit Amet",
+      "attach": true,
+      "date_attach": "19 Jan"
+    }
+  ],
+  "receipients":[
+    {
+      "name": "abc@examplecorp.com"
+    },
+    {
+      "name": "2abc@examplecorp.com"
+    },
+    {
+      "name": "3abc@examplecorp.com"
+    }
+  ],
+  "templates":[
+    {
+      "name": "T-20"
+    },
+    {
+      "name": "T-30"
+    },
+    {
+      "name": "T-20W"
+    }
+  ],
+  "attachments":[
+    {
+      "name": "Filename123.jpg"
+    },
+    {
+      "name": "Filename132123124.zip"
+    },
+    {
+      "name": "Filename879789.doc"
+    }
+  ],
+  "email_config": {
+    "mail_server_address": "10.2.2.1",
+    "port": "10.2.2.1",
+    "mail_server_type": "POP3",
+    "sender_name": "abc@examplecorp.com",
+    "authentication_type": {
+      "username": "1234",
+      "password": "1234",
+      "sender_email": "email1234@example.com"
+    },
+    "mail_type_options": [
+      {
+        "label": "POP3",
+        "value": "POP3"
+      },
+      {
+        "label": "SMTP",
+        "value": "SMTP"
+      },
+      {
+        "label": "IMAP",
+        "value": "IMAP"
+      }
+    ]
+  },
+  "schedule_config": {
+    "project_name": "Project1",
+    "group": "Group1",
+    "migration_type": "Refresh",
+    "test_email": "abc@examplecorp.com",
+    "project_options": [
+      {
+        "label": "Project1",
+        "value": "Project1"
+      }
+      ,{
+        "label": "Project2",
+        "value": "Project2"
+      }
+    ],
+    "group_options": [
+      {
+        "label": "Group1",
+        "value": "Group1"
+      }
+      ,{
+        "label": "Group2",
+        "value": "Group2"
+      }
+    ],
+    "migration_type_options": [
+      {
+        "label": "Refresh",
+        "value": "Refresh"
+      },
+      {
+        "label": "Replace",
+        "value": "Replace"
+      }
+    ]
+  },
+  "template_options":[
+    {
+      "label": "T-20",
+      "value": "T-20"
+    }
+    ,{
+      "label": "T-10",
+      "value": "T-10"
+    }
+    ,{
+      "label": "T-40",
+      "value": "T-40"
+    }
+    ,{
+      "label": "T-50",
+      "value": "T-50"
+    }
+    ,{
+      "label": "T-60",
+      "value": "T-60"
+    }
+  ]
+}

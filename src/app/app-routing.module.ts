@@ -16,6 +16,7 @@ import { ReportComponent } from './pages/report/report.component';
 import { SurveyComponent } from './pages/survey/survey.component';
 import { EmailComponent } from './pages/email/email.component';
 import { ServiceComponent } from './pages/service/service.component';
+import { TemplateAddComponent } from './pages/email/template-add/template-add.component';
 
 const routes: Routes = [
   {
@@ -65,6 +66,9 @@ const routes: Routes = [
   },
   {
     path: 'migration-update', component: UpdateMigrationComponent
+  },
+  {
+    path: 'add-template', component: TemplateAddComponent
   },
   {
     path: '**', redirectTo: '', pathMatch: 'full'

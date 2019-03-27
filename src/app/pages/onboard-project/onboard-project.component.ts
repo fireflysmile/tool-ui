@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from 'src/app/services/data.service';
-import { config } from 'src/app/core/config';
+import { widthHeight } from 'src/app/core/widthHeight';
 
 @Component({
   selector: 'app-onboard-project',
@@ -40,11 +40,11 @@ export class OnboardProjectComponent implements OnInit {
 
   ngOnInit() {
 
-    this.getHeight = document.documentElement.clientHeight - (config.height_top_table + config.height_bottom_table);
-    if (this.getHeight > config.min_table) {
+    this.getHeight = document.documentElement.clientHeight - (widthHeight.height_top_table + widthHeight.height_bottom_table);
+    if (this.getHeight > widthHeight.min_table) {
       this.tabHeight = this.getHeight + 'px';
     } else {
-      this.tabHeight = config.min_table + 'px';
+      this.tabHeight = widthHeight.min_table + 'px';
     }
 
     this.onload();

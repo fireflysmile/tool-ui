@@ -1,3 +1,148 @@
-<p>
-  report works!
-</p>
+<app-aside-view>
+  <div class="report-wp">
+    <h3 class="title">REPORTS</h3>
+    <p-tabView>
+      <p-tabPanel header="Report by Type">
+        <div class="options-fix-table p-grid p-align-center">
+          <a href="javascript:;" class="btn-export p-grid p-align-center">
+            <span class="icon icon-pdf"></span>
+            Export to PDF
+          </a>
+          <a href="javascript:;" class="btn-export p-grid p-align-center">
+            <span class="icon icon-csv"></span>
+            Export to CSV
+          </a>
+        </div>
+        <div class="report-content">
+          <div class="options p-grid p-align-center">
+            <div class="p-col p-grid p-justify-between p-align-center">
+              <div class="p-col p-grid p-align-center box">
+                <span class="label p-col-fixed">Select by</span>
+                <div class="p-col dropdown">
+                  <p-dropdown [options]="reportConfig?.select_by" [(ngModel)]="selectedBy" placeholder="Select">
+                  </p-dropdown>
+                </div>
+              </div>
+              <div class="p-col p-grid p-align-center box p-left">
+                <span class="label p-col-fixed">Type</span>
+                <div class="p-col dropdown">
+                  <p-dropdown [options]="reportConfig?.type" [(ngModel)]="selectedType" placeholder="Select">
+                  </p-dropdown>
+                </div>
+              </div>
+              <div class="p-col p-grid p-justify-end">
+                <a href="javascript:;" class="button-ok" (click)="viewType()">View Report</a>
+              </div>
+            </div>
+          </div>
+          <div class="chart-view" *ngIf="isType">
+            <div class="p-grid">
+              <div class="p-col">
+                <h5 class="box-name">{{ devicesName }}</h5>
+                <p-chart type="doughnut" height="160px" [data]="devicesChart" [options]="optionsDevice"></p-chart>
+              </div>
+              <div class="p-col">
+                <h5 class="box-name">{{ migrationName }}</h5>
+                <p-chart type="doughnut" height="160px" [data]="migrationChart" [options]="optionsMigration"></p-chart>
+              </div>
+              <div class="p-col">
+                <h5 class="box-name">{{ profileName }}</h5>
+                <p-chart type="doughnut" height="160px" [data]="profileChart" [options]="optionsProfile"></p-chart>
+              </div>
+              <div class="p-col">
+                <h5 class="box-name">Average Satisfaction Score</h5>
+                <img class="img-thumb" src="assets/img/gauge.png" alt="chart thumb">
+              </div>
+            </div>
+            <div class="p-grid two-col">
+              <div class="p-col">
+                <h5 class="box-name">{{ siteMigrationName }}</h5>
+                <p-chart type="horizontalBar" height="220px" [data]="siteMigration" [options]="siteMigrationOptions">
+                </p-chart>
+              </div>
+              <div class="p-col">
+                <h5 class="box-name">{{ plannedMigrationName }}</h5>
+                <p-chart type="bar" height="220px" [data]="plannedMigrations" [options]="plannedMigrationOptions">
+                </p-chart>
+              </div>
+            </div>
+          </div>
+        </div>
+      </p-tabPanel>
+      <p-tabPanel header="Report by Duration">
+        <div class="options-fix-table p-grid p-align-center">
+          <a href="javascript:;" class="btn-export p-grid p-align-center">
+            <span class="icon icon-pdf"></span>
+            Export to PDF
+          </a>
+          <a href="javascript:;" class="btn-export p-grid p-align-center">
+            <span class="icon icon-csv"></span>
+            Export to CSV
+          </a>
+        </div>
+        <div class="report-content">
+          <div class="options p-grid p-align-center">
+            <div class="p-col p-grid p-justify-between p-align-center">
+              <div class="p-col p-grid p-align-center box">
+                <span class="label p-col-fixed">Start Date</span>
+                <div class="p-col dropdown">
+                  <p-calendar name="mirgationDate" [(ngModel)]="startDate" placeholder="Select Date"
+                    icon="ico calender-ico" [showIcon]="true" [locale]="roCalender"></p-calendar>
+                </div>
+              </div>
+              <div class="p-col p-grid p-align-center box p-left">
+                <span class="label p-col-fixed">End Date</span>
+                <div class="p-col dropdown">
+                  <p-calendar name="mirgationDate" [(ngModel)]="endDate" placeholder="Select Date"
+                    icon="ico calender-ico" [showIcon]="true" [locale]="roCalender"></p-calendar>
+                </div>
+              </div>
+              <div class="p-col p-grid p-align-center box p-left">
+                <span class="label p-col-fixed">Migration</span>
+                <div class="p-col dropdown">
+                  <p-dropdown [options]="reportConfig?.migration" [(ngModel)]="selectedMigration" placeholder="Select">
+                  </p-dropdown>
+                </div>
+              </div>
+              <div class="p-col p-grid p-col-fixed p-justify-end" [style.width.px]="325">
+                <a href="javascript:;" class="button-ok" (click)="viewDuration()">View Report</a>
+              </div>
+            </div>
+          </div>
+          <div class="chart-view" *ngIf="isDuration">
+            <div class="p-grid">
+              <div class="p-col">
+                <h5 class="box-name">{{ devicesName }}</h5>
+                <p-chart type="doughnut" height="160px" [data]="devicesChart" [options]="optionsDevice"></p-chart>
+              </div>
+              <div class="p-col">
+                <h5 class="box-name">{{ migrationName }}</h5>
+                <p-chart type="doughnut" height="160px" [data]="migrationChart" [options]="optionsMigration"></p-chart>
+              </div>
+              <div class="p-col">
+                <h5 class="box-name">{{ profileName }}</h5>
+                <p-chart type="doughnut" height="160px" [data]="profileChart" [options]="optionsProfile"></p-chart>
+              </div>
+              <div class="p-col">
+                <h5 class="box-name">Average Satisfaction Score</h5>
+                <img class="img-thumb" src="assets/img/gauge.png" alt="chart thumb">
+              </div>
+            </div>
+            <div class="p-grid two-col">
+              <div class="p-col">
+                <h5 class="box-name">{{ siteMigrationName }}</h5>
+                <p-chart type="horizontalBar" height="220px" [data]="siteMigration" [options]="siteMigrationOptions">
+                </p-chart>
+              </div>
+              <div class="p-col">
+                <h5 class="box-name">{{ plannedMigrationName }}</h5>
+                <p-chart type="bar" height="220px" [data]="plannedMigrations" [options]="plannedMigrationOptions">
+                </p-chart>
+              </div>
+            </div>
+          </div>
+        </div>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+</app-aside-view>

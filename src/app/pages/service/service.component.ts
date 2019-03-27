@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {ViewEncapsulation} from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-service',
@@ -50,7 +49,7 @@ export class ServiceComponent implements OnInit {
       today: 'Today',
       clear: 'Clear',
       dateFormat: 'mm/dd/yy'
-  };
+    };
     this.computerList = [{computer_name: 'hp'}, {computer_name: 'asus'}, {computer_name: 'macbook'}];
     this.computer = {computer_name: 'hp'};
 
