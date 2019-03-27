@@ -20,24 +20,35 @@ export class ServiceComponent implements OnInit {
 
   mirgationDate = null;
   roCalender: any;
-  datePlan = [
-    {year: 2019, month: 3, day: 1},
-    {year: 2019, month: 3, day: 2},
-    {year: 2019, month: 3, day: 5},
-    {year: 2019, month: 3, day: 7},
-    {year: 2019, month: 3, day: 8},
-    {year: 2019, month: 3, day: 9},
-    {year: 2019, month: 3, day: 12},
-    {year: 2019, month: 3, day: 14},
-    {year: 2019, month: 3, day: 15},
-    {year: 2019, month: 3, day: 17},
-    {year: 2019, month: 3, day: 19},
-    {year: 2019, month: 3, day: 21},
-    {year: 2019, month: 3, day: 22},
-    {year: 2019, month: 3, day: 24},
-    {year: 2019, month: 3, day: 28},
-    {year: 2019, month: 3, day: 29},
+  datePlanList = [
+    {year: 2019, month: 2, day: 1},
+    {year: 2019, month: 2, day: 2},
+    {year: 2019, month: 2, day: 5},
+    {year: 2019, month: 2, day: 7},
+    {year: 2019, month: 2, day: 8},
+    {year: 2019, month: 2, day: 9},
+    {year: 2019, month: 2, day: 12},
+    {year: 2019, month: 2, day: 14},
+    {year: 2019, month: 2, day: 15},
+    {year: 2019, month: 2, day: 17},
+    {year: 2019, month: 2, day: 19},
+    {year: 2019, month: 2, day: 21},
+    {year: 2019, month: 2, day: 22},
+    {year: 2019, month: 2, day: 24},
+    {year: 2019, month: 2, day: 28},
+    {year: 2019, month: 2, day: 29},
   ];
+
+  appList = [
+    {id: 'app1', name: 'Application 1', value: true},
+    {id: 'app2', name: 'Application 2', value: true},
+    {id: 'app3', name: 'Application 3', value: true}
+  ];
+  checkList = [
+    {label: 'Yes', value: true},
+    {label: 'No', value: false}
+  ];
+
   constructor() {
     this.roCalender = {
       firstDayOfWeek: 1,
@@ -64,4 +75,9 @@ export class ServiceComponent implements OnInit {
   ngOnInit() {
   }
 
+  findDate(date= {day: null, month: null, year: null}) {
+    return !!this.datePlanList.find((curDate, i) => {
+      return curDate.year === date.year && curDate.month === date.month && curDate.day === date.day;
+    });
+  }
 }
