@@ -3,31 +3,77 @@
   <h1 class="title">self service</h1>
   <form>
     <div class="main">
-      <div class="left-div">
-        <h2><span>Welcome</span><br> Russell V Gomez</h2>
-        <div class="form-group">
-          <div class="row">
-            <label>Current Computer</label>
-            <div class="dropdown">
-              <p-dropdown name="computer" [(ngModel)]="computer" [options]="computerList" optionLabel="computer_name"></p-dropdown>
+      <div class="dflex">
+        <div class="left-div">
+          <div class="form-group">
+            <h2><span>Welcome</span><br> Russell V Gomez</h2>
+            <div class="row">
+              <label>Current Computer</label>
+              <div class="dropdown">
+                <p-dropdown name="computer" [(ngModel)]="computer" [options]="computerList" optionLabel="computer_name"></p-dropdown>
+              </div>
+            </div>
+            <div class="row">
+              <label>Current Department</label>
+              <div class="dropdown">
+                <p-dropdown  name="department" [(ngModel)]="department" [options]="departmentList" optionLabel="department_name"></p-dropdown>
+              </div>
+            </div>
+            <div class="row">
+              <label>Current Location</label>
+              <div class="dropdown">
+                <p-dropdown  name="location" [(ngModel)]="location" [options]="locationList" optionLabel="office_location"></p-dropdown>
+              </div>
             </div>
           </div>
-          <div class="row">
-            <label>Current Department</label>
-            <div class="dropdown">
-              <p-dropdown  name="department" [(ngModel)]="computer" [options]="computerList" optionLabel="department_name"></p-dropdown>
+        </div>
+        <div class="right-div">
+          <div class="box-group">
+            <p class="name">
+              <span class="icons icon-calender"></span>
+              Migration Date
+            </p>
+            <div class="text no-pad">
+              <p-calendar name="mirgationDate" [(ngModel)]="mirgationDate" placeholder="Select Date" icon="icon icon-calender-blue" [showIcon]="true" [locale]="roCalender" [readonlyInput]="true", [showOtherMonths]="false">
+                <!-- <ng-template pTemplate="date" let-date>
+                  <span [ngStyle]="{color: (date.year == datePlan.year && date.month == datePlan.month && date.day == datePlan.day ? '#ea596a' : 'inherit'}" >{{date.day}}</span>
+                </ng-template> -->
+                <ng-template pTemplate="date" let-date>
+                    <span [ngStyle]="{backgroundColor: (date.day < 21 && date.day > 10) ? '#7cc67c' : 'inherit'}" style="border-radius:50%">{{date.day}}</span>
+                </ng-template>
+              </p-calendar>
             </div>
           </div>
-          <div class="row">
-            <label>Current Location</label>
-            <div class="dropdown">
-              <p-dropdown  name="location" [(ngModel)]="location" [options]="locationList" optionLabel="office_location"></p-dropdown>
+          <div class="box-group">
+            <p class="name">
+              <span class="icons icon-application"></span>
+              Application
+            </p>
+            <div class="text">
+              <a href="javascript:;" >Skype</a>
+            </div>
+            <div class="text">
+              <a href="javascript:;" >Chrome</a>
+            </div>
+            <div class="text">
+              <a href="javascript:;" >Adobe Creative Cloud</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="right-div">
-        <p-calendar name="mirgationDate" [(ngModel)]="mirgationDate" placeholder="Select Date" icon="ico calender-ico" [showIcon]="true" [locale]="roCalender"></p-calendar>
+      <div class="dflex">
+        <div class="left-div add-control">
+          <a href="javascript:;" class="btn-add-new p-grid p-align-center" >
+            <span class="icon-add"></span>
+            Add Comment
+          </a>
+        </div>
+        <div class="right-div add-control">
+          <a href="javascript:;" class="btn-add-new p-grid p-align-center" >
+            <span class="icon-add"></span>
+            Add Application
+          </a>
+        </div>
       </div>
     </div>
     <button>update</button>
