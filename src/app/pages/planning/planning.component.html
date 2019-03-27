@@ -1,3 +1,69 @@
-<p>
-  planning works!
-</p>
+<app-aside-view>
+  <div class="planning-wp">
+    <div class="p-grid">
+      <div class="p-col">
+          <h3 class="title">schedule PLANNING</h3>
+      </div>
+      <div class="p-col p-grid p-justify-end">
+          <a href="javascript:;" class="button-ok">Update</a>
+      </div>
+    </div>
+    <div class="planning-content p-grid">
+      <div class="p-col-fixed box box-left" [style.width.px]="350">
+        <div class="box-select">
+          <div class="planning-row p-grid p-align-center">
+            <label class="label">Team</label>
+            <div class="input">
+              <div class="dropdown">
+                <p-dropdown [options]="optionsSelect?.team"></p-dropdown>
+              </div>
+            </div>
+          </div>
+          <div class="planning-row p-grid p-align-center">
+            <label class="label">Request Type</label>
+            <div class="input">
+              <div class="dropdown">
+                <p-dropdown [options]="optionsSelect?.request_type"></p-dropdown>
+              </div>
+            </div>
+          </div>
+          <div class="planning-row p-grid p-align-center">
+            <label class="label">Start Day</label>
+            <div class="input">
+              <p-calendar name="mirgationDate" [(ngModel)]="startDate" placeholder="Select Date" icon="ico calender-ico"
+                [showIcon]="true" [locale]="roCalender"></p-calendar>
+            </div>
+          </div>
+          <div class="planning-row p-grid p-align-center">
+            <label class="label">End Day</label>
+            <div class="input">
+              <p-calendar name="mirgationDate" [(ngModel)]="endDate" placeholder="Select Date"
+                icon="ico calender-ico" [showIcon]="true" [locale]="roCalender"></p-calendar>
+            </div>
+          </div>
+        </div>
+        <div class="box-checked">
+          <div class="p-grid p-align-center item-check fixed-t">
+            <div class="p-col">
+              <span class="icon-calendar"></span>
+            </div>
+            <div class="p-col p-grid p-justify-center">Unlimited</div>
+            <div class="p-col p-grid p-justify-center">Maximum</div>
+          </div>
+          <div class="p-grid p-align-center item-check" *ngFor="let item of limitOptions">
+            <div class="p-col">{{ item.day }}</div>
+            <div class="p-col p-grid p-justify-center">
+              <p-checkbox [name]="item.day" [(ngModel)]="item.unlimited" binary="true"></p-checkbox>
+            </div>
+            <div class="p-col">
+              <input *ngIf="!item.unlimited" type="text" [(ngModel)]="item.maximum">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-col box box-calendar">
+        <p-fullCalendar [events]="events" [options]="options"></p-fullCalendar>
+      </div>
+    </div>
+  </div>
+</app-aside-view>

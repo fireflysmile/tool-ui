@@ -1,0 +1,90 @@
+<app-header></app-header>
+<div class="add-template main-content">
+  <app-back (routerName)="redirectTo('email')">Email Template</app-back>
+  <h3 class="title fix-top">Add template</h3>
+  <div class="p-grid">
+    <div class="p-col box-config">
+      <div class="top-editor">
+        <div class="p-grid p-align-center item fixed-bd">
+          <div class="p-col-5">
+            <span class="label">Template Type</span>
+          </div>
+          <div class="p-col-7">
+            <div class="input">
+              <p-dropdown [options]="templatesOptions"></p-dropdown>
+            </div>
+          </div>
+        </div>
+        <div class="p-grid p-align-center item fixed-bd">
+          <div class="p-col-5">
+            <span class="label">Subject Line</span>
+          </div>
+          <div class="p-col-7">
+            <div class="input">
+              <input type="text">
+            </div>
+          </div>
+        </div>
+      </div>
+      <p-editor [(ngModel)]="text" [style]="{'height':'320px'}" (onInit)="initData($event)"
+        (onSelectionChange)="onContentChanged($event)">
+        <p-header>
+          <span class="ql-formats">
+            <select class="ql-font">
+              <option value="">Insert</option>
+              <option value="1">User ID</option>
+              <option value="2">Date</option>
+              <option value="3">Time</option>
+            </select>
+          </span>
+          <span class="ql-formats">
+            <button class="ql-bold" aria-label="Bold"></button>
+            <button class="ql-italic" aria-label="Italic"></button>
+          </span>
+          <span class="ql-formats">
+            <button class="ql-align" value="" aria-label="left align"></button>
+            <button class="ql-align" value="center" aria-label="center align"></button>
+            <button class="ql-align" value="right" aria-label="right align"></button>
+            <button class="ql-align" value="justify" aria-label="justify align"></button>
+
+            <button class="ql-list" value="ordered" aria-label="Ordered List"></button>
+            <button class="ql-list" value="bullet" aria-label="Unordered List"></button>
+
+            <button class="ql-undo" value="undo" aria-label="Unordered List"></button>
+          </span>
+          <span class="ql-formats">
+            <button class="ql-link" aria-label="Insert Link"></button>
+            <button class="ql-image" aria-label="Insert Image"></button>
+          </span>
+        </p-header>
+      </p-editor>
+    </div>
+    <div class="p-col-fixed right-tpl">
+      <div class="box-config">
+        <div class="p-grid p-align-center item fixed-t">
+          <div class="p-col-fixed" [style.width.px]="36">
+            <span class="icon-attach-gray"></span>
+          </div>
+          <div class="p-col">Attachment</div>
+        </div>
+        <div class="p-grid p-align-center p-justify-between item"
+          *ngFor="let item of attachmentDatas; let idx of index">
+          <div class="p-col">{{ item.name }}</div>
+          <div class="p-col-4 p-grid p-justify-end">
+            <span class="icon-delete" (click)="deleteAttachment(idx)"></span>
+          </div>
+        </div>
+        <div class="p-grid p-align-center p-justify-between item c-bottom">
+          <div class="p-col">
+            <a href="javascript:;" class="btn-add-new p-grid p-align-center">
+              <span class="icon-add"></span>Add Attachment</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-grid p-justify-center" [style.margin-top.px]="25">
+    <a href="javascript:;" class="button-ok" [routerLink]="[ '/email' ]">Save Template</a>
+    <a href="javascript:;" class="button-ok" [routerLink]="[ '/email' ]">Send Test Mail</a>
+  </div>
+</div>

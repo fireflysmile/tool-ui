@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TabsetComponent } from './tabset.component';
+import { TemplateAddComponent } from './template-add.component';
 
-describe('TabsetComponent', () => {
-  let component: TabsetComponent;
-  let fixture: ComponentFixture<TabsetComponent>;
+describe('TemplateAddComponent', () => {
+  let component: TemplateAddComponent;
+  let fixture: ComponentFixture<TemplateAddComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TabsetComponent ]
+      declarations: [ TemplateAddComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TabsetComponent);
+    fixture = TestBed.createComponent(TemplateAddComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
