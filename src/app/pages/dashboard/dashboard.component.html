@@ -21,17 +21,17 @@
           <p class="number">{{ users?.datas?.length }}</p>
           <span class="name">Users</span>
         </div>
-        <div class="child child-departments p-col" (click)="activateTab(4)">
+        <div class="child child-departments p-col" (click)="activateTab(3)">
           <span class="icon"></span>
           <p class="number">{{ departments?.datas?.length }}</p>
           <span class="name">Departments</span>
         </div>
-        <div class="child child-applications p-col" (click)="activateTab(2)">
+        <div class="child child-applications p-col" (click)="activateTab(1)">
           <span class="icon"></span>
           <p class="number">{{ aplications?.datas?.length }}</p>
           <span class="name">Applications</span>
         </div>
-        <div class="child child-computer p-col" (click)="activateTab(3)">
+        <div class="child child-computer p-col" (click)="activateTab(2)">
           <span class="icon"></span>
           <p class="number">{{ computers?.datas?.length }}</p>
           <span class="name">Computer</span>
@@ -39,25 +39,25 @@
       </div>
     </div>
 
-    <p-tabView (onChange)="onTabChange($event)">
-      <p-tabPanel header="Users" [selected]="selectedTab===0">
+    <p-tabView>
+      <p-tabPanel header="Users" [selected]="selectedTab==0">
         <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
           <app-table-view [datas]="users" [sortBy]="usersSortBy" (viewDetail)="fnViewDetail($event, 'user-detail')" [sortByName]="usersSortByName"></app-table-view>
         </p-scrollPanel>
       </p-tabPanel>
-      <p-tabPanel header="Application" [selected]="selectedTab===2">
+      <p-tabPanel header="Application" [selected]="selectedTab==1">
         <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
           <app-table-view [datas]="aplications" [sortBy]="aplicationsSortBy" (viewDetail)="fnViewDetail($event, 'application-detail')" [sortByName]="aplicationsSortByName">
           </app-table-view>
         </p-scrollPanel>
       </p-tabPanel>
-      <p-tabPanel header="Computer" [selected]="selectedTab===3">
+      <p-tabPanel header="Computer" [selected]="selectedTab==2">
         <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
           <app-table-view [datas]="computers" [sortBy]="computersSortBy" (viewDetail)="fnViewDetail($event, 'computer-detail')" [sortByName]="computersSortByName">
           </app-table-view>
         </p-scrollPanel>
       </p-tabPanel>
-      <p-tabPanel header="Department" [selected]="selectedTab===4">
+      <p-tabPanel header="Department" [selected]="selectedTab==3">
         <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
           <app-table-view [datas]="departments" [sortBy]="departmentsSortBy" [sortByName]="departmentsSortByName">
           </app-table-view>

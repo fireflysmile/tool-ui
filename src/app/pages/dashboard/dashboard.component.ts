@@ -52,6 +52,8 @@ export class DashboardComponent implements OnInit {
 
     this.onload();
 
+    this.activateTab(0);
+
   }
 
   onload() {
@@ -85,10 +87,6 @@ export class DashboardComponent implements OnInit {
     localStorage.setItem(page, JSON.stringify(isData));
 
     this.router.navigateByUrl(page);
-  }
-
-  onTabChange(event) {
-      this.activateTab(event.index);
   }
 
   activateTab(tabNumber) {
