@@ -48,6 +48,7 @@ import { EditorModule } from 'primeng/editor';
 import { TemplateAddComponent } from './pages/email/template-add/template-add.component';
 import { SurveySettingComponent } from './pages/survey-setting/survey-setting.component';
 import { DialogModule } from 'primeng/dialog';
+import { GaugeComponent } from './components/gauge/gauge.component';
 
 const PrimeNGmodule = [
   FileUploadModule,
@@ -94,7 +95,8 @@ const PrimeNGmodule = [
     EmailComponent,
     ServiceComponent,
     TemplateAddComponent,
-    SurveySettingComponent
+    SurveySettingComponent,
+    GaugeComponent
   ],
   imports: [
     BrowserModule,
