@@ -134,5 +134,29 @@
       "month": 4,
       "day": 29
     }
+  ],
+  "applications": [
+    {
+      "name": "Skype",
+      "status": "Yes"
+    },
+    {
+      "name": "Chrome",
+      "status": "Yes"
+    },
+    {
+      "name": "Adobe Creative Cloud",
+      "status": "No"
+    }
+  ],
+  "application_options": [
+    {
+      "label": "Yes",
+      "value": "Yes"
+    },
+    {
+      "label": "No",
+      "value": "No"
+    }
   ]
 }

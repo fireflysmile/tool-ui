@@ -10,6 +10,9 @@ import { DataService } from 'src/app/services/data.service';
 export class ServiceComponent implements OnInit {
 
   // init datas
+  applications: any;
+  applicationOptions: any;
+
   computerList: any;
   computer = '';
   departmentList: any;
@@ -50,6 +53,8 @@ export class ServiceComponent implements OnInit {
         this.departmentList = datas.department_list;
         this.locationList = datas.location_list;
         this.datePlan = datas.date_plan;
+        this.applications = datas.applications;
+        this.applicationOptions = datas.application_options;
       }
     );
   }

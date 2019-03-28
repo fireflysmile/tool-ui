@@ -100,7 +100,7 @@
           }
           p-calendar {
             .ui-calendar {
-              padding: 0 25px;
+              padding: 0 20px;
               width: 100%;
               display: flex;
               justify-content: space-between;
@@ -148,6 +148,12 @@
                 color: $mandy2;
               }
             }
+          }
+          .drop-small {
+            color: $blue;
+            width: 55px;
+            padding: 0;
+            height: 40px;
           }
         }
       }

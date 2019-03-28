@@ -7,7 +7,7 @@
   <h1 class="title">self service</h1>
 
   <!-- form data -->
-  <form>
+  <div>
     <div class="main">
       <div class="p-grid">
         <!-- left content -->
@@ -64,14 +64,11 @@
               <span class="icons icon-application"></span>
               Application
             </p>
-            <div class="text">
-              <a href="javascript:;">Skype</a>
-            </div>
-            <div class="text">
-              <a href="javascript:;">Chrome</a>
-            </div>
-            <div class="text">
-              <a href="javascript:;">Adobe Creative Cloud</a>
+            <div class="text p-grid p-justify-between" *ngFor="let item of applications">
+              <a href="javascript:;" class="p-col">{{ item.name }}</a>
+              <div class="p-col-fixed drop-small">
+                <p-dropdown [options]="applicationOptions" [(ngModel)]="item.status"></p-dropdown>
+              </div>
             </div>
           </div>
         </div>
@@ -101,6 +98,6 @@
       <a href="javascript:;" class="button-ok">Update</a>
     </div>
     <!-- end btn Update -->
-  </form>
+  </div>
 </div>
 <!-- end content -->
