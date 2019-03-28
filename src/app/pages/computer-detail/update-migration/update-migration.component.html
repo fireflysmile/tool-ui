@@ -81,12 +81,18 @@
             </div>
           </div>
         </div>
-        <div class="item-row p-grid p-align-center">
+        <div class="item-row p-grid p-align-center" *ngIf="migrationType !== 'Replace'">
           <label class="label p-col-fixed">New Keyboard Layout</label>
           <div class="input p-col">
             <div class="dropdown">
               <p-dropdown [options]="datas?.new_keyboard"></p-dropdown>
             </div>
+          </div>
+        </div>
+        <div class="item-row p-grid p-align-center" *ngIf="migrationType === 'Replace'">
+          <label class="label p-col-fixed">New Keyboard Layout</label>
+          <div class="input p-col">
+            <input type="text" value="Layout SI.NA 09">
           </div>
         </div>
         <div class="item-row p-grid p-align-center">
