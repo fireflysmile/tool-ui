@@ -69,8 +69,9 @@
               <!-- chart Average Satisfaction Score -->
               <div class="p-col">
                 <h5 class="box-name">Average Satisfaction Score</h5>
-                
-                <img class="img-thumb" src="assets/img/gauge.png" alt="chart thumb">
+                <div *ngIf="true">
+                    <app-gauge val="6.5" beginVal= "0" endVal="8"></app-gauge>
+                </div>
               </div>
             </div>
             <div class="p-grid two-col">
@@ -162,8 +163,7 @@
               <!-- chart Average Satisfaction Score -->
               <div class="p-col">
                 <h5 class="box-name">Average Satisfaction Score</h5>
-                <app-gauge val="5" beginVal= "0" endVal="8"></app-gauge>
-                <!-- <img class="img-thumb" src="assets/img/gauge.png" alt="chart thumb"> -->
+                <app-gauge val="5.5" beginVal= "0" endVal="8"></app-gauge>
               </div>
             </div>
             <div class="p-grid two-col">

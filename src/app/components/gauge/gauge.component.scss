@@ -1,13 +1,28 @@
 @import 'color';
-.value-gauge {
-    color: $mine-shaft;
-    font-size: 24px;
-    font-weight: 700;
+
+.gauge {
+    text-align: center;
+    position: relative;
+    .chart-div {
+        width: 100%;
+        min-height: 172px;
+        display: inline-block;
+        margin-top: -30px;
+    }
+    .bottom {
+        background-color: white;
+        position: absolute;
+        bottom: -20px;
+        width: 100%;
+        .value-gauge {
+            color: $mine-shaft;
+            line-height: 18px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .text-gauge {
+            color: $dusty-gray;
+        }
+    }
 }
-#chartdiv {
-    width: 100%;
-    min-height: 160px;
-}
-.text-gauge {
-    color: $dusty-gray;
-}
+

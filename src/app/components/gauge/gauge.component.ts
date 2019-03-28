@@ -1,5 +1,5 @@
 import 'core-js/shim';
-import { Component, OnInit, AfterViewInit, NgZone, OnDestroy, Input } from '@angular/core';
+import { Component, OnInit, AfterViewInit, NgZone, OnDestroy, Input, ViewChild, ElementRef } from '@angular/core';
 import * as am4core from '@amcharts/amcharts4/core';
 import * as am4charts from '@amcharts/amcharts4/charts';
 import am4themes_animated from '@amcharts/amcharts4/themes/animated';
@@ -12,6 +12,9 @@ am4core.useTheme(am4themes_animated);
   styleUrls: ['./gauge.component.scss']
 })
 export class GaugeComponent implements OnInit, AfterViewInit, OnDestroy {
+
+  @ViewChild('root') root: ElementRef;
+
   @Input() val: number;
   @Input() beginVal: number;
   @Input() endVal: number;
@@ -23,7 +26,7 @@ export class GaugeComponent implements OnInit, AfterViewInit, OnDestroy {
   ngAfterViewInit() {
     console.log(this.val, this.beginVal, this.endVal);
     this.zone.runOutsideAngular(() => {
-      const chart = am4core.create('chartdiv', am4charts.GaugeChart);
+      const chart = am4core.create(this.root.nativeElement, am4charts.GaugeChart);
 
       chart.innerRadius = am4core.percent(80);
       chart.startAngle = 135;
@@ -38,7 +41,7 @@ export class GaugeComponent implements OnInit, AfterViewInit, OnDestroy {
       // background
       const axis = chart.xAxes.push(new am4charts.CategoryAxis<am4charts.AxisRendererCircular>());
       axis.renderer.line.strokeOpacity = 1;
-      axis.renderer.line.strokeWidth = 19;
+      axis.renderer.line.strokeWidth = 15;
       axis.renderer.line.stroke = am4core.color('#ededed');
       axis.renderer.ticks.template.stroke = am4core.color('#ededed');
       axis.renderer.radius = am4core.percent(90);
@@ -59,20 +62,6 @@ export class GaugeComponent implements OnInit, AfterViewInit, OnDestroy {
       range0.axisFill.fill = gradient;
 
       /**
-       * Label
-       */
-
-      // const label = chart.radarContainer.createChild(am4core.Label);
-      // label.isMeasured = false;
-      // label.fontSize = 45;
-      // label.x = am4core.percent(50);
-      // label.y = am4core.percent(100);
-      // label.horizontalCenter = 'middle';
-      // label.verticalCenter = 'bottom';
-      // label.text = this.val + '';
-
-
-      /**
        * Hand
        */
 
@@ -91,17 +80,6 @@ export class GaugeComponent implements OnInit, AfterViewInit, OnDestroy {
         axis2.invalidate();
       });
 
-      // demo:
-      setInterval(() => {
-        const value = Math.round(Math.random() * this.val);
-        // label.text = value + '';
-        this.val = value;
-        const animation = new am4core.Animation(hand, {
-          property: 'value',
-          to: value
-        }, 1000, am4core.ease.cubicOut).start();
-      }, 2000);
-      // ------ end demo
       this.chart = chart;
     });
   }
