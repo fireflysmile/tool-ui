@@ -22,11 +22,6 @@
     },
     {
       "name": "Lorem Ipsum Dolor Sit Amet",
-      "attach": false,
-      "date_attach": "10 Feb"
-    },
-    {
-      "name": "Lorem Ipsum Dolor Sit Amet",
       "attach": true,
       "date_attach": "5 Feb"
     },

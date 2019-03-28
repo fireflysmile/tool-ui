@@ -149,8 +149,8 @@
             </div>
           </div>
           <div class="p-grid">
-            <div class="p-col">
-              <div class="box-config">
+            <div class="p-col p-grid">
+              <div class="box-config p-col">
                 <div class="p-grid p-align-center item fixed-t">
                   <div class="p-col-fixed" [style.width.px]="50">
                     <span class="icon-email-log"></span>
@@ -164,7 +164,7 @@
                     <span class="icon-delete" (click)="deleteReceipient(idx)"></span>
                   </div>
                 </div>
-                <div class="p-grid p-align-center p-justify-between item">
+                <div class="p-grid p-align-center p-justify-between item c-bottom">
                   <div class="p-col">
                     <a href="javascript:;" class="btn-add-new p-grid p-align-center">
                       <span class="icon-add"></span>
@@ -174,8 +174,8 @@
                 </div>
               </div>
             </div>
-            <div class="p-col box-bd-left">
-              <div class="box-config">
+            <div class="p-col p-grid box-bd-left">
+              <div class="box-config p-col">
                 <div class="p-grid p-align-center item fixed-t">
                   <div class="p-col-fixed" [style.width.px]="50">
                     <span class="icon-save-tpl"></span>
@@ -189,7 +189,7 @@
                     <span class="icon-delete" (click)="deleteTemplates(idx)"></span>
                   </div>
                 </div>
-                <div class="p-grid p-align-center p-justify-between item">
+                <div class="p-grid p-align-center p-justify-between item c-bottom">
                   <div class="p-col">
                     <a href="javascript:;" class="btn-add-new p-grid p-align-center" [routerLink]="[ '/add-template' ]">
                       <span class="icon-add"></span>
