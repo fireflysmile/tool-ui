@@ -14,6 +14,11 @@
     background: -webkit-linear-gradient(45deg, rgb(0,181,255) 0%, rgb(26,70,157) 100%);
     background: -o-linear-gradient(45deg, rgb(0,181,255) 0%, rgb(26,70,157) 100%);
     background: linear-gradient(45deg, rgb(0,181,255) 0%, rgb(26,70,157) 100%);
+    position: fixed;
+    min-height: $min-h;
+    height: 100vh;
+    left: 0;
+    top: 0;
     .logo {
       width: 36px;
       display: inline-block;
@@ -70,6 +75,8 @@
     }
   }
   .right-content {
-    width: calc(100% - #{$aside-w});
+    width: 100%;
+    // float: right;
+    padding-left: $aside-w;
   }
 }
