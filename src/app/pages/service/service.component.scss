@@ -3,12 +3,13 @@
 @import "width-height";
 @import "primeng-dropdown";
 @import "mixin";
+@import "primeng-calender";
 
 .self-service-page {
   h1 {
     font-size: 24px;
     color: $chathams-blue;
-    padding-top: 35px;
+    padding-top: 50px;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 36px;;
@@ -61,6 +62,10 @@
     .right-div {
       width: 40%;
       .box-group {
+        // border: 1px solid $heather;
+        &.border-top {
+          border-top: 1px solid $heather;
+        }
         p {
           padding-left: 21px;
           &.name {
@@ -98,16 +103,16 @@
             text-decoration: none;
             color: $blue;
           }
-          p-calendar {
-            .ui-calendar {
-              padding: 0 25px;
-              width: 100%;
-              display: flex;
-              justify-content: space-between;
-              height: 52px;
-              input.ui-inputtext {
-                cursor: pointer;
-                border: 0;
+          >span {
+
+          }
+          p-dropdown {
+            .ui-dropdown {
+              width: auto;
+              min-width: 2em;
+              label.ui-dropdown-label {
+                padding: 0;
+                padding-right: 20px;
                 color: $blue;
                 font-size: 14px;
                 font-weight: 500;

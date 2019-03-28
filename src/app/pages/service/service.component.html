@@ -56,22 +56,20 @@
                   </span>
                   <span>{{date.day}}</span>
                 </ng-template>
+                <!-- <ng-template pTemplate="date" let-date>
+                    <span [ngStyle]="{color: (date.day < 21 && date.day > 10) ? '#7cc67c' : 'inherit'}">{{date | json}}</span>
+                </ng-template> -->
               </p-calendar>
             </div>
           </div>
-          <div class="box-group">
+          <div class="box-group border-top">
             <p class="name">
               <span class="icons icon-application"></span>
               Application
             </p>
-            <div class="text">
-              <a href="javascript:;">Skype</a>
-            </div>
-            <div class="text">
-              <a href="javascript:;">Chrome</a>
-            </div>
-            <div class="text">
-              <a href="javascript:;">Adobe Creative Cloud</a>
+            <div class="text dflex justify-space-between" *ngFor="let app of appList">
+              <span>{{app.name}}</span>
+              <p-dropdown [name]="app.id" [(ngModel)]="app.value" [options]="checkList"></p-dropdown>
             </div>
           </div>
         </div>
@@ -95,7 +93,6 @@
       </div>
       <!-- end button add -->
     </div>
-
     <!-- btn Update -->
     <div class="p-grid p-justify-center" [style.margin-top.px]="25">
       <a href="javascript:;" class="button-ok">Update</a>
