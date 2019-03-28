@@ -1,0 +1,27 @@
+.ui-dialog-mask {
+  background-color: rgba($color: #000000, $alpha: 0.45);
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  .ui-dialog {
+    background-color: rgb(255, 255, 255);
+    width: 520px;
+    padding: 30px;
+    .ui-dialog-content {
+      padding: 0;
+    }
+    .title {
+      font-size: 24px;
+      color: $chathams-blue;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding-bottom: 23px;
+    }
+    .ui-dialog-titlebar {
+      display: none;
+    }
+    .dropdown {
+      border-bottom: 1px solid $geyser;
+    }
+  }
+}

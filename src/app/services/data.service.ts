@@ -3,7 +3,7 @@ import { environment } from 'src/environments/environment';
 import { delay, retry, catchError } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 
-const MOCK_API_DELAY = 1000;
+const MOCK_API_DELAY = 0;
 
 @Injectable()
 export class DataService {

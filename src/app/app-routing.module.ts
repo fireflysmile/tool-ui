@@ -16,6 +16,8 @@ import { ReportComponent } from './pages/report/report.component';
 import { SurveyComponent } from './pages/survey/survey.component';
 import { EmailComponent } from './pages/email/email.component';
 import { ServiceComponent } from './pages/service/service.component';
+import { TemplateAddComponent } from './pages/email/template-add/template-add.component';
+import { SurveySettingComponent } from './pages/survey-setting/survey-setting.component';
 
 const routes: Routes = [
   {
@@ -49,10 +51,13 @@ const routes: Routes = [
     path: 'survey', component: SurveyComponent
   },
   {
-    path: 'email', component: EmailComponent
+    path: 'survey-setting', component: SurveySettingComponent
   },
   {
-    path: 'service', component: ServiceComponent
+    path: 'email-templates', component: EmailComponent
+  },
+  {
+    path: 'self-service', component: ServiceComponent
   },
   {
     path: 'user-detail', component: UserDetailComponent
@@ -65,6 +70,9 @@ const routes: Routes = [
   },
   {
     path: 'migration-update', component: UpdateMigrationComponent
+  },
+  {
+    path: 'add-template', component: TemplateAddComponent
   },
   {
     path: '**', redirectTo: '', pathMatch: 'full'

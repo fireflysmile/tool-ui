@@ -1,0 +1,39 @@
+{
+  "projects": [
+    {
+      "label": "Project 1",
+      "value": "Project 1"
+    }
+    ,{
+      "label": "Project 2",
+      "value": "Project 2"
+    }
+    ,{
+      "label": "Project 3",
+      "value": "Project 3"
+    }
+    ,{
+      "label": "Project 4",
+      "value": "Project 4"
+    }
+    ,{
+      "label": "Project 5",
+      "value": "Project 5"
+    }
+    ,{
+      "label": "Project 6",
+      "value": "Project 6"
+    }
+  ],
+  "files": [
+    {
+      "name": "Filename123"
+    }
+    ,{
+      "name": "Filename12334534"
+    }
+    ,{
+      "name": "Filename1233453534"
+    }
+  ]
+}

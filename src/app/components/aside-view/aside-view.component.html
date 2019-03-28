@@ -1,15 +1,18 @@
 <div class="wp-view p-grid p-align-stretch">
-  <div class="aside-content p-grid p-dir-col">
-    <a href="javascript:;" class="logo p-col-align-center">
+  <div class="aside-content p-grid p-dir-col p-col-fixed">
+    <!-- logo company -->
+    <a href="javascript:;" [routerLink]="[ '/welcome' ]" class="logo p-col-align-center">
       <img src="assets/img/logo-aside@2x.svg" alt="logo company">
     </a>
+    <!-- end logo company -->
 
+    <!-- aside link -->
     <div class="aside-links">
-      <a href="javascript:;" class="item dashboard" [routerLink]="[ '/dashboard' ]" routerLinkActive="active">
+      <a href="javascript:;" class="item dashboard-aside" [routerLink]="[ '/dashboard' ]" routerLinkActive="active">
         <i class="icon"></i><br />
         <span class="text">Dashboard</span>
       </a>
-      <a href="javascript:;" class="item readiness" [routerLink]="[ '/readiness' ]" routerLinkActive="active">
+      <a href="javascript:;" class="item readiness-aside" [routerLink]="[ '/readiness' ]" routerLinkActive="active">
         <i class="icon"></i><br />
         <span class="text">App Readiness</span>
       </a>
@@ -22,6 +25,9 @@
         <span class="text">Report</span>
       </a>
     </div>
+    <!-- end aside link -->
+
+    <!-- search and user -->
     <div class="user-box">
       <div class="options">
         <span class="icon-search" (click)="fnSearch(); $event.stopPropagation()"></span>
@@ -30,13 +36,18 @@
         </a>
       </div>
     </div>
+    <!-- end search and user -->
   </div>
-  <div class="right-content">
-    <ng-content></ng-content>
+  <div class="right-content p-col">
+    <ng-content>
+      <!-- main content of aside -->
+    </ng-content>
   </div>
 </div>
+<!-- end aside page -->
 
-
+<!-- popup search -->
 <ng-container *ngIf="search">
     <app-search (closeSearch)="fnCloseSearch()"></app-search>
 </ng-container>
+<!-- end popup search -->

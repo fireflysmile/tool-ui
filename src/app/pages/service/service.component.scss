@@ -1,39 +1,201 @@
 @import "icons";
 @import "color";
 @import "width-height";
+@import "primeng-dropdown";
+@import "mixin";
 
 .self-service-page {
-    h1 {
-        font-size: 24px;
-        color: $chathams-blue;
-        padding-top: 15px;
-        text-transform: uppercase;
-        text-align: center;
-        margin-bottom: 36px;;
-    }
-    .main {
-        border: 1px solid $heather;
-        width: $width-service;
-        display: flex;
-        align-self: center;
-        .left-div {
-            width: 60%;
-            box-sizing: border-box;
-            padding: 25px;
-            h2 {
-                font-size: 18px;
-                color: $chathams-blue;
-                padding-bottom: 32px;
-                font-weight: 600;
-                >span {
-                    font-size: 14px;
-                    color: $mine-shaft;
-                    text-transform: uppercase;
-                }
+  h1 {
+    font-size: 24px;
+    color: $chathams-blue;
+    padding-top: 35px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 36px;;
+  }
+  .main {
+    border: 1px solid $heather;
+    width: $width-service;
+    margin: auto;
+    .left-div {
+      width: 60%;
+      box-sizing: border-box;
+      border-right: 1px solid $heather;
+      .form-group {
+        padding: 25px;
+        h2 {
+          font-size: 18px;
+          color: $chathams-blue;
+          padding-bottom: 32px;
+          font-weight: 600;
+          >span {
+            font-size: 14px;
+            color: $mine-shaft;
+            font-weight: normal;
+          }
+        }
+        .row {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 10px;
+          height: 40px;
+          font-size: 14px;
+          color: $mine-shaft;
+          >label {
+            font-weight: 600;
+            width: 45%;
+            align-self: center;
+          }
+          .dropdown {
+            width: 55%;
+            border: none;
+            border-bottom: 1px solid $geyser;
+            .ui-dropdown-label {
+              height: 40px;
+              line-height: 35px;
             }
+          }
         }
-        .right-div {
-            width: 40%;
-        }
+      }
     }
+    .right-div {
+      width: 40%;
+      .box-group {
+        p {
+          padding-left: 21px;
+          &.name {
+            display: flex;
+            align-items: center;
+            height: 50px;
+            font-size: 15px;
+            color: $chathams-blue;
+            font-weight: 700;
+            background-color: $white-lilac;
+            border-bottom: 1px solid $heather;
+            .icons {
+              margin-right: 16px;
+              &.icon-application {
+                @include icon(applications-color, null, null);
+              }
+              &.icon-calender{
+                @include icon(calender, null, null);
+              }
+            }
+          }
+        }
+        .text{
+          height: 52px;
+          padding: 0 23px;
+          line-height: 52px;
+          border-bottom: 1px solid $heather;
+          &:last-child {
+            border: none;
+          }
+          &.fix-padding {
+            padding: 0;
+          }
+          a {
+            text-decoration: none;
+            color: $blue;
+          }
+          p-calendar {
+            .ui-calendar {
+              padding: 0 20px;
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              height: 52px;
+              input.ui-inputtext {
+                cursor: pointer;
+                border: 0;
+                color: $blue;
+                font-size: 14px;
+                font-weight: 500;
+                font-style: normal;
+              }
+              button.ui-calendar-button {
+                border: 0;
+                background-color: #fff;
+                .icon.icon-calender-blue {
+                  @include icon(calender-blue, null, null);
+                }
+              }
+              .ui-datepicker {
+                background-color: #fff;
+                line-height: normal;
+                .ui-datepicker-group {
+                  .ui-datepicker-header {
+                    .ui-datepicker-prev {
+                      left: 100px;
+                    }
+                    .ui-datepicker-next {
+                      right: 100px;
+                    }
+                    .ui-datepicker-title {
+                      font-size: 14px;
+                      color: $chathams-blue;
+                      font-weight: 500;
+                      line-height: 32px;
+                      .ui-datepicker-month, .ui-datepicker-year {
+                        display: inline-block;
+                      }
+                    }
+                  }
+                }
+              }
+              .is-event {
+                position: absolute;
+                color: $mandy2;
+              }
+            }
+          }
+          .drop-small {
+            color: $blue;
+            width: 55px;
+            padding: 0;
+            height: 40px;
+          }
+        }
+      }
+    }
+    .add-control {
+      border-top: 1px solid $heather;
+      height: 50px;
+      line-height: 50px;
+      padding: 0 25px;
+      .btn-add-new {
+        font-size: 14px;
+        color: $blue;
+        font-weight: 600;
+        text-decoration: none;
+        .icon-add {
+          margin-right: 14px;
+          margin-top: -3px;
+          @include icon(add, null, null);
+        }
+      }
+    }
+  }
+  .button-ok {
+    height: 35px;
+    line-height: 35px;
+    width: 103px;
+    display: inline-block;
+    background-color: $blue;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+    padding: 0 26px;
+    color: white;
+    font-weight: 600;
+    margin: 0 11px;
+    text-decoration: none;
+  }
+}
+@include placeholder {
+  color: $blue;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
 }

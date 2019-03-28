@@ -1,35 +1,103 @@
+<!-- header -->
 <app-header></app-header>
+
+<!-- content -->
 <div class="self-service-page">
+  <!-- title -->
   <h1 class="title">self service</h1>
-  <form>
+
+  <!-- form data -->
+  <div>
     <div class="main">
-      <div class="left-div">
-        <h2><span>Welcome</span><br> Russell V Gomez</h2>
-        <div class="form-group">
-          <div class="row">
-            <label>Current Computer</label>
-            <div class="dropdown">
-              <p-dropdown name="computer" [(ngModel)]="computer" [options]="computerList" optionLabel="computer_name"></p-dropdown>
+      <div class="p-grid">
+        <!-- left content -->
+        <div class="left-div">
+          <div class="form-group">
+            <h2><span>Welcome</span><br> Russell V Gomez</h2>
+            <div class="row">
+              <label>Current Computer</label>
+              <div class="dropdown">
+                <p-dropdown name="computer" [(ngModel)]="computer" [options]="computerList">
+                </p-dropdown>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <label>Current Department</label>
-            <div class="dropdown">
-              <p-dropdown  name="department" [(ngModel)]="computer" [options]="computerList" optionLabel="department_name"></p-dropdown>
+            <div class="row">
+              <label>Current Department</label>
+              <div class="dropdown">
+                <p-dropdown name="department" [(ngModel)]="department" [options]="departmentList"></p-dropdown>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <label>Current Location</label>
-            <div class="dropdown">
-              <p-dropdown  name="location" [(ngModel)]="location" [options]="locationList" optionLabel="office_location"></p-dropdown>
+            <div class="row">
+              <label>Current Location</label>
+              <div class="dropdown">
+                <p-dropdown name="location" [(ngModel)]="location" [options]="locationList"></p-dropdown>
+              </div>
             </div>
           </div>
         </div>
+        <!-- end left content -->
+
+        <!-- right content -->
+        <div class="right-div">
+          <div class="box-group">
+            <p class="name">
+              <span class="icons icon-calender"></span>
+              Migration Date
+            </p>
+            <div class="text fix-padding">
+              <p-calendar name="mirgationDate" [(ngModel)]="mirgationDate" placeholder="Select Date"
+                icon="icon icon-calender-blue" [showIcon]="true" [locale]="roCalender" [readonlyInput]="true"
+                [showOtherMonths]="false">
+                <ng-template pTemplate="date" let-date>
+                  <span *ngFor="let item of datePlan; let i = index">
+                    <span *ngIf="date.year == item.year && date.month == item.month && date.day == item.day" class="is-event">
+                      {{date.day}}
+                    </span>
+                  </span>
+                  <span>{{date.day}}</span>
+                </ng-template>
+              </p-calendar>
+            </div>
+          </div>
+          <div class="box-group">
+            <p class="name">
+              <span class="icons icon-application"></span>
+              Application
+            </p>
+            <div class="text p-grid p-justify-between" *ngFor="let item of applications">
+              <a href="javascript:;" class="p-col">{{ item.name }}</a>
+              <div class="p-col-fixed drop-small">
+                <p-dropdown [options]="applicationOptions" [(ngModel)]="item.status"></p-dropdown>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end right content -->
       </div>
-      <div class="right-div">
-        <p-calendar name="mirgationDate" [(ngModel)]="mirgationDate" placeholder="Select Date" icon="ico calender-ico" [showIcon]="true" [locale]="roCalender"></p-calendar>
+
+      <!-- button add -->
+      <div class="p-grid">
+        <div class="left-div add-control">
+          <a href="javascript:;" class="btn-add-new p-grid p-align-center">
+            <span class="icon-add"></span>
+            Add Comment
+          </a>
+        </div>
+        <div class="right-div add-control">
+          <a href="javascript:;" class="btn-add-new p-grid p-align-center">
+            <span class="icon-add"></span>
+            Add Application
+          </a>
+        </div>
       </div>
+      <!-- end button add -->
     </div>
-    <button>update</button>
-  </form>
+
+    <!-- btn Update -->
+    <div class="p-grid p-justify-center" [style.margin-top.px]="25">
+      <a href="javascript:;" class="button-ok">Update</a>
+    </div>
+    <!-- end btn Update -->
+  </div>
 </div>
+<!-- end content -->

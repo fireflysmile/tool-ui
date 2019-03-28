@@ -1,3 +1,26 @@
-<p>
-  survey works!
-</p>
+<!-- header -->
+<app-header></app-header>
+
+<!-- content -->
+<div class="survey-page main-content">
+  <!-- title -->
+  <h3 class="title fix-top">Fill SUrvey</h3>
+
+  <!-- box rating -->
+  <div class="box-q p-col">
+    <p class="name">Question 1 of 10</p>
+    <p class="sub-name">Lorem Ipsum Dolor sit Amet?</p>
+    <div class="star p-grid p-justify-center">
+      <span class="icon-star" [ngClass]="{'active': starNumber > idx}" (click)="fnStar(idx + 1)"
+        *ngFor="let star of [1,2,3,4,5]; let idx = index"></span>
+    </div>
+  </div>
+  <!-- end box rating -->
+
+  <!-- btn next -->
+  <div class="p-grid p-justify-center" [style.margin-top.px]="25">
+    <a href="javascript:;" class="button-ok">Next</a>
+  </div>
+  <!-- btn next -->
+</div>
+<!-- end content -->

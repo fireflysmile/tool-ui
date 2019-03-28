@@ -1,3 +1,210 @@
-<p>
-  email works!
-</p>
+<!-- header -->
+<app-header></app-header>
+
+<!-- content -->
+<div class="email-config">
+  <!-- back router -->
+  <app-back (routerName)="redirectTo('welcome')">Home</app-back>
+
+  <!-- title -->
+  <h3 class="title fix-top">EMAIL TEMPLATE</h3>
+
+  <!-- templates content -->
+  <div class="config-content p-grid">
+    <!-- Email Log -->
+    <div class="p-col-fixed box box-left">
+      <div class="box-config">
+        <div class="p-grid p-align-center item fixed-t">
+          <div class="p-col-fixed" [style.width.px]="50">
+            <span class="icon-email-log"></span>
+          </div>
+          <div class="p-col">Email Log</div>
+        </div>
+        <div class="p-grid p-align-center p-justify-between item" *ngFor="let item of logDatas">
+          <div class="p-col">{{ item.name }} <span *ngIf="item.attach" class="icon-attach"></span></div>
+          <div class="p-col-4 p-grid p-justify-end">{{ item.date_attach }}</div>
+        </div>
+      </div>
+    </div>
+    <!-- end Email Log -->
+
+    <!-- Configuration Email and Schedule -->
+    <div class="p-col box box-right">
+      <p-tabView>
+
+        <!-- tab Email Configuration -->
+        <p-tabPanel header="Email Configuration">
+          <div class="box-bd-top">
+            <div class="p-grid p-align-center c-row">
+              <div class="p-col-3">
+                <span class="label">Mail Server Address</span>
+              </div>
+              <div class="p-col-4">
+                <div class="input">
+                  <input type="text" [ngModel]="mailServerAddress">
+                </div>
+              </div>
+            </div>
+            <div class="p-grid p-align-center c-row">
+              <div class="p-col-3">
+                <span class="label">Port</span>
+              </div>
+              <div class="p-col-4">
+                <div class="input">
+                  <input type="text" [(ngModel)]="port">
+                </div>
+              </div>
+            </div>
+            <div class="p-grid p-align-center c-row">
+              <div class="p-col-3">
+                <span class="label">Mail Server Type</span>
+              </div>
+              <div class="p-col-4">
+                <div class="input color">
+                  <div class="dropdown">
+                    <p-dropdown [options]="mailTypeOptions" [(ngModel)]="mailServerType">
+                    </p-dropdown>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-grid p-align-center c-row">
+              <div class="p-col-3">
+                <span class="label">Sender Name</span>
+              </div>
+              <div class="p-col-4">
+                <div class="input">
+                  <input type="text" [(ngModel)]="senderName">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box-bd-top">
+            <div class="p-grid p-align-center c-row">
+              <div class="p-col-3">
+                <span class="label">Authentication Type</span>
+              </div>
+            </div>
+            <div class="p-grid p-align-center c-row">
+              <div class="p-col-3">
+                <span class="label">Username</span>
+              </div>
+              <div class="p-col-4">
+                <div class="input">
+                  <input type="text" [(ngModel)]="username">
+                </div>
+              </div>
+            </div>
+            <div class="p-grid p-align-center c-row">
+              <div class="p-col-3">
+                <span class="label">Password</span>
+              </div>
+              <div class="p-col-4">
+                <div class="input">
+                  <input type="text" [(ngModel)]="password">
+                </div>
+              </div>
+            </div>
+
+            <div class="p-grid p-align-center c-row">
+              <div class="p-col-3">
+                <span class="label">Sender Email</span>
+              </div>
+              <div class="p-col-4">
+                <div class="input">
+                  <input type="text" [(ngModel)]="senderEmail">
+                </div>
+              </div>
+            </div>
+          </div>
+        </p-tabPanel>
+
+        <!-- tab Schedule Configuration -->
+        <p-tabPanel header="Schedule Configuration">
+          <div class="box-bd-top">
+            <div class="p-grid p-align-center c-row">
+              <div class="p-col-3">
+                <span class="label">Project Name</span>
+              </div>
+              <div class="p-col-4">
+                <div class="input color">
+                  <p-dropdown [options]="scheduleConfig?.project_options" [(ngModel)]="projectName">
+                  </p-dropdown>
+                </div>
+              </div>
+              <div class="p-col-5 p-grid p-justify-end">
+                  <p-inputSwitch [(ngModel)]="projectChecked"></p-inputSwitch>
+              </div>
+            </div>
+            <div class="p-grid p-align-center c-row">
+              <div class="p-col-3">
+                <span class="label">Test Email</span>
+              </div>
+              <div class="p-col-4">
+                <div class="input">
+                  <input type="text" [(ngModel)]="testEmail">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-grid">
+            <div class="p-col p-grid">
+              <div class="box-config p-col">
+                <div class="p-grid p-align-center item fixed-t">
+                  <div class="p-col-fixed" [style.width.px]="50">
+                    <span class="icon-email-log"></span>
+                  </div>
+                  <div class="p-col">Select Receipients</div>
+                </div>
+                <div class="p-grid p-align-center p-justify-between item"
+                  *ngFor="let item of receipientsDatas; let idx of index">
+                  <div class="p-col">{{ item.name }}</div>
+                  <div class="p-col-4 p-grid p-justify-end">
+                    <span class="icon-delete" (click)="deleteReceipient(idx)"></span>
+                  </div>
+                </div>
+                <div class="p-grid p-align-center p-justify-between item c-bottom">
+                  <div class="p-col">
+                    <a href="javascript:;" class="btn-add-new p-grid p-align-center">
+                      <span class="icon-add"></span>
+                      Add Receipient
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-col p-grid box-bd-left">
+              <div class="box-config p-col">
+                <div class="p-grid p-align-center item fixed-t">
+                  <div class="p-col-fixed" [style.width.px]="50">
+                    <span class="icon-save-tpl"></span>
+                  </div>
+                  <div class="p-col">Saved Templates</div>
+                </div>
+                <div class="p-grid p-align-center p-justify-between item"
+                  *ngFor="let item of templatesDatas; let idx of index">
+                  <div class="p-col">{{ item.name }}</div>
+                  <div class="p-col-4 p-grid p-justify-end">
+                    <span class="icon-delete" (click)="deleteTemplates(idx)"></span>
+                  </div>
+                </div>
+                <div class="p-grid p-align-center p-justify-between item c-bottom">
+                  <div class="p-col">
+                    <a href="javascript:;" class="btn-add-new p-grid p-align-center" [routerLink]="[ '/add-template' ]">
+                      <span class="icon-add"></span>
+                      Add/Update Template
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </p-tabPanel>
+      </p-tabView>
+    </div>
+    <!-- end Configuration Email and Schedule -->
+  </div>
+  <!-- end templates content -->
+</div>
+<!-- end content -->

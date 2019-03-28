@@ -7,6 +7,7 @@ import { Component, OnInit, ElementRef, ViewChild, Input } from '@angular/core';
 })
 export class DonutChartComponent implements OnInit {
 
+  // progress bar color
   @ViewChild('fill') fill: ElementRef;
   @ViewChild('fill1') fill1: ElementRef;
   @ViewChild('fill2') fill2: ElementRef;
@@ -19,20 +20,17 @@ export class DonutChartComponent implements OnInit {
   percent: number;
 
 
-  constructor(private elementRef: ElementRef) { }
+  constructor() { }
 
   ngOnInit() {
-    // this.progress = isNaN(Number(eval[0])) ? 0 : Number(eval[0]);
-
     const rotate = 'rotate(0deg)';
     this.percent = this.numberData * 1.8;
 
+    // rotate element
     this.fill.nativeElement.style.transform
     = this.fill1.nativeElement.style.transform
     = this.fill2.nativeElement.style.transform
     = this.fill3.nativeElement.style.transform
     = rotate.replace('0', `${this.percent}`);
-
   }
-
 }

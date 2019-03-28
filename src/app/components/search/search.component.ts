@@ -32,8 +32,10 @@ export class SearchComponent implements OnInit {
     );
   }
 
+  // select dropdown
   action(e: any) { }
 
+  // off popup search click outside
   onClickOutside(e: any) {
     this.closeSearch.emit();
   }

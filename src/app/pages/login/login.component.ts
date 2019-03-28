@@ -11,6 +11,7 @@ import { message } from 'src/app/core/messages';
 })
 export class LoginComponent implements OnInit {
 
+  // init datas
   login: FormGroup;
   error: string;
 
@@ -21,12 +22,14 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    // build login form
     this.login = this.fb.group({
       username: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required)
     });
   }
 
+  // submit login
   onSubmit() {
     // get username and password values
     const username: string = this.login.get('username').value;
@@ -42,6 +45,7 @@ export class LoginComponent implements OnInit {
       password
     };
 
+    // check data login
     this.dataService.get('user.json').subscribe(
       (data: any) => {
         const users = data.user;

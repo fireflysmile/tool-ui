@@ -1,0 +1,108 @@
+@import 'color';
+@import 'icons';
+@import 'config';
+@import 'mixin';
+@import 'primeng-dropdown';
+@import 'width-height';
+
+.readiness-wp {
+  .title {
+    font-size: 24px;
+    font-weight: 800;
+    color: $chathams-blue;
+    height: $heading-h;
+    line-height: $heading-h;
+    padding-left: 34px;
+    text-transform: uppercase
+  }
+  .button-ok {
+    width: 105px;
+    height: 35px;
+    line-height: 35px;
+    display: inline-block;
+    background-color: $blue;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    margin-top: 35px;
+    margin-right: 34px;
+    text-decoration: none;
+  }
+  .readiness-content {
+    padding: 34px;
+    padding-top: 0;
+    min-height: calc(100% - #{$heading-h - 10});
+    .readiness {
+      height: 100%;
+      border: 1px solid $heather;
+      .readiness-row{
+        padding: 22px 25px 35px;
+        position: relative;
+        border-bottom: 1px solid $geyser;
+        .p-col {
+          padding-right: 45px;
+        }
+        .p-col-fixed {
+          padding: 0;
+          padding-right: 45px;
+        }
+        .label {
+          font-weight: 600;
+          font-size: 14px;
+          color: $mine-shaft;
+          margin-bottom: -3px;
+          display: block;
+        }
+        .input {
+          height: 32px;
+          border: none;
+          font-size: 15px;
+          color: $mine-shaft;
+          border-bottom: 1px solid $geyser;
+        }
+        input {
+          height: 30px;
+          border: none;
+        }
+        .name {
+          color: $chathams-blue;
+          font-size: 18px;
+          font-weight: 600;
+          padding-bottom: 27px;
+          a {
+            text-decoration: none;
+          }
+          .icon {
+            display: inline-block;
+            border-radius: 50%;
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            top: 13px;
+            right: 13px;
+            @each $item in $iconsConfig {
+              &-#{nth($item, 1)} {
+                @include linear-gradient(nth($item, 2), nth($item, 3));
+              }
+            }
+          }
+        }
+        .btn-add-new {
+          font-size: 14px;
+          color: $blue;
+          font-weight: 600;
+          text-decoration: none;
+          margin-top: 27px;
+          .icon-add {
+            margin-right: 14px;
+            margin-top: -3px;
+            @include icon(add, null, null);
+          }
+        }
+      }
+    }
+  }
+}

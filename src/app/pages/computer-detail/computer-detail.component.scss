@@ -131,8 +131,8 @@
             &.icon-users {
               @include icon(users, null, null);
             }
-            &.icon-computer{
-              @include icon(computer-color, null, null);
+            &.icon-application{
+              @include icon(applications-color, null, null);
             }
           }
         }

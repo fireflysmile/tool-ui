@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 })
 export class ImportDataComponent implements OnInit {
 
+  // init datas
   links = [];
-
   import: boolean;
   uploaded: boolean;
 
@@ -20,6 +20,7 @@ export class ImportDataComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    // get link of data
     this.dataService.get('welcome.json').subscribe(
       (data: any) => {
         this.links = data.inputdatas;
@@ -27,10 +28,12 @@ export class ImportDataComponent implements OnInit {
     );
   }
 
+  // redirect to link
   redirectTo(key: string) {
     this.router.navigateByUrl(key);
   }
 
+  // select option page
   select(name: string) {
     if (name === 'CSV File') {
       this.redirectTo('upload-csv');

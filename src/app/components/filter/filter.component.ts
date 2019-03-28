@@ -21,10 +21,12 @@ export class FilterComponent implements OnInit {
     this.formFilter = this.fb.group({});
   }
 
+  // off popup filter
   onClickOutside(e: any) {
     this.closeFilter.emit();
   }
 
+  // submit filter
   onSubmit() {
     this.okFilter.emit();
   }

@@ -1,25 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-service',
   templateUrl: './service.component.html',
-  styleUrls: ['./service.component.scss']
+  styleUrls: ['./service.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ServiceComponent implements OnInit {
 
-  computerList = [];
-  computer = {};
+  // init datas
+  applications: any;
+  applicationOptions: any;
 
-  departmentList = [];
-  department = {};
-
-  locationList = [];
-  location = {};
-
+  computerList: any;
+  computer = '';
+  departmentList: any;
+  department = '';
+  locationList: any;
+  location = '';
   mirgationDate = null;
   roCalender: any;
 
-  constructor() {
+  datePlan: any;
+
+  constructor(private dataService: DataService) {
+    // calendar config
     this.roCalender = {
       firstDayOfWeek: 1,
       dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
@@ -31,18 +37,26 @@ export class ServiceComponent implements OnInit {
       today: 'Today',
       clear: 'Clear',
       dateFormat: 'mm/dd/yy'
-  };
-    this.computerList = [{computer_name: 'hp'}, {computer_name: 'asus'}, {computer_name: 'macbook'}];
-    this.computer = {computer_name: 'hp'};
+    };
 
-    this.departmentList = [{department_name: 'hp'}, {department_name: 'asus'}, {department_name: 'macbook'}];
-    this.department = {department_name: 'hp'};
-
-    this.locationList = [{office_location: 'hp'}, {office_location: 'asus'}, {office_location: 'macbook'}];
-    this.location = {office_location: 'hp'};
   }
 
   ngOnInit() {
+    // onload
+    this.onload();
+  }
+
+  onload() {
+    this.dataService.get('self-services.json').subscribe(
+      (datas: any) => {
+        this.computerList = datas.computer_list;
+        this.departmentList = datas.department_list;
+        this.locationList = datas.location_list;
+        this.datePlan = datas.date_plan;
+        this.applications = datas.applications;
+        this.applicationOptions = datas.application_options;
+      }
+    );
   }
 
 }

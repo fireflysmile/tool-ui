@@ -10,15 +10,12 @@ import { Router } from '@angular/router';
 })
 export class WelcomeComponent implements OnInit {
 
+  // init datas
   searchBy = 'Computers';
   dropdownName = 'Search by';
   listSearchBy: DropdownValue[];
-
   links = [];
-  inputDatas = [];
 
-  import: boolean;
-  uploaded: boolean;
 
   constructor(
     private dataService: DataService,
@@ -26,6 +23,7 @@ export class WelcomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    // load datas
     this.dataService.get('welcome.json').subscribe(
       (data: any) => {
         this.links = data.links;
@@ -34,11 +32,14 @@ export class WelcomeComponent implements OnInit {
     );
   }
 
+  // select dropdown
   action(e: string): void {
   }
 
+  // redirect to link
   redirectTo(routerName: string) {
-    this.router.navigateByUrl(routerName);
+    if (routerName) {
+      this.router.navigateByUrl(routerName);
+    }
   }
-
 }

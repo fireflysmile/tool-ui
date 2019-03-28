@@ -2,7 +2,7 @@
   <div class="migration-update">
     <a class="btn-back" [routerLink]="[ '/computer-detail' ]">
       <span class="icon-back"></span>
-      <span class="name-back">Back to Dashboard</span>
+      <span class="name-back">Back to Computer Details</span>
     </a>
     <h3 class="title">Migration Status</h3>
     <div class="migration-content p-grid">
@@ -29,7 +29,7 @@
           <label class="label">Migration Type</label>
           <div class="input">
             <div class="dropdown">
-              <p-dropdown [options]="datas?.migration_type"></p-dropdown>
+              <p-dropdown [options]="datas?.migration_type" [(ngModel)]="migrationType"></p-dropdown>
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@
         </div>
         <div class="item-row p-grid p-align-center" *ngIf="addMigration">
           <label class="label">Migration Data</label>
-          <div class="input">
+          <div class="input" [style.width.%]="27">
             <input type="text">
           </div>
         </div>
@@ -65,6 +65,14 @@
             <input type="text" value="{{ isData?.asset_model }}">
           </div>
         </div>
+        <div class="item-row p-grid p-align-center" *ngIf="migrationType === 'Replace'">
+          <label class="label p-col-fixed">New H/W Model</label>
+          <div class="input p-col">
+            <div class="dropdown">
+              <p-dropdown [options]="datas?.new_model"></p-dropdown>
+            </div>
+          </div>
+        </div>
         <div class="item-row p-grid p-align-center">
           <label class="label p-col-fixed">Current Keyboard Layout</label>
           <div class="input p-col">
@@ -73,12 +81,18 @@
             </div>
           </div>
         </div>
-        <div class="item-row p-grid p-align-center">
+        <div class="item-row p-grid p-align-center" *ngIf="migrationType !== 'Replace'">
           <label class="label p-col-fixed">New Keyboard Layout</label>
           <div class="input p-col">
             <div class="dropdown">
               <p-dropdown [options]="datas?.new_keyboard"></p-dropdown>
             </div>
+          </div>
+        </div>
+        <div class="item-row p-grid p-align-center" *ngIf="migrationType === 'Replace'">
+          <label class="label p-col-fixed">New Keyboard Layout</label>
+          <div class="input p-col">
+            <input type="text" value="Layout SI.NA 09">
           </div>
         </div>
         <div class="item-row p-grid p-align-center">
@@ -112,7 +126,7 @@
           </a>
         </div>
         <div class="item-row p-grid p-align-center" *ngIf="!addAdditionalApp">
-          <a href="javascript:;" class="btn-add-new p-grid p-align-center" (click)="fnAddAdditionalApp()">
+          <a href="javascript:;" class="btn-add-new p-grid p-align-center" (click)="fnAdditionalApp()">
             <span class="icon-add"></span>
             Add Additional App Installed
           </a>

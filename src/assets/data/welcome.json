@@ -2,34 +2,42 @@
   "links": [
     {
       "text": "Input Data",
+      "link": "input-data",
       "icon": "input-data"
     },
     {
       "text": "Onboard to Project Data",
+      "link": "onboard",
       "icon": "onboard"
     },
     {
       "text": "Dashboard",
+      "link": "dashboard",
       "icon": "dashboard"
     },
     {
       "text": "App Readiness",
+      "link": "readiness",
       "icon": "readiness"
     },
     {
       "text": "Email Templates",
+      "link": "email-templates",
       "icon": "email"
     },
     {
       "text": "Self Service",
+      "link": null,
       "icon": "service"
     },
     {
       "text": "Survey",
+      "link": "survey-setting",
       "icon": "survey"
     },
     {
       "text": "Report",
+      "link": "report",
       "icon": "report"
     }
   ],

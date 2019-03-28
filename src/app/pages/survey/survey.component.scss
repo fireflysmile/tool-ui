@@ -1,0 +1,63 @@
+@import 'icons';
+@import 'color';
+@import 'width-height';
+@import 'primeng-dropdown';
+
+.survey-page {
+  min-height: $min-h;
+  .title {
+    font-size: 30px;
+    color: $chathams-blue;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 34px;
+    font-weight: 800;
+    &.fix-top {
+      padding-top: 60px;
+      padding-bottom: 20px;
+    }
+  }
+  .box-q {
+    height: 100%;
+    position: relative;
+    border: 1px solid $heather;
+    padding: 20px 35px;
+    .name {
+      font-size: 16px;
+      font-weight: 600;
+      color: $chathams-blue;
+      line-height: 22px;
+    }
+    .sub-name {
+      font-size: 18px;
+    }
+    .star {
+      margin-top: 36px;
+      padding-bottom: 62px;
+      .icon-star {
+        @include icon(star-none, null, null);
+        margin: 0 12px;
+        cursor: pointer;
+        &.active {
+          @include icon(star-active, null, null);
+        }
+      }
+    }
+  }
+  .button-ok {
+    height: 35px;
+    line-height: 35px;
+    width: 103px;
+    display: inline-block;
+    background-color: $blue;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+    padding: 0 26px;
+    color: white;
+    font-weight: 600;
+    margin: 0 11px;
+    text-decoration: none;
+  }
+}

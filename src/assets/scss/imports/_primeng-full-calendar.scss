@@ -1,0 +1,70 @@
+@import 'color';
+
+.fc.fc-ltr.ui-widget {
+  .fc-toolbar.fc-header-toolbar {
+    text-align: center;
+    height: 65px;
+    line-height: 65px;
+    color: $mine-shaft;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid $heather;
+    margin-bottom: -1px;
+    .fc-left,
+    .fc-right {
+      display: none;
+    }
+  }
+  .fc-view-container {
+    .fc-basic-view {
+      table {
+        width: 100%;
+        .fc-head {
+          tr {
+            th {
+              background-color: $white-lilac;
+              height: 35px;
+              vertical-align: middle;
+              text-align: center;
+              border: 1px solid $heather;
+            }
+          }
+        }
+      }
+      .fc-day-top {
+        .fc-day-number {
+          float: left;
+          font-weight: 700;
+          color: $mine-shaft;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.fc td, .fc th {
+  border-color: $heather;
+}
+.fc-popover.fc-more-popover {
+  background-color: white;
+}
+.ui-widget {
+  .fc-event {
+    padding: 7px;
+    color: $blue;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+    border-radius: 0;
+    border: none;
+    background-color: $zumthor;
+  }
+  .fc-more {
+    margin-top: 15px;
+    color: $blue;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+  }
+}

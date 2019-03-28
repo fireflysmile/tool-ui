@@ -17,6 +17,20 @@
       "value": "14-12-2019"
     }
   ],
+  "new_model": [
+    {
+      "label": "ASUS",
+      "value": "ASUS"
+    },
+    {
+      "label": "HP Spectre",
+      "value": "HP Spectre"
+    }
+    ,{
+      "label": "ACER",
+      "value": "ACER"
+    }
+  ],
   "migration_type": [
     {
       "label": "Refresh",

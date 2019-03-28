@@ -12,6 +12,8 @@ export class UpdateMigrationComponent implements OnInit {
   isData: any;
   datas: any;
 
+  migrationType: string;
+
   addMigration: boolean;
   addLoanerName: boolean;
   addAdditionalApp: boolean;
