@@ -18,16 +18,6 @@ export class ServiceComponent implements OnInit {
   location = '';
   mirgationDate = null;
   roCalender: any;
-  
-  checkList = [
-  {label: 'Yes', value: true},
-  {label: 'No', value: false}
-];
- appList = [
-    {id: 'app1', name: 'Application 1', value: true},
-    {id: 'app2', name: 'Application 2', value: true},
-    {id: 'app3', name: 'Application 3', value: true}
-  ];
 
   datePlan: any;
 
@@ -64,9 +54,4 @@ export class ServiceComponent implements OnInit {
     );
   }
 
-  findDate(date= {day: null, month: null, year: null}) {
-    return !!this.datePlanList.find((curDate, i) => {
-      return curDate.year === date.year && curDate.month === date.month && curDate.day === date.day;
-    });
-  }
 }
