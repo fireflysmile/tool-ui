@@ -10,9 +10,9 @@ import { DataService } from 'src/app/services/data.service';
 export class ServiceComponent implements OnInit {
 
   // init datas
-  datas = [];
+  datas = {};
+  computer = '';
   department = '';
-  locationList = '';
   location = '';
   mirgationDate = null;
   roCalender: any;
