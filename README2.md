@@ -7,8 +7,8 @@ user1/12345678
 user2/12345678
 
 ### Direct to link:
-1, Self service: /self-service
-2, Fill survey: /survey
+1, Self service: /self-service   e.g: http://localhost:4200/self-service
+2, Fill survey: /survey          e.g: http://localhost:4200/survey
 
 #### Deploy to Heroku:
 1.Create a app on Heroku(for example,my app name is 'tool23i')
