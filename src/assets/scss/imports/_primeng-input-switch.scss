@@ -1,0 +1,52 @@
+.ui-inputswitch {
+  border-radius: 9px;
+  width: 40px;
+  height: 10px;
+
+  .ui-helper-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    .ui-helper-hidden-accessible input,
+    .ui-helper-hidden-accessible select {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+  }
+  .ui-inputswitch-slider {
+    -moz-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    border-radius: 30px;
+    background: #cccccc;
+    &:before {
+      background-color: #ffffff;
+      left: -0.15em;
+      bottom: -0.25em;
+      border-radius: 50%;
+      -webkit-transition: 0.2s;
+      transition: 0.2s;
+      box-shadow: 0px 0px 23.25px 1.75px rgba(143, 165, 173, 0.55);
+      position: absolute;
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &.ui-inputswitch-checked .ui-inputswitch-slider {
+    background-color: $limeade;
+    &:before {
+      -webkit-transform: translateX(1.55em);
+      -ms-transform: translateX(1.55em);
+      transform: translateX(1.55em);
+    }
+  }
+  &.ui-inputswitch-checked:not(.ui-state-disabled):hover .ui-inputswitch-slider {
+    background-color: $limeade;
+  }
+}

@@ -2,7 +2,7 @@
   <div class="migration-update">
     <a class="btn-back" [routerLink]="[ '/computer-detail' ]">
       <span class="icon-back"></span>
-      <span class="name-back">Back to Dashboard</span>
+      <span class="name-back">Back to Computer Details</span>
     </a>
     <h3 class="title">Migration Status</h3>
     <div class="migration-content p-grid">
@@ -47,7 +47,7 @@
         </div>
         <div class="item-row p-grid p-align-center" *ngIf="addMigration">
           <label class="label">Migration Data</label>
-          <div class="input">
+          <div class="input" [style.width.%]="27">
             <input type="text">
           </div>
         </div>
