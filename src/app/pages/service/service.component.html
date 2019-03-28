@@ -3,7 +3,7 @@
   <h1 class="title">self service</h1>
   <form>
     <div class="main">
-      <div class="dflex">
+      <div class="p-grid">
         <div class="left-div">
           <div class="form-group">
             <h2><span>Welcome</span><br> Russell V Gomez</h2>
@@ -36,7 +36,7 @@
               <span class="icons icon-calender"></span>
               Migration Date
             </p>
-            <div class="text no-pad">
+            <div class="text fix-padding">
               <p-calendar name="mirgationDate" [(ngModel)]="mirgationDate" placeholder="Select Date"
                 icon="icon icon-calender-blue" [showIcon]="true" [locale]="roCalender" [readonlyInput]="true"
                 [showOtherMonths]="false">
@@ -66,7 +66,7 @@
           </div>
         </div>
       </div>
-      <div class="dflex">
+      <div class="p-grid">
         <div class="left-div add-control">
           <a href="javascript:;" class="btn-add-new p-grid p-align-center">
             <span class="icon-add"></span>
@@ -81,6 +81,8 @@
         </div>
       </div>
     </div>
-    <button>update</button>
+    <div class="p-grid p-justify-center" [style.margin-top.px]="25">
+      <a href="javascript:;" class="button-ok">Update</a>
+    </div>
   </form>
 </div>

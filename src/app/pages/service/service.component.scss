@@ -8,7 +8,7 @@
   h1 {
     font-size: 24px;
     color: $chathams-blue;
-    padding-top: 15px;
+    padding-top: 35px;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 36px;;
@@ -91,6 +91,9 @@
           &:last-child {
             border: none;
           }
+          &.fix-padding {
+            padding: 0;
+          }
           a {
             text-decoration: none;
             color: $blue;
@@ -161,6 +164,22 @@
         }
       }
     }
+  }
+  .button-ok {
+    height: 35px;
+    line-height: 35px;
+    width: 103px;
+    display: inline-block;
+    background-color: $blue;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+    padding: 0 26px;
+    color: white;
+    font-weight: 600;
+    margin: 0 11px;
+    text-decoration: none;
   }
 }
 @include placeholder {

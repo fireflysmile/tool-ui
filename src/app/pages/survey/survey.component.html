@@ -1,33 +1,15 @@
 <app-header></app-header>
-<div class="survey-setting main-content">
-  <app-back (routerName)="redirectTo('welcome')">Home</app-back>
-  <h3 class="title fix-top">Survey Form Settings</h3>
-  <div class="p-grid">
-    <div class="box-q p-col">
-      <div class="p-grid p-align-center p-justify-between item" *ngFor="let item of questionDatas; let idx = index">
-        <div class="p-col" [style.margin-right.px]="22">
-          <p class="name">Q {{ idx + 1 }}</p>
-          <div class="input">
-            <input type="text" [(ngModel)]="item.name">
-          </div>
-        </div>
-        <div class="p-col-fixed" [style.width.px]="160">
-          <div class="input">
-            <div class="dropdown">
-              <p-dropdown [options]="ratingOptions" placeholder="Stars Rating" [(ngModel)]="rating"></p-dropdown>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="p-grid p-align-center item fix-w">
-        <div class="p-col">
-          <a href="javascript:;" class="btn-add-new p-grid p-align-center" (click)="addQuestion()">
-            <span class="icon-add"></span>Add Question</a>
-        </div>
-      </div>
+<div class="survey main-content">
+  <h3 class="title fix-top">Fill SUrvey</h3>
+  <div class="box-q p-col">
+    <p class="name">Question 1 of 10</p>
+    <p class="sub-name">Lorem Ipsum Dolor sit Amet?</p>
+    <div class="star p-grid p-justify-center">
+      <span class="icon-star" [ngClass]="{'active': starNumber > idx}" (click)="fnStar(idx + 1)"
+        *ngFor="let star of [1,2,3,4,5]; let idx = index"></span>
     </div>
   </div>
   <div class="p-grid p-justify-center" [style.margin-top.px]="25">
-    <a href="javascript:;" class="button-ok" [routerLink]="[ '/welcome' ]">Publish</a>
+    <a href="javascript:;" class="button-ok">Next</a>
   </div>
 </div>

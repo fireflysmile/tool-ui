@@ -3,7 +3,7 @@
 @import 'width-height';
 @import 'primeng-dropdown';
 
-.survey-setting {
+.survey {
   min-height: $min-h;
   .title {
     font-size: 30px;
@@ -21,47 +21,25 @@
     height: 100%;
     position: relative;
     border: 1px solid $heather;
-    border-bottom: none;
-    .item {
-      min-height: 100px;
-      border-bottom: 1px solid $heather;
-      font-size: 15px;
-      padding: 0 25px 0 35px;
-      color: $mine-shaft;
-      &.fix-w {
-        height: 50px;
-        min-height: 50px;
-      }
-      .name {
-        font-size: 24px;
-        font-weight: 600;
-        color: $chathams-blue;
-        text-transform: uppercase;
-        line-height: 22px;
-        letter-spacing: -3px;
-      }
-      .input {
-        width: 100%;
-        height: 40px;
-        border-bottom: 1px solid $heather;
-        .dropdown {
-          margin-top: 23px;
-        }
-      }
-      input {
-        width: 100%;
-        height: 39px;
-        border: none;
-      }
-      .btn-add-new {
-        font-size: 14px;
-        color: $blue;
-        font-weight: 600;
-        text-decoration: none;
-        .icon-add {
-          margin-right: 14px;
-          margin-top: -3px;
-          @include icon(add, null, null);
+    padding: 20px 35px;
+    .name {
+      font-size: 16px;
+      font-weight: 600;
+      color: $chathams-blue;
+      line-height: 22px;
+    }
+    .sub-name {
+      font-size: 18px;
+    }
+    .star {
+      margin-top: 36px;
+      padding-bottom: 62px;
+      .icon-star {
+        @include icon(star-none, null, null);
+        margin: 0 12px;
+        cursor: pointer;
+        &.active {
+          @include icon(star-active, null, null);
         }
       }
     }
@@ -69,6 +47,7 @@
   .button-ok {
     height: 35px;
     line-height: 35px;
+    width: 103px;
     display: inline-block;
     background-color: $blue;
     border: none;

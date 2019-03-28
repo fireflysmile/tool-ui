@@ -57,7 +57,7 @@ const routes: Routes = [
     path: 'email-templates', component: EmailComponent
   },
   {
-    path: 'service', component: ServiceComponent
+    path: 'self-service', component: ServiceComponent
   },
   {
     path: 'user-detail', component: UserDetailComponent
