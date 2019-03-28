@@ -7,6 +7,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class BackComponent implements OnInit {
 
+  // Output routerName
   @Output() routerName: EventEmitter<string> = new EventEmitter();
 
   constructor() { }
@@ -14,6 +15,7 @@ export class BackComponent implements OnInit {
   ngOnInit() {
   }
 
+  // redirect link
   redirectTo() {
     this.routerName.emit();
   }

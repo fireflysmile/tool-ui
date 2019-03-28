@@ -1,7 +1,15 @@
+<!-- header -->
 <app-header></app-header>
+
+<!-- content -->
 <div class="survey-setting main-content">
+  <!-- back to router -->
   <app-back (routerName)="redirectTo('welcome')">Home</app-back>
+
+  <!-- title -->
   <h3 class="title fix-top">Survey Form Settings</h3>
+
+  <!-- box add question -->
   <div class="p-grid">
     <div class="box-q p-col">
       <div class="p-grid p-align-center p-justify-between item" *ngFor="let item of questionDatas; let idx = index">
@@ -27,7 +35,12 @@
       </div>
     </div>
   </div>
+  <!-- end box add question -->
+
+  <!-- btn Publish -->
   <div class="p-grid p-justify-center" [style.margin-top.px]="25">
     <a href="javascript:;" class="button-ok" [routerLink]="[ '/welcome' ]">Publish</a>
   </div>
+  <!-- end btn Publish -->
 </div>
+<!-- end content -->

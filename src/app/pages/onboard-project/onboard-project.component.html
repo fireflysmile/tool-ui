@@ -1,31 +1,48 @@
+<!-- header page -->
 <app-header></app-header>
+
+<!-- btn back router -->
 <app-back (routerName)="redirectTo('welcome')">Home</app-back>
+
+<!-- content -->
 <div class="onboard-project">
   <div class="options-table p-grid p-justify-between">
+
+    <!-- title page -->
     <div class="p-col">
       <h3 class="title-table">ONBOARD TO PROJECT DATA</h3>
     </div>
+
+    <!-- browse options -->
     <div>
       <input type="text" placeholder="Project Name" class="search-table">
       <a href="javascript:;" class="button-ok" (click)="fnBrowse(); $event.stopPropagation()">Browse</a>
     </div>
   </div>
+  <!-- tabs content -->
   <p-tabView>
+    <!-- tab users -->
     <p-tabPanel header="Users">
       <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
         <app-table-view [select]="true" [datas]="users" [sortBy]="usersSortBy" [sortByName]="usersSortByName"></app-table-view>
       </p-scrollPanel>
     </p-tabPanel>
+
+    <!-- tab applications -->
     <p-tabPanel header="Application">
       <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
         <app-table-view [select]="true" [datas]="aplications" [sortBy]="aplicationsSortBy" [sortByName]="aplicationsSortByName"></app-table-view>
       </p-scrollPanel>
     </p-tabPanel>
+
+    <!-- tab computers -->
     <p-tabPanel header="Computer">
       <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
         <app-table-view [select]="true" [datas]="computers" [sortBy]="computersSortBy" [sortByName]="computersSortByName"></app-table-view>
       </p-scrollPanel>
     </p-tabPanel>
+
+    <!-- tab departments -->
     <p-tabPanel header="Department">
       <p-scrollPanel [style]="{width: '100%', height: tabHeight}">
         <app-table-view [select]="true" [datas]="departments" [sortBy]="departmentsSortBy" [sortByName]="departmentsSortByName"></app-table-view>
@@ -33,13 +50,14 @@
     </p-tabPanel>
   </p-tabView>
 
+  <!-- popup browse -->
   <div class="ui-dialog-mask" *ngIf="browse">
-    <p-dialog [(visible)]="browse"  clickOutside (clickOutside)="offBrowse($event)">
+    <p-dialog [(visible)]="browse" [contentStyle]="{'overflow':'visible'}" clickOutside (clickOutside)="offBrowse($event)">
       <h4 class="title">Browse Files</h4>
 
       <div class="dropdown">
-          <p-dropdown [options]="projects" appendTo="body"></p-dropdown>
-        </div>
+        <p-dropdown [options]="projects"></p-dropdown>
+      </div>
       <div class="list-content">
         <div class="item" *ngFor="let item of files" (click)="offBrowse($event)">
           <p>{{ item.name }}</p>
@@ -52,3 +70,4 @@
   </div>
 
 </div>
+<!-- end content -->

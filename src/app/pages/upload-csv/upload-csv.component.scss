@@ -3,6 +3,7 @@
 @import 'mixin';
 @import 'config';
 @import 'width-height';
+@import 'primeng-upload-file';
 
 .upload {
   min-height: $min-h;
@@ -55,6 +56,7 @@
         text-decoration: none;
         text-align: center;
         padding-top: 33px;
+        position: relative;
         @each $icons in $iconsConfig {
           &.#{nth($icons, 1)} {
             @include linear-gradient(nth($icons, 2), nth($icons, 3));

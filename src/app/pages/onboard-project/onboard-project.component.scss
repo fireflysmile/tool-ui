@@ -49,6 +49,7 @@
   }
 }
 
+// list projects in popup
 .list-content {
   border: 1px solid $geyser;
   margin-top: 21px;
@@ -65,7 +66,7 @@
   }
 }
 
-
+// placeholder input
 @include placeholder {
   color: $silver;
   font-size: 15px;

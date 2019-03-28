@@ -15,12 +15,14 @@ class Question {
 })
 export class SurveyComponent implements OnInit {
 
+  // init datas
   starNumber = 2;
   constructor() { }
 
   ngOnInit() {
   }
 
+  // rating rank
   fnStar(idx: number) {
     this.starNumber = idx;
   }

@@ -135,12 +135,17 @@
                       font-size: 14px;
                       color: $chathams-blue;
                       font-weight: 500;
+                      line-height: 32px;
                       .ui-datepicker-month, .ui-datepicker-year {
                         display: inline-block;
                       }
                     }
                   }
                 }
+              }
+              .is-event {
+                position: absolute;
+                color: $mandy2;
               }
             }
           }

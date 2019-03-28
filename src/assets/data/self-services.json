@@ -1,0 +1,138 @@
+{
+  "computer_list": [
+    {
+      "label": "computer 123",
+      "value": "computer 123"
+    },
+    {
+      "label": "computer 33",
+      "value": "computer 33"
+    },
+    {
+      "label": "computer 11",
+      "value": "computer 11"
+    },
+    {
+      "label": "computer 33",
+      "value": "computer 33"
+    }
+  ],
+  "department_list": [
+    {
+      "label": "department 123",
+      "value": "department 123"
+    },
+    {
+      "label": "department 34",
+      "value": "department 34"
+    },
+    {
+      "label": "department 12",
+      "value": "department 12"
+    },
+    {
+      "label": "department 45",
+      "value": "department 45"
+    }
+  ],
+  "location_list": [
+    {
+      "label": "location 123",
+      "value": "location 123"
+    },
+    {
+      "label": "location 34",
+      "value": "location 34"
+    },
+    {
+      "label": "location 12",
+      "value": "location 12"
+    },
+    {
+      "label": "location 45",
+      "value": "location 45"
+    }
+  ],
+  "date_plan": [
+    {
+      "year": 2019,
+      "month": 2,
+      "day": 1
+    },
+    {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    {
+      "year": 2019,
+      "month": 4,
+      "day": 5
+    },
+    {
+      "year": 2019,
+      "month": 4,
+      "day": 7
+    },
+    {
+      "year": 2019,
+      "month": 4,
+      "day": 8
+    },
+    {
+      "year": 2019,
+      "month": 4,
+      "day": 9
+    },
+    {
+      "year": 2019,
+      "month": 4,
+      "day": 12
+    },
+    {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    {
+      "year": 2019,
+      "month": 4,
+      "day": 15
+    },
+    {
+      "year": 2019,
+      "month": 2,
+      "day": 17
+    },
+    {
+      "year": 2019,
+      "month": 4,
+      "day": 19
+    },
+    {
+      "year": 2019,
+      "month": 2,
+      "day": 21
+    },
+    {
+      "year": 2019,
+      "month": 4,
+      "day": 22
+    },
+    {
+      "year": 2019,
+      "month": 4,
+      "day": 24
+    },
+    {
+      "year": 2019,
+      "month": 2,
+      "day": 28
+    },
+    {
+      "year": 2019,
+      "month": 4,
+      "day": 29
+    }
+  ]
+}

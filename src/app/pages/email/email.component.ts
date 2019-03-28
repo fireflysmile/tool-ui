@@ -12,12 +12,13 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class EmailComponent implements OnInit {
 
+  // init datas
   logDatas: any;
   receipientsDatas: any;
   templatesDatas: any;
 
+  // email config
   mailTypeOptions: any;
-
   mailServerAddress: string;
   port: string;
   mailServerType: string;
@@ -26,6 +27,7 @@ export class EmailComponent implements OnInit {
   password: string;
   senderEmail: string;
 
+  // Schedule config
   scheduleConfig: any;
   projectName: string;
   group: string;
@@ -38,19 +40,25 @@ export class EmailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    // onload
     this.onload();
   }
 
+  // redirect to link
   redirectTo(key: string) {
     this.router.navigateByUrl(key);
   }
 
+  // load datas
   onload() {
     this.dataService.get('email.json').subscribe(
       (datas: any) => {
+
+        // data other
         this.logDatas = datas.logs;
         this.receipientsDatas = datas.receipients;
         this.templatesDatas = datas.templates;
+
         // email
         this.mailServerAddress = datas.email_config.mail_server_address;
         this.port = datas.email_config.port;
@@ -71,9 +79,12 @@ export class EmailComponent implements OnInit {
     );
   }
 
+  // Delete Receipient
   deleteReceipient(idx: number) {
     this.receipientsDatas.splice(idx, 1);
   }
+
+  // Delete Templates
   deleteTemplates(idx: number) {
     this.templatesDatas.splice(idx, 1);
   }

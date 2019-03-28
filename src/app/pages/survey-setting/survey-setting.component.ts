@@ -16,6 +16,7 @@ class Question {
 })
 export class SurveySettingComponent implements OnInit {
 
+  // init datas
   questionDatas: any;
   ratingOptions: any;
 
@@ -25,13 +26,16 @@ export class SurveySettingComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    // onload
     this.onload();
   }
 
+  // redirect to link
   redirectTo(key: string) {
     this.router.navigateByUrl(key);
   }
 
+  // load datas
   onload() {
     this.dataService.get('survey.json').subscribe(
       (datas: any) => {
@@ -41,6 +45,7 @@ export class SurveySettingComponent implements OnInit {
     );
   }
 
+  // fn add question
   addQuestion() {
     const question = new Question();
     this.questionDatas.push(question);

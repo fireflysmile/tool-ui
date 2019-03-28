@@ -10,14 +10,12 @@
       <a href="javascript:;" class="item csv">
         <i class="icon"></i><br />
         <p class="text">Drop your <span>CSV File here</span></p>
+        <p-fileUpload name="myfile[]" multiple="multiple" accept=".csv" showUploadButton="false" showCancelButton="false"
+      maxFileSize="1000000" (onSelect)="fnSelectFile($event)"></p-fileUpload>
       </a>
     </div>
   </div>
   <div [style.text-align]="'center'">
     <p class="suport-text">Learn how to format your CSV File <a href="javascript:;">here</a></p>
-  </div>
-  <div class="clear">
-    <p-fileUpload name="myfile[]" multiple="multiple" accept=".csv" showUploadButton="false" showCancelButton="false"
-      maxFileSize="1000000"></p-fileUpload>
   </div>
 </div>

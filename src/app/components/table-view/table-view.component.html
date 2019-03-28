@@ -1,3 +1,4 @@
+<!-- option filter end sort by -->
 <div class="options-fix-table p-grid p-align-center">
   <app-dropdown [style.margin-left]="'auto'" [values]="datas?.sort" [dropdownName]="dropdownName"
     [activeValue]="sortByName" (select)="action($event)"></app-dropdown>
@@ -6,15 +7,22 @@
     Filter
   </a>
 </div>
+<!-- end option filter end sort by -->
 
+<!-- table content -->
 <p-table class="table-view" [(selection)]="selected" [columns]="datas?.config" [sortField]="sortBy" [value]="datas?.datas"
   [style]="{width:'100%'}">
+
+  <!-- config width column table -->
   <ng-template pTemplate="colgroup" let-columns>
     <colgroup>
       <col [style.width.px]="70" *ngIf="select">
       <col *ngFor="let col of columns" [style.width.px]="col.width">
     </colgroup>
   </ng-template>
+  <!-- end config width column table -->
+
+  <!-- header table -->
   <ng-template pTemplate="header" let-columns>
     <tr [class.no-checkbox]="!select">
       <th class="checkbox" *ngIf="select">
@@ -25,6 +33,9 @@
       </th>
     </tr>
   </ng-template>
+  <!-- end header table -->
+
+  <!-- body table -->
   <ng-template pTemplate="body" let-rowData let-columns="columns">
     <tr [pSelectableRow]="rowData" (click)="viewData(rowData)" [class.no-checkbox]="!select">
       <td class="checkbox" *ngIf="select">
@@ -35,8 +46,11 @@
       </td>
     </tr>
   </ng-template>
+  <!-- end body table -->
 </p-table>
+<!-- end table content -->
 
+<!-- bottom table if table select row -->
 <div class="table-bottom p-grid p-align-center p-justify-between" *ngIf="select">
   <div class="number-select">
     <p *ngIf="selected?.length > 0">
@@ -48,7 +62,10 @@
     <a href="javascript:;" class="button-ok" (click)="redirectTo('dashboard')">Publish</a>
   </div>
 </div>
+<!-- end bottom table if table select row -->
 
+<!-- filter popup -->
 <ng-container *ngIf="isFilter">
   <app-filter [datas]="datas?.config" (closeFilter)="fnCloseFilter()" (okFilter)="fnCloseFilter()"></app-filter>
 </ng-container>
+<!-- end filter popup -->

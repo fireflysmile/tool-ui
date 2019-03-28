@@ -21,23 +21,29 @@ export class DropdownComponent implements OnChanges {
   @Input() values: DropdownValue[];
   @Input() activeValue: any;
   @Output() select: EventEmitter<any>;
+
   defaultValue: any;
   isShowDropdown = false;
 
   constructor(private eref: ElementRef) {
     this.select = new EventEmitter();
   }
+
   ngOnChanges() {
     this.defaultValue = this.activeValue;
   }
-
+  // Click Outside
   onClickOutside(event: any) {
     this.isShowDropdown = false;
   }
+
+  // select value
   selectItem(value: string, text: string) {
     this.defaultValue = text;
     this.select.emit(value);
   }
+
+  // is dropdown show
   onShowDropdown(): void {
     this.isShowDropdown = !this.isShowDropdown;
   }

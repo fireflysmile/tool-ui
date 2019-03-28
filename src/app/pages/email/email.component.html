@@ -1,8 +1,17 @@
+<!-- header -->
 <app-header></app-header>
+
+<!-- content -->
 <div class="email-config">
+  <!-- back router -->
   <app-back (routerName)="redirectTo('welcome')">Home</app-back>
+
+  <!-- title -->
   <h3 class="title fix-top">EMAIL TEMPLATE</h3>
+
+  <!-- templates content -->
   <div class="config-content p-grid">
+    <!-- Email Log -->
     <div class="p-col-fixed box box-left">
       <div class="box-config">
         <div class="p-grid p-align-center item fixed-t">
@@ -17,8 +26,13 @@
         </div>
       </div>
     </div>
+    <!-- end Email Log -->
+
+    <!-- Configuration Email and Schedule -->
     <div class="p-col box box-right">
       <p-tabView>
+
+        <!-- tab Email Configuration -->
         <p-tabPanel header="Email Configuration">
           <div class="box-bd-top">
             <div class="p-grid p-align-center c-row">
@@ -105,6 +119,8 @@
             </div>
           </div>
         </p-tabPanel>
+
+        <!-- tab Schedule Configuration -->
         <p-tabPanel header="Schedule Configuration">
           <div class="box-bd-top">
             <div class="p-grid p-align-center c-row">
@@ -206,5 +222,8 @@
         </p-tabPanel>
       </p-tabView>
     </div>
+    <!-- end Configuration Email and Schedule -->
   </div>
+  <!-- end templates content -->
 </div>
+<!-- end content -->

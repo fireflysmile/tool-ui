@@ -1,35 +1,43 @@
+<!-- header -->
 <app-header></app-header>
+
+<!-- content -->
 <div class="self-service-page">
+  <!-- title -->
   <h1 class="title">self service</h1>
+
+  <!-- form data -->
   <form>
     <div class="main">
       <div class="p-grid">
+        <!-- left content -->
         <div class="left-div">
           <div class="form-group">
             <h2><span>Welcome</span><br> Russell V Gomez</h2>
             <div class="row">
               <label>Current Computer</label>
               <div class="dropdown">
-                <p-dropdown name="computer" [(ngModel)]="computer" [options]="computerList" optionLabel="computer_name">
+                <p-dropdown name="computer" [(ngModel)]="computer" [options]="datas?.computer_list">
                 </p-dropdown>
               </div>
             </div>
             <div class="row">
               <label>Current Department</label>
               <div class="dropdown">
-                <p-dropdown name="department" [(ngModel)]="department" [options]="departmentList"
-                  optionLabel="department_name"></p-dropdown>
+                <p-dropdown name="department" [(ngModel)]="department" [options]="datas?.department_list"></p-dropdown>
               </div>
             </div>
             <div class="row">
               <label>Current Location</label>
               <div class="dropdown">
-                <p-dropdown name="location" [(ngModel)]="location" [options]="locationList"
-                  optionLabel="office_location"></p-dropdown>
+                <p-dropdown name="location" [(ngModel)]="location" [options]="datas?.location_list"></p-dropdown>
               </div>
             </div>
           </div>
         </div>
+        <!-- end left content -->
+
+        <!-- right content -->
         <div class="right-div">
           <div class="box-group">
             <p class="name">
@@ -40,12 +48,14 @@
               <p-calendar name="mirgationDate" [(ngModel)]="mirgationDate" placeholder="Select Date"
                 icon="icon icon-calender-blue" [showIcon]="true" [locale]="roCalender" [readonlyInput]="true"
                 [showOtherMonths]="false">
-                <!-- <ng-template pTemplate="date" let-date>
-                  <span [ngStyle]="{color: (date.year == datePlan.year && date.month == datePlan.month && date.day == datePlan.day ? '#ea596a' : 'inherit'}" >{{date.day}}</span>
-                </ng-template> -->
-                <!-- <ng-template pTemplate="date" let-date>
-                    <span [ngStyle]="{backgroundColor: (date.day < 21 && date.day > 10) ? '#7cc67c' : 'inherit'}" style="border-radius:50%">{{date.day}}</span>
-                </ng-template> -->
+                <ng-template pTemplate="date" let-date>
+                  <span *ngFor="let item of datePlan; let i = index">
+                    <span *ngIf="date.year == item.year && date.month == item.month && date.day == item.day" class="is-event">
+                      {{date.day}}
+                    </span>
+                  </span>
+                  <span>{{date.day}}</span>
+                </ng-template>
               </p-calendar>
             </div>
           </div>
@@ -65,7 +75,10 @@
             </div>
           </div>
         </div>
+        <!-- end right content -->
       </div>
+
+      <!-- button add -->
       <div class="p-grid">
         <div class="left-div add-control">
           <a href="javascript:;" class="btn-add-new p-grid p-align-center">
@@ -80,9 +93,14 @@
           </a>
         </div>
       </div>
+      <!-- end button add -->
     </div>
+
+    <!-- btn Update -->
     <div class="p-grid p-justify-center" [style.margin-top.px]="25">
       <a href="javascript:;" class="button-ok">Update</a>
     </div>
+    <!-- end btn Update -->
   </form>
 </div>
+<!-- end content -->

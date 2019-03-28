@@ -1,17 +1,25 @@
 <app-aside-view>
+  <!-- content -->
   <div class="readiness-wp">
     <div class="p-grid">
+      <!-- title page -->
       <div class="p-col">
         <h3 class="title">APP READINESS</h3>
       </div>
+
+      <!-- btn update -->
       <div class="p-col p-grid p-justify-end">
         <a href="javascript:;" class="button-ok">Update</a>
       </div>
     </div>
     <div class="readiness-content p-grid p-align-stretch">
       <div class="p-col readiness">
+        <!-- table list repeat -->
         <div class="readiness-row" *ngFor="let item of readinessData?.datas">
-          <h4 class="name"><a [routerLink]="[ '/application-detail' ]">{{ item.name }}</a> <span class="icon icon-{{item.donut}}"></span></h4>
+          <!-- name -->
+          <h4 class="name"><a [routerLink]="[ '/application-detail' ]">{{ item.name }}</a> <span
+              class="icon icon-{{item.donut}}"></span></h4>
+          <!-- options -->
           <div class="p-grid">
             <div class="p-col">
               <span class="label">Version</span>
@@ -66,4 +74,5 @@
       </div>
     </div>
   </div>
+  <!-- end content -->
 </app-aside-view>

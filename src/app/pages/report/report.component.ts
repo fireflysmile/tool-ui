@@ -10,6 +10,7 @@ import 'chartjs-plugin-doughnutlabel';
 })
 export class ReportComponent implements OnInit {
 
+  // init datas
   selectedBy = '';
   selectedType = '';
   startDate = '';
@@ -20,33 +21,39 @@ export class ReportComponent implements OnInit {
 
   reportConfig: any;
 
+  // devices chart
   devicesChart: any;
   devicesName: string;
   devicesSum: number;
   optionsDevice: any;
 
-
+  // migration Chart
   migrationChart: any;
   migrationName: string;
   migrationSum: number;
   optionsMigration: any;
 
+  // profile Chart
   profileChart: any;
   profileName: string;
   profileSum: number;
   optionsProfile: any;
 
+  // site Migration
   siteMigration: any;
   siteMigrationName: string;
   siteMigrationOptions: any;
 
+  // planned Migrations
   plannedMigrations: any;
   plannedMigrationName: string;
   plannedMigrationOptions: any;
 
+  // calendar config
   roCalender: any;
 
   constructor(private dataService: DataService) {
+    // calendar config
     this.roCalender = {
       firstDayOfWeek: 1,
       dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
@@ -62,9 +69,11 @@ export class ReportComponent implements OnInit {
   }
 
   ngOnInit() {
+    // onload
     this.onload();
   }
 
+  // options view tab Report by Type
   viewType() {
     if (this.selectedBy !== '' && this.selectedType !== '') {
       this.isType = true;
@@ -72,6 +81,7 @@ export class ReportComponent implements OnInit {
     }
   }
 
+  // options view tab Report by Duration
   viewDuration() {
     if (this.startDate !== '' && this.selectedMigration !== '') {
       this.isDuration = true;
@@ -79,6 +89,7 @@ export class ReportComponent implements OnInit {
     }
   }
 
+  // load data config
   onload() {
     this.dataService.get('reports.json').subscribe(
       (datas: any) => {
@@ -87,6 +98,7 @@ export class ReportComponent implements OnInit {
     );
   }
 
+  // load datas chart
   chartLoad() {
     this.dataService.get('reports.json').subscribe(
       (datas: any) => {
@@ -118,6 +130,7 @@ export class ReportComponent implements OnInit {
     );
   }
 
+  // load options chart
   onloadOption() {
     this.optionsDevice = {
       legend: {

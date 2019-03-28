@@ -6,11 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-detail.component.scss']
 })
 export class UserDetailComponent implements OnInit {
-
+  // init data
   isData: any;
   constructor() { }
 
   ngOnInit() {
+    // load data is user
     this.isData = JSON.parse(localStorage.getItem('user-detail'));
   }
 

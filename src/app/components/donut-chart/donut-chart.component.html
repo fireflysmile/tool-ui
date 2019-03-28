@@ -1,15 +1,16 @@
 <div class="radial-progress">
-    <div class="circle">
-      <div class="shadow "></div>
-      <div class="mask full" #fill>
-        <div class="fill" [style.background-color]="donutColor" #fill1></div>
-      </div>
-      <div class="mask half">
-        <div class="fill" [style.background-color]="donutColor" #fill2></div>
-        <div class="fill fix" [style.background-color]="donutColor" #fill3></div>
-      </div>
+  <div class="circle">
+    <div class="shadow "></div>
+    <div class="mask full" #fill>
+      <div class="fill" [style.background-color]="donutColor" #fill1></div>
     </div>
-    <div class="inset p-grid p-align-center p-justify-center" [style.background-color]="insetColor">
-      <p class="number" [style.color]="donutColor">{{ numberData }}<span>%</span></p>
+    <div class="mask half">
+      <div class="fill" [style.background-color]="donutColor" #fill2></div>
+      <div class="fill fix" [style.background-color]="donutColor" #fill3></div>
     </div>
   </div>
+  <div class="inset p-grid p-align-center p-justify-center" [style.background-color]="insetColor">
+    <p class="number" [style.color]="donutColor">{{ numberData }}<span>%</span></p>
+  </div>
+</div>
+<!-- end donut chart progress css -->
