@@ -49,6 +49,7 @@ import { TemplateAddComponent } from './pages/email/template-add/template-add.co
 import { SurveySettingComponent } from './pages/survey-setting/survey-setting.component';
 import { DialogModule } from 'primeng/dialog';
 import { GaugeComponent } from './components/gauge/gauge.component';
+import { InputSwitchModule } from 'primeng/inputswitch';
 
 const PrimeNGmodule = [
   FileUploadModule,
@@ -61,7 +62,8 @@ const PrimeNGmodule = [
   FullCalendarModule,
   CheckboxModule,
   EditorModule,
-  DialogModule
+  DialogModule,
+  InputSwitchModule
 ];
 
 @NgModule({

@@ -22,11 +22,6 @@
     },
     {
       "name": "Lorem Ipsum Dolor Sit Amet",
-      "attach": false,
-      "date_attach": "10 Feb"
-    },
-    {
-      "name": "Lorem Ipsum Dolor Sit Amet",
       "attach": true,
       "date_attach": "5 Feb"
     },
@@ -106,8 +101,6 @@
   },
   "schedule_config": {
     "project_name": "Project1",
-    "group": "Group1",
-    "migration_type": "Refresh",
     "test_email": "abc@examplecorp.com",
     "project_options": [
       {
@@ -117,26 +110,6 @@
       ,{
         "label": "Project2",
         "value": "Project2"
-      }
-    ],
-    "group_options": [
-      {
-        "label": "Group1",
-        "value": "Group1"
-      }
-      ,{
-        "label": "Group2",
-        "value": "Group2"
-      }
-    ],
-    "migration_type_options": [
-      {
-        "label": "Refresh",
-        "value": "Refresh"
-      },
-      {
-        "label": "Replace",
-        "value": "Replace"
       }
     ]
   },

@@ -28,10 +28,9 @@ export class EmailComponent implements OnInit {
   senderEmail: string;
 
   // Schedule config
+  projectChecked = true;
   scheduleConfig: any;
   projectName: string;
-  group: string;
-  migrationType: string;
   testEmail: string;
 
   constructor(
@@ -72,8 +71,6 @@ export class EmailComponent implements OnInit {
         // schedule config
         this.scheduleConfig = datas.schedule_config;
         this.projectName = datas.schedule_config.project_name;
-        this.group = datas.schedule_config.group;
-        this.migrationType = datas.schedule_config.migration_type;
         this.testEmail = datas.schedule_config.test_email;
       }
     );

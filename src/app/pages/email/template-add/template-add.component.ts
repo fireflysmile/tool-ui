@@ -40,13 +40,11 @@ export class TemplateAddComponent implements OnInit {
     );
   }
 
-  onContentChanged(quill) {
-    console.log('quill content is changed!', quill);
-  }
+  // editor change
+  onContentChanged(quill: any) { }
 
-  initData(quill) {
-    console.log('init', quill);
-  }
+  // editor init
+  initData(quill: any) { }
 
   // Delete Attachment
   deleteAttachment(idx: number) {

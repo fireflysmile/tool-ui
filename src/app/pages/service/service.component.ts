@@ -10,9 +10,14 @@ import { DataService } from 'src/app/services/data.service';
 export class ServiceComponent implements OnInit {
 
   // init datas
-  datas = {};
+  applications: any;
+  applicationOptions: any;
+
+  computerList: any;
   computer = '';
+  departmentList: any;
   department = '';
+  locationList: any;
   location = '';
   mirgationDate = null;
   roCalender: any;
@@ -44,8 +49,12 @@ export class ServiceComponent implements OnInit {
   onload() {
     this.dataService.get('self-services.json').subscribe(
       (datas: any) => {
-        this.datas = datas;
+        this.computerList = datas.computer_list;
+        this.departmentList = datas.department_list;
+        this.locationList = datas.location_list;
         this.datePlan = datas.date_plan;
+        this.applications = datas.applications;
+        this.applicationOptions = datas.application_options;
       }
     );
   }
