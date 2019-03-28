@@ -6,30 +6,34 @@
       "current_status": "Production Ready",
       "rationalization": "Keep",
       "target_version": 10.2,
+      "target_app": "Aplication 1",
       "donut": "onboard"
-    }
-    ,{
+    },
+    {
       "name": "Application Name Lorem Ipsum",
       "version": 10.1,
       "current_status": "In UAT",
       "rationalization": "Keep",
       "target_version": 10.2,
+      "target_app": "Aplication 1",
       "donut": "dashboard"
-    }
-    ,{
+    },
+    {
       "name": "Application Name Lorem Ipsum",
       "version": 10.1,
       "current_status": "In Packaging",
       "rationalization": "Keep",
       "target_version": 10.2,
+      "target_app": "Aplication 1",
       "donut": "readiness"
-    }
-    ,{
+    },
+    {
       "name": "Application Name Lorem Ipsum",
       "version": 10.1,
       "current_status": "Uncategorized",
       "rationalization": "Keep",
       "target_version": 10.2,
+      "target_app": "Aplication 1",
       "donut": "email"
     }
   ],
@@ -37,16 +41,16 @@
     {
       "label": "Production Ready",
       "value": "Production Ready"
-    }
-    ,{
+    },
+    {
       "label": "In UAT",
       "value": "In UAT"
-    }
-    ,{
+    },
+    {
       "label": "In Packaging",
       "value": "In Packaging"
-    }
-    ,{
+    },
+    {
       "label": "Uncategorized",
       "value": "Uncategorized"
     }
@@ -55,8 +59,8 @@
     {
       "label": "Keep",
       "value": "Keep"
-    }
-    ,{
+    },
+    {
       "label": "Keep 2",
       "value": "Keep 2"
     }
@@ -65,8 +69,8 @@
     {
       "label": "Application 1",
       "value": "Application 2"
-    }
-    ,{
+    },
+    {
       "label": "Application 2",
       "value": "Application 2"
     }
@@ -75,20 +79,20 @@
     {
       "label": 0.1,
       "value": 0.1
-    }
-    ,{
+    },
+    {
       "label": 0.2,
       "value": 0.2
-    }
-    ,{
+    },
+    {
       "label": 0.3,
       "value": 0.3
-    }
-    ,{
+    },
+    {
       "label": 10.2,
       "value": 10.2
-    }
-    ,{
+    },
+    {
       "label": 10.3,
       "value": 10.3
     }

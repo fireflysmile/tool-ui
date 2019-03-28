@@ -38,7 +38,10 @@ export class WelcomeComponent implements OnInit {
   }
 
   redirectTo(routerName: string) {
-    this.router.navigateByUrl(routerName);
+
+    if (routerName) {
+      this.router.navigateByUrl(routerName);
+    }
   }
 
 }

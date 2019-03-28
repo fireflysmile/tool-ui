@@ -38,6 +38,15 @@
               </div>
             </div>
             <div class="p-col">
+              <span class="label">Target App</span>
+              <div class="input">
+                <div class="dropdown">
+                  <p-dropdown [options]="readinessData?.target_app_options" [(ngModel)]="item.target_app">
+                  </p-dropdown>
+                </div>
+              </div>
+            </div>
+            <div class="p-col">
               <span class="label">Target Version</span>
               <div class="input">
                 <div class="dropdown">

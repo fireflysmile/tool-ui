@@ -9,7 +9,7 @@
   </div>
   <div class="options box-content">
     <div class="col" *ngFor="let item of links">
-      <a href="javascript:;" class="item {{ item.icon }}" (click)="redirectTo(item.icon)">
+      <a href="javascript:;" class="item {{ item.icon }}" (click)="redirectTo(item.link)">
         <i class="icon"></i><br />
         <span class="text">{{ item.text }}</span>
       </a>
