@@ -24,7 +24,6 @@ export class GaugeComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(private zone: NgZone) {}
 
   ngAfterViewInit() {
-    console.log(this.val, this.beginVal, this.endVal);
     this.zone.runOutsideAngular(() => {
       const chart = am4core.create(this.root.nativeElement, am4charts.GaugeChart);
 
