@@ -1,6 +1,7 @@
 @import 'primeng';
 @import 'color';
 @import 'icons';
+@import 'primeng-calendar';
 
 .report-wp {
   .title {
@@ -41,6 +42,10 @@
       border-bottom: 1px solid $heather;
       height: 93px;
       padding: 0 33px;
+      input.ui-inputtext {
+        color: $mine-shaft;
+        font-weight: 400;
+      }
       .box {
         .label {
           width: 123px;

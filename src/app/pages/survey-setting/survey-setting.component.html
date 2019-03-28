@@ -1,0 +1,46 @@
+<!-- header -->
+<app-header></app-header>
+
+<!-- content -->
+<div class="survey-setting main-content">
+  <!-- back to router -->
+  <app-back (routerName)="redirectTo('welcome')">Home</app-back>
+
+  <!-- title -->
+  <h3 class="title fix-top">Survey Form Settings</h3>
+
+  <!-- box add question -->
+  <div class="p-grid">
+    <div class="box-q p-col">
+      <div class="p-grid p-align-center p-justify-between item" *ngFor="let item of questionDatas; let idx = index">
+        <div class="p-col" [style.margin-right.px]="22">
+          <p class="name">Q {{ idx + 1 }}</p>
+          <div class="input">
+            <input type="text" [(ngModel)]="item.name">
+          </div>
+        </div>
+        <div class="p-col-fixed" [style.width.px]="160">
+          <div class="input">
+            <div class="dropdown">
+              <p-dropdown [options]="ratingOptions" placeholder="Stars Rating" [(ngModel)]="rating"></p-dropdown>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-grid p-align-center item fix-w">
+        <div class="p-col">
+          <a href="javascript:;" class="btn-add-new p-grid p-align-center" (click)="addQuestion()">
+            <span class="icon-add"></span>Add Question</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end box add question -->
+
+  <!-- btn Publish -->
+  <div class="p-grid p-justify-center" [style.margin-top.px]="25">
+    <a href="javascript:;" class="button-ok" [routerLink]="[ '/welcome' ]">Publish</a>
+  </div>
+  <!-- end btn Publish -->
+</div>
+<!-- end content -->

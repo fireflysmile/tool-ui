@@ -15,34 +15,16 @@ class Question {
 })
 export class SurveyComponent implements OnInit {
 
-  questionDatas: any;
-  ratingOptions: any;
-
-  constructor(
-    private router: Router,
-    private dataService: DataService
-  ) { }
+  // init datas
+  starNumber = 2;
+  constructor() { }
 
   ngOnInit() {
-    this.onload();
   }
 
-  redirectTo(key: string) {
-    this.router.navigateByUrl(key);
-  }
-
-  onload() {
-    this.dataService.get('survey.json').subscribe(
-      (datas: any) => {
-        this.questionDatas = datas.datas;
-        this.ratingOptions = datas.rating_options;
-      }
-    );
-  }
-
-  addQuestion() {
-    const question = new Question();
-    this.questionDatas.push(question);
+  // rating rank
+  fnStar(idx: number) {
+    this.starNumber = idx;
   }
 
 }

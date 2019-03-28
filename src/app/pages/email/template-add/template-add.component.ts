@@ -10,6 +10,7 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class TemplateAddComponent implements OnInit {
 
+  // init data
   attachmentDatas: any;
   templatesOptions: any;
   text: string;
@@ -20,13 +21,16 @@ export class TemplateAddComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    // onload
     this.onload();
   }
 
+  // redirect to link
   redirectTo(key: string) {
     this.router.navigateByUrl(key);
   }
 
+  // load datas
   onload() {
     this.dataService.get('email.json').subscribe(
       (datas: any) => {
@@ -44,6 +48,7 @@ export class TemplateAddComponent implements OnInit {
     console.log('init', quill);
   }
 
+  // Delete Attachment
   deleteAttachment(idx: number) {
     this.attachmentDatas.splice(idx, 1);
   }

@@ -1,18 +1,29 @@
+<!-- header -->
 <app-header></app-header>
-<div class="welcome main-content" *ngIf="!import">
+
+<!-- content -->
+<div class="welcome main-content">
+  <!-- title -->
   <h3 class="title">Welcome</h3>
+
+  <!-- options -->
   <div class="search-box">
     <label for="search" class="icon-search"></label>
     <input id="search" class="input" type="text" placeholder="What do you want to search?">
     <app-dropdown [style.margin-left]="'auto'" [values]="listSearchBy" [dropdownName]="dropdownName"
       [activeValue]="searchBy" (select)="action($event)"></app-dropdown>
   </div>
+  <!-- end options -->
+
+  <!-- list links in home -->
   <div class="options box-content">
     <div class="col" *ngFor="let item of links">
-      <a href="javascript:;" class="item {{ item.icon }}" (click)="redirectTo(item.icon)">
+      <a href="javascript:;" class="item {{ item.icon }}" (click)="redirectTo(item.link)">
         <i class="icon"></i><br />
         <span class="text">{{ item.text }}</span>
       </a>
     </div>
   </div>
+  <!-- end list links in home -->
 </div>
+<!-- end content -->

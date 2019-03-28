@@ -1,10 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'fonts';
+@import 'color';
 
 body {
   font-family: "ProximaNova";
+  color: $mine-shaft;
   font-weight: 400;
-  height: 768px;
+  min-height: 768px;
 }
 
 .main-content {

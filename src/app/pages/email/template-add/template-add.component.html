@@ -1,8 +1,18 @@
+<!-- header -->
 <app-header></app-header>
+
+<!-- content -->
 <div class="add-template main-content">
-  <app-back (routerName)="redirectTo('email')">Email Template</app-back>
+
+  <!-- back to router -->
+  <app-back (routerName)="redirectTo('email-templates')">Email Template</app-back>
+
+  <!-- title -->
   <h3 class="title fix-top">Add template</h3>
+
+
   <div class="p-grid">
+    <!-- box quill editor -->
     <div class="p-col box-config">
       <div class="top-editor">
         <div class="p-grid p-align-center item fixed-bd">
@@ -59,6 +69,9 @@
         </p-header>
       </p-editor>
     </div>
+    <!-- end box quill editor -->
+
+    <!-- box template options -->
     <div class="p-col-fixed right-tpl">
       <div class="box-config">
         <div class="p-grid p-align-center item fixed-t">
@@ -82,9 +95,14 @@
         </div>
       </div>
     </div>
+    <!-- end box template options -->
   </div>
+
+  <!-- btn options -->
   <div class="p-grid p-justify-center" [style.margin-top.px]="25">
     <a href="javascript:;" class="button-ok" [routerLink]="[ '/email' ]">Save Template</a>
     <a href="javascript:;" class="button-ok" [routerLink]="[ '/email' ]">Send Test Mail</a>
   </div>
+  <!-- end btn options -->
 </div>
+<!-- end content -->

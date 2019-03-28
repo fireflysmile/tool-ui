@@ -9,20 +9,17 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class PlanningComponent implements OnInit {
 
+  // init datas
   events: any[];
   optionsSelect: any;
-
   limitOptions: any;
-
   startDate = '';
   endDate = '';
-
-
   options: any;
-
   roCalender: any;
 
   constructor(private dataService: DataService) {
+    // format calendar popup
     this.roCalender = {
       firstDayOfWeek: 1,
       dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
@@ -38,6 +35,7 @@ export class PlanningComponent implements OnInit {
   }
 
   ngOnInit() {
+    // options full calendar
     this.options = {
       defaultDate: '2019-03-26',
       header: {
@@ -48,9 +46,11 @@ export class PlanningComponent implements OnInit {
       eventLimit: true
     };
 
+    // onload data
     this.onload();
   }
 
+  // fn load data
   onload() {
     this.dataService.get('planning.json').subscribe(
       (datas: any) => {

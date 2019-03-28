@@ -11,8 +11,12 @@ import { widthHeight } from 'src/app/core/widthHeight';
 })
 export class OnboardProjectComponent implements OnInit {
 
+  // init datas
   getHeight: number;
   tabHeight: string;
+
+  projects: string;
+  files: string;
 
   users: any;
   usersSortBy = 'user_name';
@@ -33,6 +37,8 @@ export class OnboardProjectComponent implements OnInit {
 
   dropdownName = 'Sort by';
 
+  browse: boolean;
+
   constructor(
     private dataService: DataService,
     private router: Router
@@ -40,6 +46,7 @@ export class OnboardProjectComponent implements OnInit {
 
   ngOnInit() {
 
+    // get height table
     this.getHeight = document.documentElement.clientHeight - (widthHeight.height_top_table + widthHeight.height_bottom_table);
     if (this.getHeight > widthHeight.min_table) {
       this.tabHeight = this.getHeight + 'px';
@@ -47,26 +54,35 @@ export class OnboardProjectComponent implements OnInit {
       this.tabHeight = widthHeight.min_table + 'px';
     }
 
+    // onload data
     this.onload();
 
   }
 
   onload() {
+
+    // user datas
     this.dataService.get('users.json').subscribe(
       (datas: any) => {
         this.users = datas;
       }
     );
+
+    // aptications datas
     this.dataService.get('aptications.json').subscribe(
       (datas: any) => {
         this.aplications = datas;
       }
     );
+
+    // computers datas
     this.dataService.get('computers.json').subscribe(
       (datas: any) => {
         this.computers = datas;
       }
     );
+
+    // departments datas
     this.dataService.get('departments.json').subscribe(
       (datas: any) => {
         this.departments = datas;
@@ -74,8 +90,25 @@ export class OnboardProjectComponent implements OnInit {
     );
   }
 
+  // redirect to router
   redirectTo(key: string) {
     this.router.navigateByUrl(key);
+  }
+
+  // open popup browse
+  fnBrowse() {
+    this.browse = true;
+    this.dataService.get('onboard.json').subscribe(
+      (datas: any) => {
+        this.projects = datas.projects;
+        this.files = datas.files;
+      }
+    );
+  }
+
+  // off popup browse
+  offBrowse(e: any) {
+    this.browse = false;
   }
 
 }

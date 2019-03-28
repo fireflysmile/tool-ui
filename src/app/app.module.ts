@@ -46,6 +46,8 @@ import { FullCalendarModule } from 'primeng/fullcalendar';
 import { CheckboxModule } from 'primeng/checkbox';
 import { EditorModule } from 'primeng/editor';
 import { TemplateAddComponent } from './pages/email/template-add/template-add.component';
+import { SurveySettingComponent } from './pages/survey-setting/survey-setting.component';
+import { DialogModule } from 'primeng/dialog';
 
 const PrimeNGmodule = [
   FileUploadModule,
@@ -57,7 +59,8 @@ const PrimeNGmodule = [
   ChartModule,
   FullCalendarModule,
   CheckboxModule,
-  EditorModule
+  EditorModule,
+  DialogModule
 ];
 
 @NgModule({
@@ -90,7 +93,8 @@ const PrimeNGmodule = [
     SurveyComponent,
     EmailComponent,
     ServiceComponent,
-    TemplateAddComponent
+    TemplateAddComponent,
+    SurveySettingComponent
   ],
   imports: [
     BrowserModule,

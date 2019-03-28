@@ -29,7 +29,7 @@
           <label class="label">Migration Type</label>
           <div class="input">
             <div class="dropdown">
-              <p-dropdown [options]="datas?.migration_type"></p-dropdown>
+              <p-dropdown [options]="datas?.migration_type" [(ngModel)]="migrationType"></p-dropdown>
             </div>
           </div>
         </div>
@@ -63,6 +63,14 @@
           <label class="label p-col-fixed">Current H/W Model</label>
           <div class="input p-col">
             <input type="text" value="{{ isData?.asset_model }}">
+          </div>
+        </div>
+        <div class="item-row p-grid p-align-center" *ngIf="migrationType === 'Replace'">
+          <label class="label p-col-fixed">New H/W Model</label>
+          <div class="input p-col">
+            <div class="dropdown">
+              <p-dropdown [options]="datas?.new_model"></p-dropdown>
+            </div>
           </div>
         </div>
         <div class="item-row p-grid p-align-center">

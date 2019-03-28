@@ -1,6 +1,9 @@
 <div class="login">
   <div class="left main-login">
+    <!-- logo -->
     <app-logo></app-logo>
+
+    <!-- form login -->
     <form [formGroup]="login" (ngSubmit)="onSubmit()">
       <h3 class="title">Login</h3>
       <div class="row-set">
@@ -12,9 +15,14 @@
       <button type="submit" class="button-fluid" [ngClass]="{'disable': login.invalid}" [disabled]="login.invalid">Login</button>
       <p class="error-ms" *ngIf="error">{{ error }}</p>
     </form>
+    <!-- end form login -->
+
+    <!-- copyright -->
     <div class="copyright">
       <small>Copyright Rollout management 2019</small>
     </div>
   </div>
+  <!-- right login -->
   <div class="right"></div>
 </div>
+<!-- end content login -->
