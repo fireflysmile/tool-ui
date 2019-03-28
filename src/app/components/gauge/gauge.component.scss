@@ -1,0 +1,13 @@
+@import 'color';
+.value-gauge {
+    color: $mine-shaft;
+    font-size: 24px;
+    font-weight: 700;
+}
+#chartdiv {
+    width: 100%;
+    min-height: 160px;
+}
+.text-gauge {
+    color: $dusty-gray;
+}

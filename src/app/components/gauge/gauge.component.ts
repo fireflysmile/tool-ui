@@ -37,16 +37,13 @@ export class GaugeComponent implements OnInit, AfterViewInit, OnDestroy {
 
       // background
       const axis = chart.xAxes.push(new am4charts.CategoryAxis<am4charts.AxisRendererCircular>());
-
-
-
       axis.renderer.line.strokeOpacity = 1;
       axis.renderer.line.strokeWidth = 19;
       axis.renderer.line.stroke = am4core.color('#ededed');
       axis.renderer.ticks.template.stroke = am4core.color('#ededed');
       axis.renderer.radius = am4core.percent(90);
 
-      const axis2 = chart.xAxes.push(new am4charts.CategoryAxis<am4charts.AxisRendererCircular>());
+      const axis2 = chart.xAxes.push(new am4charts.ValueAxis<am4charts.AxisRendererCircular>());
       axis2.min = +this.beginVal;
       axis2.max = +this.endVal;
       axis2.renderer.innerRadius = 10;
@@ -65,14 +62,14 @@ export class GaugeComponent implements OnInit, AfterViewInit, OnDestroy {
        * Label
        */
 
-      const label = chart.radarContainer.createChild(am4core.Label);
-      label.isMeasured = false;
-      label.fontSize = 45;
-      label.x = am4core.percent(50);
-      label.y = am4core.percent(100);
-      label.horizontalCenter = 'middle';
-      label.verticalCenter = 'bottom';
-      label.text = this.val + '';
+      // const label = chart.radarContainer.createChild(am4core.Label);
+      // label.isMeasured = false;
+      // label.fontSize = 45;
+      // label.x = am4core.percent(50);
+      // label.y = am4core.percent(100);
+      // label.horizontalCenter = 'middle';
+      // label.verticalCenter = 'bottom';
+      // label.text = this.val + '';
 
 
       /**
@@ -81,13 +78,13 @@ export class GaugeComponent implements OnInit, AfterViewInit, OnDestroy {
 
       const hand = chart.hands.push(new am4charts.ClockHand());
       hand.axis = axis2;
-      hand.innerRadius = am4core.percent(-40);
-      hand.radius = am4core.percent(30);
-      hand.startWidth = 10;
+      hand.innerRadius = am4core.percent(0);
+      hand.radius = am4core.percent(40);
+      hand.startWidth = 20;
       hand.endWidth = 3;
       hand.pin.disabled = false;
       hand.value = +this.val;
-      hand.pin.radius = 5;
+      hand.pin.radius = 10;
 
       hand.events.on('propertychanged', (ev) => {
         range0.endValue = ev.target.value;
@@ -97,7 +94,8 @@ export class GaugeComponent implements OnInit, AfterViewInit, OnDestroy {
       // demo:
       setInterval(() => {
         const value = Math.round(Math.random() * this.val);
-        label.text = value + '';
+        // label.text = value + '';
+        this.val = value;
         const animation = new am4core.Animation(hand, {
           property: 'value',
           to: value
