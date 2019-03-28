@@ -14,6 +14,9 @@ export class OnboardProjectComponent implements OnInit {
   getHeight: number;
   tabHeight: string;
 
+  projects: string;
+  files: string;
+
   users: any;
   usersSortBy = 'user_name';
   usersSortByName = 'User Name';
@@ -32,6 +35,8 @@ export class OnboardProjectComponent implements OnInit {
 
 
   dropdownName = 'Sort by';
+
+  browse: boolean;
 
   constructor(
     private dataService: DataService,
@@ -76,6 +81,21 @@ export class OnboardProjectComponent implements OnInit {
 
   redirectTo(key: string) {
     this.router.navigateByUrl(key);
+  }
+
+  fnBrowse() {
+    this.browse = true;
+
+    this.dataService.get('onboard.json').subscribe(
+      (datas: any) => {
+        this.projects = datas.projects;
+        this.files = datas.files;
+      }
+    );
+  }
+
+  offBrowse(e) {
+    this.browse = false;
   }
 
 }

@@ -7,10 +7,7 @@
     </div>
     <div>
       <input type="text" placeholder="Project Name" class="search-table">
-      <label for="import" class="button-ok">
-        Browse
-        <input type="file" id="import" accept=".csv" value="">
-      </label>
+      <a href="javascript:;" class="button-ok" (click)="fnBrowse(); $event.stopPropagation()">Browse</a>
     </div>
   </div>
   <p-tabView>
@@ -35,4 +32,23 @@
       </p-scrollPanel>
     </p-tabPanel>
   </p-tabView>
+
+  <div class="ui-dialog-mask" *ngIf="browse">
+    <p-dialog [(visible)]="browse"  clickOutside (clickOutside)="offBrowse($event)">
+      <h4 class="title">Browse Files</h4>
+
+      <div class="dropdown">
+          <p-dropdown [options]="projects" appendTo="body"></p-dropdown>
+        </div>
+      <div class="list-content">
+        <div class="item" *ngFor="let item of files" (click)="offBrowse($event)">
+          <p>{{ item.name }}</p>
+        </div>
+      </div>
+      <p-footer>
+        <a href="javascript:;" class="button-ok" (click)="offBrowse($event)">Onboard</a>
+      </p-footer>
+    </p-dialog>
+  </div>
+
 </div>

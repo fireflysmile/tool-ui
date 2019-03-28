@@ -2,10 +2,10 @@
   <div class="planning-wp">
     <div class="p-grid">
       <div class="p-col">
-          <h3 class="title">schedule PLANNING</h3>
+        <h3 class="title">schedule PLANNING</h3>
       </div>
       <div class="p-col p-grid p-justify-end">
-          <a href="javascript:;" class="button-ok">Update</a>
+        <a href="javascript:;" class="button-ok">Update</a>
       </div>
     </div>
     <div class="planning-content p-grid">
@@ -30,15 +30,15 @@
           <div class="planning-row p-grid p-align-center">
             <label class="label">Start Day</label>
             <div class="input">
-              <p-calendar name="mirgationDate" [(ngModel)]="startDate" placeholder="Select Date" icon="ico calender-ico"
-                [showIcon]="true" [locale]="roCalender"></p-calendar>
+              <p-calendar name="mirgationDate" [(ngModel)]="startDate" placeholder="Select Date"
+                icon="icon icon-calender-blue" [showIcon]="true" [locale]="roCalender" dateFormat="dd MM yy"></p-calendar>
             </div>
           </div>
           <div class="planning-row p-grid p-align-center">
             <label class="label">End Day</label>
             <div class="input">
               <p-calendar name="mirgationDate" [(ngModel)]="endDate" placeholder="Select Date"
-                icon="ico calender-ico" [showIcon]="true" [locale]="roCalender"></p-calendar>
+                icon="icon icon-calender-blue" [showIcon]="true" [locale]="roCalender" dateFormat="dd MM yy"></p-calendar>
             </div>
           </div>
         </div>
