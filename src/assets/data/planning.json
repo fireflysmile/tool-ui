@@ -1,12 +1,22 @@
 {
   "events": [
     {
-        "title": "Long Event",
-        "start": "2019-03-26",
-        "end": "2019-03-26"
+        "title": "Long Event 1",
+        "start": "2019-03-01",
+        "end": "2019-03-01"
     },
     {
         "title": "Long Event 2",
+        "start": "2019-03-02",
+        "end": "2019-03-02"
+    },
+    {
+        "title": "Long Event 3",
+        "start": "2019-03-04",
+        "end": "2019-03-04"
+    },
+    {
+        "title": "Long Event 4",
         "start": "2019-03-26",
         "end": "2019-03-26"
     },
@@ -124,15 +134,6 @@
         "title": "Meeting review",
         "start": "2019-03-08",
         "end": "2019-03-08"
-    },
-    {
-        "title": "Repeating Event",
-        "start": "2019-03-30T16:00:00",
-        "end": "2019-04-03T16:00:00"
-    },
-    {
-        "title": "Repeating Event",
-        "start": "2016-01-16T16:00:00"
     }
   ],
   "options": {

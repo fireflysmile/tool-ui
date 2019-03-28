@@ -60,7 +60,7 @@
                 <span class="label">Mail Server Type</span>
               </div>
               <div class="p-col-4">
-                <div class="input">
+                <div class="input color">
                   <div class="dropdown">
                     <p-dropdown [options]="mailTypeOptions" [(ngModel)]="mailServerType">
                     </p-dropdown>
@@ -128,32 +128,13 @@
                 <span class="label">Project Name</span>
               </div>
               <div class="p-col-4">
-                <div class="input">
+                <div class="input color">
                   <p-dropdown [options]="scheduleConfig?.project_options" [(ngModel)]="projectName">
                   </p-dropdown>
                 </div>
               </div>
-            </div>
-            <div class="p-grid p-align-center c-row">
-              <div class="p-col-3">
-                <span class="label">Group</span>
-              </div>
-              <div class="p-col-4">
-                <div class="input">
-                  <p-dropdown [options]="scheduleConfig?.group_options" [(ngModel)]="group">
-                  </p-dropdown>
-                </div>
-              </div>
-            </div>
-            <div class="p-grid p-align-center c-row">
-              <div class="p-col-3">
-                <span class="label">Migration Type</span>
-              </div>
-              <div class="p-col-4">
-                <div class="input">
-                  <p-dropdown [options]="scheduleConfig?.migration_type_options" [(ngModel)]="migrationType">
-                  </p-dropdown>
-                </div>
+              <div class="p-col-5 p-grid p-justify-end">
+                  <p-inputSwitch [(ngModel)]="projectChecked"></p-inputSwitch>
               </div>
             </div>
             <div class="p-grid p-align-center c-row">

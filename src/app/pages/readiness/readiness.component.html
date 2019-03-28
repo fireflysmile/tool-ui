@@ -21,7 +21,7 @@
               class="icon icon-{{item.donut}}"></span></h4>
           <!-- options -->
           <div class="p-grid">
-            <div class="p-col">
+            <div class="p-col-fixed" [style.width.px]="90">
               <span class="label">Version</span>
               <div class="input">
                 <input type="text" [(ngModel)]="item.version">
@@ -54,7 +54,7 @@
                 </div>
               </div>
             </div>
-            <div class="p-col">
+            <div class="p-col-fixed" [style.width.px]="155">
               <span class="label">Target Version</span>
               <div class="input">
                 <div class="dropdown">
