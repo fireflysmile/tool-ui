@@ -38,7 +38,7 @@ export class GaugeComponent implements OnInit, AfterViewInit, OnDestroy {
       gradient.addColor(am4core.color('#40eaa5'));
 
       // background
-      const axis = chart.xAxes.push(new am4charts.CategoryAxis<am4charts.AxisRendererCircular>());
+      const axis = chart.xAxes.push(new am4charts.ValueAxis<am4charts.AxisRendererCircular>());
       axis.renderer.line.strokeOpacity = 1;
       axis.renderer.line.strokeWidth = 15;
       axis.renderer.line.stroke = am4core.color('#ededed');
