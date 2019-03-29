@@ -23,7 +23,7 @@ export class PlanningComponent implements OnInit {
     this.roCalender = {
       firstDayOfWeek: 1,
       dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      dayNamesShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+      dayNamesShort: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
       dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
       monthNames: [ 'January', 'February', 'March', 'April',
       'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ],
@@ -43,6 +43,7 @@ export class PlanningComponent implements OnInit {
           center: 'title',
           right: 'month,agendaWeek,agendaDay'
       },
+      firstDay: 1,
       eventLimit: true
     };
 
