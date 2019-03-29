@@ -43,7 +43,8 @@ export class PlanningComponent implements OnInit {
           center: 'title',
           right: 'month,agendaWeek,agendaDay'
       },
-      eventLimit: true
+      eventLimit: true,
+      firstDay: 1
     };
 
     // onload data
