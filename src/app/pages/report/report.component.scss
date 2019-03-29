@@ -81,11 +81,18 @@
       > div {
         min-height: 300px
       }
+      .p-col {
+        max-width: 25%;
+      }
       .two-col {
         .p-col:first-child {
           padding-right: 50px;
         }
+        .p-col {
+          max-width: 50%;
+        }
       }
+
       .box-name {
         font-size: 15px;
         color: $mine-shaft;
