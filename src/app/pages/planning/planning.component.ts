@@ -44,7 +44,8 @@ export class PlanningComponent implements OnInit {
           right: 'month,agendaWeek,agendaDay'
       },
       firstDay: 1,
-      eventLimit: true
+      eventLimit: true,
+      columnHeaderFormat: { weekday: 'long' }
     };
 
     // onload data
